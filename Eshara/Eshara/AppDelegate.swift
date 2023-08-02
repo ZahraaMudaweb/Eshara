@@ -7,16 +7,60 @@
 
 import UIKit
 import FirebaseCore
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
+    private let remindActionID = "RemindAction"
+    private let markAsPaidActionID = "MarkAsPaidAction"
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let id = response.notification.request.identifier
+        guard var alert = Database.shared.getAlert(notificationID: id) else { completionHandler(); return }
+        
+        switch response.actionIdentifier {
+            
+        case remindActionID:
+            
+            let newRemindDate = Date().addingTimeInterval(60 * 60 * 24)
+            
+            //compare to break the reminder
+            
+            alert.scheduleReminder(on: newRemindDate) { (updatedAlert) in
+                Database.shared.updateAndSave(updatedAlert)
+            }
+            
+        case markAsPaidActionID:
+            alert.paidDate = Date()
+            Database.shared.updateAndSave(alert)
+            
+        default:
+            break
+        }
+        
+        completionHandler()
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        let remindAction = UNNotificationAction(identifier: remindActionID, title: "Remind me later", options: [])
+        let markAsPaidAction = UNNotificationAction(identifier: markAsPaidActionID, title: "Mark as paid", options: [.authenticationRequired])
+        
+        let category = UNNotificationCategory(identifier: Notify.notificationCategoryID, actions: [remindAction, markAsPaidAction], intentIdentifiers: [], options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list, .banner, .sound])
     }
 
     // MARK: UISceneSession Lifecycle
