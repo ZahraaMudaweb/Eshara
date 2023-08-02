@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049F3B512A7B92E900740775 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F3B502A7B92E900740775 /* SettingTableViewController.swift */; };
+		049F3B532A7B95A800740775 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F3B522A7B95A800740775 /* SettingTableViewCell.swift */; };
+		049F3B552A7B969600740775 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F3B542A7B969600740775 /* setting.swift */; };
+		049F3B572A7BBEE400740775 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F3B562A7BBEE400740775 /* SignupViewController.swift */; };
+		049F3B592A7BE8D000740775 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F3B582A7BE8D000740775 /* MainNavigationController.swift */; };
 		6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACDE2A794959006CE7DA /* AppDelegate.swift */; };
 		6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACE02A794959006CE7DA /* SceneDelegate.swift */; };
 		6740ACE32A794959006CE7DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACE22A794959006CE7DA /* ViewController.swift */; };
@@ -17,9 +22,16 @@
 		6740ACF62A7949E7006CE7DA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6740ACF52A7949E7006CE7DA /* FirebaseDatabase */; };
 		6740ACF82A7949E7006CE7DA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6740ACF72A7949E7006CE7DA /* FirebaseStorage */; };
 		6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */; };
+		6A0B11852A7A9828004CB45C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B11842A7A9828004CB45C /* LoginViewController.swift */; };
+		6A0B11872A7AB160004CB45C /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B11862A7AB160004CB45C /* profileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049F3B502A7B92E900740775 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		049F3B522A7B95A800740775 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		049F3B542A7B969600740775 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		049F3B562A7BBEE400740775 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		049F3B582A7BE8D000740775 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		6740ACDB2A794959006CE7DA /* Eshara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eshara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6740ACDE2A794959006CE7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6740ACE02A794959006CE7DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +41,8 @@
 		6740ACEA2A79495A006CE7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6740ACEC2A79495A006CE7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A0B11842A7A9828004CB45C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6A0B11862A7AB160004CB45C /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +82,14 @@
 				6740ACDE2A794959006CE7DA /* AppDelegate.swift */,
 				6740ACE02A794959006CE7DA /* SceneDelegate.swift */,
 				6740ACE22A794959006CE7DA /* ViewController.swift */,
+				6A0B11842A7A9828004CB45C /* LoginViewController.swift */,
+				049F3B582A7BE8D000740775 /* MainNavigationController.swift */,
 				6740ACE42A794959006CE7DA /* Main.storyboard */,
+				049F3B562A7BBEE400740775 /* SignupViewController.swift */,
+				049F3B502A7B92E900740775 /* SettingTableViewController.swift */,
+				049F3B522A7B95A800740775 /* SettingTableViewCell.swift */,
+				049F3B542A7B969600740775 /* setting.swift */,
+				6A0B11862A7AB160004CB45C /* profileViewController.swift */,
 				6740ACE72A79495A006CE7DA /* Assets.xcassets */,
 				6740ACE92A79495A006CE7DA /* LaunchScreen.storyboard */,
 				6740ACEC2A79495A006CE7DA /* Info.plist */,
@@ -156,8 +177,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049F3B592A7BE8D000740775 /* MainNavigationController.swift in Sources */,
+				049F3B572A7BBEE400740775 /* SignupViewController.swift in Sources */,
+				049F3B512A7B92E900740775 /* SettingTableViewController.swift in Sources */,
+				6A0B11852A7A9828004CB45C /* LoginViewController.swift in Sources */,
+				049F3B532A7B95A800740775 /* SettingTableViewCell.swift in Sources */,
 				6740ACE32A794959006CE7DA /* ViewController.swift in Sources */,
 				6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */,
+				6A0B11872A7AB160004CB45C /* profileViewController.swift in Sources */,
+				049F3B552A7B969600740775 /* setting.swift in Sources */,
 				6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
