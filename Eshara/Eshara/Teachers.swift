@@ -18,5 +18,4 @@ struct Teacher
     var image: UIImage?
     var color: UIColor
     
-    
 }
