@@ -15,7 +15,7 @@ import UIKit
 class TeachersDataViewController: UIViewController
 {
 
-    
+    // commetS
     
     @IBOutlet var locationLabel: UILabel!
     
