@@ -9,20 +9,11 @@ import UIKit
 
 
 
-private let reuseIdentifier = "Cell"
 
 
-class TeachersDataViewController: UIViewController, TeachersCollectionDelegate
+
+class TeachersDataViewController: UIViewController
 {
-    func didSelectTeacher(_ teacher: Teacherdata)
-    {
-        nameLabel.text = teacher.teacherName
-        locationLabel.text = teacher.teacherLocation
-        rateLabel.text = "\(teacher.teacherRate)"
-        priceLabel.text = "\(teacher.teacherPrice)"
-    }
-    
-   
 
     
     
@@ -37,30 +28,20 @@ class TeachersDataViewController: UIViewController, TeachersCollectionDelegate
     
     @IBOutlet var priceLabel: UILabel!
     
-   
+    
+    var teacher : Teacherdata?
     
     override func viewDidLoad()
     
     {
         super.viewDidLoad()
         
+     
+        
+       
+      
+       
+        
         
     }
-
-
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   
-   
-    
-    
 }

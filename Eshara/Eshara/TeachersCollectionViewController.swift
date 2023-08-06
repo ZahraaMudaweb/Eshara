@@ -11,15 +11,11 @@ private let reuseIdentifier = "Cell"
 
 
 
-protocol TeachersCollectionDelegate: AnyObject
+class TeachersCollectionViewController: UICollectionViewController
 {
-    func didSelectTeacher(_ teacher: Teacherdata)
-}
-class TeachersCollectionViewController: UICollectionViewController {
    
     
-    weak var delegate: TeachersCollectionDelegate?
-
+    
     let teacherss: [Teacherdata] =
     [
             Teacherdata(teacherName: "Ali", teacherRate: 4.5, teacherLocation: "Sitra", teacherPrice: 8, color: UIColor(red: (1/255.0), green: (145/255.0), blue: (180/255.0), alpha: 1)),
@@ -69,11 +65,8 @@ class TeachersCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TeachersDataCollectionViewCell
         
-        
-       
         let teacherData = teacherss[indexPath.row]
        
-        
         
         cell.name(teacherName: teacherData.teacherName, teacherRate: teacherData.teacherRate, teacherLocation: teacherData.teacherLocation, teacherPrice: teacherData.teacherPrice)
         cell.backgroundColor = teacherData.color
@@ -86,9 +79,6 @@ class TeachersCollectionViewController: UICollectionViewController {
     
     private func generateLayout() -> UICollectionViewLayout
     {
-        
-        
-        
         
         
         let space: CGFloat = 30
@@ -124,12 +114,22 @@ class TeachersCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         
-        var selectedTeacher = teacherss[indexPath.row]
-        delegate?.didSelectTeacher(selectedTeacher)
-        print(selectedTeacher.teacherName)
+        let selectedTeacher = teacherss[indexPath.row]
+        
+        
+   
+        
+        if let des =  storyboard?.instantiateViewController(withIdentifier: "teacherData") as? TeachersDataViewController
+        {
+            des.teacher = selectedTeacher
+            
+            navigationController?.pushViewController(des, animated: true)
+        }
+                
     }
     
 
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -161,4 +161,7 @@ class TeachersCollectionViewController: UICollectionViewController {
     }
     */
 
+    
+    
+    
 }

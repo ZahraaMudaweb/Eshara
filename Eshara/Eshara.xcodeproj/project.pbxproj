@@ -19,6 +19,7 @@
 		6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */; };
 		6A03A51C2A7A9CB500367ED6 /* Teachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51B2A7A9CB500367ED6 /* Teachers.swift */; };
 		6A03A51E2A7AA01D00367ED6 /* TeachersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */; };
+		6A03A5262A7FE52100367ED6 /* Ahmed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A03A5252A7FE52100367ED6 /* Ahmed.storyboard */; };
 		815805462A7E62A80073AE7A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815805452A7E62A80073AE7A /* Theme.swift */; };
 		81AF19102A7F726100398D4D /* TeachersDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF190F2A7F726100398D4D /* TeachersDataViewController.swift */; };
 		81DCFDF12A7CD80600EBE3D7 /* TeachersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCFDF02A7CD80600EBE3D7 /* TeachersCollectionViewController.swift */; };
@@ -37,6 +38,7 @@
 		6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A03A51B2A7A9CB500367ED6 /* Teachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teachers.swift; sourceTree = "<group>"; };
 		6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersData.swift; sourceTree = "<group>"; };
+		6A03A5252A7FE52100367ED6 /* Ahmed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ahmed.storyboard; sourceTree = "<group>"; };
 		815805452A7E62A80073AE7A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		81AF190F2A7F726100398D4D /* TeachersDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersDataViewController.swift; sourceTree = "<group>"; };
 		81DCFDF02A7CD80600EBE3D7 /* TeachersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersCollectionViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				81DCFDF22A7CD81A00EBE3D7 /* TeachersDataCollectionViewCell.swift */,
 				815805452A7E62A80073AE7A /* Theme.swift */,
 				81AF190F2A7F726100398D4D /* TeachersDataViewController.swift */,
+				6A03A5252A7FE52100367ED6 /* Ahmed.storyboard */,
 			);
 			name = Ahmed;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */,
 				6740ACE82A79495A006CE7DA /* Assets.xcassets in Resources */,
 				6740ACE62A794959006CE7DA /* Main.storyboard in Resources */,
+				6A03A5262A7FE52100367ED6 /* Ahmed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
