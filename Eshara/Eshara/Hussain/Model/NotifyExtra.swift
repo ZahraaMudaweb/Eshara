@@ -81,9 +81,12 @@ extension Notify {
             }
             
             let content = UNMutableNotificationContent()
-            content.title = "Bill Reminder"
+            content.title = "Eshara Reminder"
+            
             content.body = String(format: "%@ due to %@ on %@", arguments: [(updatedAlert.amount ?? 0).formatted(.currency(code: "usd")), (updatedAlert.payee ?? ""), updatedAlert.formattedDueDate])
+            
             content.categoryIdentifier = Notify.notificationCategoryID
+            
             content.sound = UNNotificationSound.default
             
             let triggerDateComponents = Calendar.current.dateComponents([.second, .minute, .hour, .day, .month, .year], from: date)

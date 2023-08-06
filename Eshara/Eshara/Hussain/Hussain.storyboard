@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xx5-h2-xP8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yxl-Os-tHE">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -27,7 +27,7 @@
         <!--Reminder-->
         <scene sceneID="OZn-ql-nkX">
             <objects>
-                <tableViewController title="Reminder" id="By6-DH-JMk" customClass="BillListTableViewController" customModule="BillManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Reminder" id="By6-DH-JMk" customClass="AlertListTableViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9im-T4-ulR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,17 +71,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Znx-lT-xZm" kind="presentation" id="BWq-40-Ilw"/>
+                        <segue destination="Znx-lT-xZm" kind="presentation" identifier="alertDetail" id="BWq-40-Ilw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oN-xv-9Qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="-497"/>
+            <point key="canvasLocation" x="1637.4045801526718" y="-497.18309859154931"/>
         </scene>
         <!--Add/Edit Reminder-->
         <scene sceneID="ahe-Oq-5ZY">
             <objects>
-                <tableViewController id="xf9-dz-BKx" userLabel="Add/Edit Reminder" customClass="BillDetailTableViewController" customModule="BillManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xf9-dz-BKx" userLabel="Add/Edit Reminder" customClass="AlertDetailTableViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VGh-uS-1oP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +359,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WS-5C-6of" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="64k-39-fen" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2770" y="-497"/>
+            <point key="canvasLocation" x="3695.419847328244" y="-497.18309859154931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VZ8-T5-bah">
@@ -377,11 +377,60 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCA-GA-Uf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="-497"/>
+            <point key="canvasLocation" x="2683.2061068702287" y="-497.18309859154931"/>
+        </scene>
+        <!--Test View-->
+        <scene sceneID="Vpk-gi-hk7">
+            <objects>
+                <viewController title="Test View" id="jag-IK-9uj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p8T-w9-sbR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hellow " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVh-XK-7Yv">
+                                <rect key="frame" x="148" y="323" width="129" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bi5-TJ-X62"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dVh-XK-7Yv" firstAttribute="leading" secondItem="bi5-TJ-X62" secondAttribute="leading" constant="148" id="HK6-Bk-mZH"/>
+                            <constraint firstItem="dVh-XK-7Yv" firstAttribute="top" secondItem="bi5-TJ-X62" secondAttribute="top" constant="264" id="Hfk-zW-qtk"/>
+                            <constraint firstItem="bi5-TJ-X62" firstAttribute="trailing" secondItem="dVh-XK-7Yv" secondAttribute="trailing" constant="116" id="uHr-aM-ho0"/>
+                            <constraint firstItem="bi5-TJ-X62" firstAttribute="bottom" secondItem="dVh-XK-7Yv" secondAttribute="bottom" constant="397" id="xYk-AG-qOE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGZ-e8-7Qk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2340" y="166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M0U-6n-DEq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yxl-Os-tHE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7dU-8X-v9V">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="By6-DH-JMk" kind="relationship" relationship="rootViewController" id="RFs-Wr-yhU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-hP-Sx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710.68702290076328" y="-497.18309859154931"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EUO-eO-8Q0"/>
+        <segue reference="BWq-40-Ilw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">

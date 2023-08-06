@@ -7,83 +7,239 @@
 
 import UIKit
 
-class AlertDetailTableViewController: UITableViewController {
-
+class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate {
+    private let datePickerHeight = CGFloat(216)
+    private let dueDateCellIndexPath = IndexPath(row: 2, section: 0)
+    private let remindDateCellIndexPath = IndexPath(row:0, section: 1)
+    
+    @IBOutlet var payeeTextField: UITextField!
+    @IBOutlet var amountTextField: UITextField!
+    @IBOutlet var dueDateLabel: UILabel!
+    @IBOutlet var dueDatePicker: UIDatePicker!
+   
+    @IBOutlet var remindStatusLabel: UILabel!
+    @IBOutlet var remindSwitch: UISwitch!
+    @IBOutlet var remindDatePicker: UIDatePicker!
+    
+    @IBOutlet var paidStatusLabel: UILabel!
+    @IBOutlet var paidSwitch: UISwitch!
+    @IBOutlet var paidDateLabel: UILabel!
+    
+    var isDueDatePickerShown: Bool = false {
+        didSet {
+            dueDatePicker.isHidden = !isDueDatePickerShown
+        }
+    }
+    var isRemindDatePickerShown: Bool = false {
+        didSet {
+            remindDatePicker.isHidden = !isRemindDatePickerShown
+        }
+    }
+    
+    var alert: Notify?
+    var paidDate: Date?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        tapGestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(tapGestureRecognizer)
+        amountTextField.keyboardType = .decimalPad
+        paidDateLabel.text = ""
+        
+        dueDatePicker.date = Calendar.current.startOfDay(for: Date()).addingTimeInterval(86399)
+        updateDueDateUI()
+        
+        if let alert = alert {
+            title = "Edit Alert"
+            payeeTextField.text = alert.payee
+            amountTextField.text = String(format: "%@", arguments: [(alert.amount ?? 0).formatted(.number.precision(.fractionLength(2)))])
+            
+            if let dueDate = alert.dueDate {
+                dueDatePicker.date = dueDate
+            }
+            
+            updateDueDateUI()
+            remindSwitch.isOn = alert.hasReminder
+            remindDatePicker.date = alert.remindDate ?? Date()
+            updateRemindUI()
+            paidSwitch.isOn = alert.isPaid
+            paidDate = alert.paidDate
+            updatePaymentUI()
+            navigationItem.leftBarButtonItem = nil
+            
+        } else {
+            title = "Add Alert"
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonTapped))
+        }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func updateDueDateUI() {
+        dueDateLabel.text = dueDatePicker.date.formatted(date: .numeric, time: .omitted)
+        remindDatePicker.maximumDate = dueDatePicker.date
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func updateRemindUI() {
+        if remindSwitch.isOn {
+            remindStatusLabel.text = remindDatePicker.date.formatted(date: .numeric, time: .shortened)
+        } else {
+            remindStatusLabel.text = "No"
+        }
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func updatePaymentUI() {
+        if paidSwitch.isOn {
+            paidStatusLabel.text = "Yes"
+            paidDateLabel.text = Date().formatted(date: .abbreviated, time: .omitted)
+        } else {
+            paidStatusLabel.text = "No"
+            paidDateLabel.text = ""
+        }
     }
-    */
+    
+    @IBAction func remindSwitchChanged(_ sender: UISwitch) {
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        if sender.isOn {
+            isDueDatePickerShown = false
+            isRemindDatePickerShown = true
+        } else {
+            isRemindDatePickerShown = false
+        }
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
+        updateRemindUI()
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    @IBAction func paymentSwitchChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            paidDate = Date()
+        } else {
+            paidDate = nil
+        }
+        updatePaymentUI()
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch (indexPath.section, indexPath.row) {
+        case (dueDateCellIndexPath.section, dueDateCellIndexPath.row):
+            updateDueDateUI()
+            
+            if isDueDatePickerShown {
+                isDueDatePickerShown = false
+            } else if isRemindDatePickerShown {
+                isRemindDatePickerShown = false
+                isDueDatePickerShown = true
+            } else {
+                isDueDatePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        case (remindDateCellIndexPath.section, remindDateCellIndexPath.row):
+            if isRemindDatePickerShown {
+                isRemindDatePickerShown = false
+            } else if isDueDatePickerShown {
+                isDueDatePickerShown = false
+                isRemindDatePickerShown = true
+            } else {
+                isRemindDatePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        default:
+            break
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (dueDateCellIndexPath.section, dueDateCellIndexPath.row + 1):
+            if isDueDatePickerShown {
+                return datePickerHeight
+            } else {
+                return 0
+            }
+        case (remindDateCellIndexPath.section, remindDateCellIndexPath.row + 1):
+            if isRemindDatePickerShown {
+                return datePickerHeight
+            } else {
+                return 0
+            }
+        default:
+            return 44
+        }
+    }
+    
+    func presentNeedAuthorizationAlert() {
+        let alert = UIAlertController(title: "Authorization Needed", message: "We can't set reminders for you without notification permissions. Please go to the iOS Settings app and grant us notification permissions if you wish to make use of reminders.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func dueDatePickerValueChanged(_ sender: UIDatePicker) {
+        updateDueDateUI()
+    }
+    
+    @IBAction func remindDatePickerValueChanged(_ sender: UIDatePicker) {
+        updateRemindUI()
+    }
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == amountTextField {
+            let text = (textField.text ?? "") as NSString
+            let newText = text.replacingCharacters(in: range, with: string)
+            if let _ = Double(newText) {
+                return true
+            }
+            return newText.isEmpty
+        } else {
+            return true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        var alrt = self.alert ?? Database.shared.addAlert()
+        
+        alrt.payee = payeeTextField.text
+        alrt.amount = Double(amountTextField.text ?? "0") ?? 0.00
+        alrt.dueDate = dueDatePicker.date
+        alrt.paidDate = paidDate
+        
+        if remindSwitch.isOn {
+            alrt.scheduleReminder(on: remindDatePicker.date) { (updatedAlert) in
+                if updatedAlert.notificationID == nil {
+                    self.presentNeedAuthorizationAlert()
+                }
+                
+                Database.shared.updateAndSave(updatedAlert)
+            }
+        } else {
+            alrt.removeReminder()
+            Database.shared.updateAndSave(alrt)
+        }
     }
-    */
+    
+    @objc func cancelButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+
 
 }

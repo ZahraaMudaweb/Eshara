@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         switch response.actionIdentifier {
             
+            //after receive notification -> save to firbase db
+            
+            
         case remindActionID:
             
             let newRemindDate = Date().addingTimeInterval(60 * 60 * 24)
