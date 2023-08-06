@@ -7,7 +7,11 @@
 
 import UIKit
 
+
+
 class TeachersDataCollectionViewCell: UICollectionViewCell {
+  
+    
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var RateLabel: UILabel!
@@ -30,5 +34,10 @@ class TeachersDataCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 10
         layer.masksToBounds = true
     }
+  
+    
+    
+    
+    
     
 }

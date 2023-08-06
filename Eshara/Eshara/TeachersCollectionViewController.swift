@@ -9,8 +9,16 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+
+
+protocol TeachersCollectionDelegate: AnyObject
+{
+    func didSelectTeacher(_ teacher: Teacherdata)
+}
 class TeachersCollectionViewController: UICollectionViewController {
+   
     
+    weak var delegate: TeachersCollectionDelegate?
 
     let teacherss: [Teacherdata] =
     [
@@ -61,12 +69,16 @@ class TeachersCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TeachersDataCollectionViewCell
         
-      
+        
+       
         let teacherData = teacherss[indexPath.row]
        
         
+        
         cell.name(teacherName: teacherData.teacherName, teacherRate: teacherData.teacherRate, teacherLocation: teacherData.teacherLocation, teacherPrice: teacherData.teacherPrice)
         cell.backgroundColor = teacherData.color
+        
+       
 
         return cell
     }
@@ -107,7 +119,15 @@ class TeachersCollectionViewController: UICollectionViewController {
         return layout
      
     }
+    
    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        
+        var selectedTeacher = teacherss[indexPath.row]
+        delegate?.didSelectTeacher(selectedTeacher)
+        print(selectedTeacher.teacherName)
+    }
     
 
     // MARK: UICollectionViewDelegate

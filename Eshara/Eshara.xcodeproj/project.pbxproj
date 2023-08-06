@@ -20,6 +20,7 @@
 		6A03A51C2A7A9CB500367ED6 /* Teachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51B2A7A9CB500367ED6 /* Teachers.swift */; };
 		6A03A51E2A7AA01D00367ED6 /* TeachersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */; };
 		815805462A7E62A80073AE7A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815805452A7E62A80073AE7A /* Theme.swift */; };
+		81AF19102A7F726100398D4D /* TeachersDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF190F2A7F726100398D4D /* TeachersDataViewController.swift */; };
 		81DCFDF12A7CD80600EBE3D7 /* TeachersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCFDF02A7CD80600EBE3D7 /* TeachersCollectionViewController.swift */; };
 		81DCFDF32A7CD81A00EBE3D7 /* TeachersDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCFDF22A7CD81A00EBE3D7 /* TeachersDataCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		6A03A51B2A7A9CB500367ED6 /* Teachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teachers.swift; sourceTree = "<group>"; };
 		6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersData.swift; sourceTree = "<group>"; };
 		815805452A7E62A80073AE7A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		81AF190F2A7F726100398D4D /* TeachersDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersDataViewController.swift; sourceTree = "<group>"; };
 		81DCFDF02A7CD80600EBE3D7 /* TeachersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersCollectionViewController.swift; sourceTree = "<group>"; };
 		81DCFDF22A7CD81A00EBE3D7 /* TeachersDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersDataCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				81DCFDF02A7CD80600EBE3D7 /* TeachersCollectionViewController.swift */,
 				81DCFDF22A7CD81A00EBE3D7 /* TeachersDataCollectionViewCell.swift */,
 				815805452A7E62A80073AE7A /* Theme.swift */,
+				81AF190F2A7F726100398D4D /* TeachersDataViewController.swift */,
 			);
 			name = Ahmed;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				6A03A51E2A7AA01D00367ED6 /* TeachersData.swift in Sources */,
 				6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */,
 				6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */,
+				81AF19102A7F726100398D4D /* TeachersDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
