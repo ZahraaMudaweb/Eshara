@@ -29,6 +29,11 @@ class TeachersDataViewController: UIViewController
     @IBOutlet var priceLabel: UILabel!
     
     
+    
+    
+    
+    
+    
     var teacher : Teacherdata?
     
     override func viewDidLoad()
@@ -36,12 +41,8 @@ class TeachersDataViewController: UIViewController
     {
         super.viewDidLoad()
         
-     
-        
-       
-      
-       
-        
+        nameLabel.text = teacher?.teacherName
         
     }
+    
 }

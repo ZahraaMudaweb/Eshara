@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 private let reuseIdentifier = "Cell"
+
 
 
 
@@ -23,6 +26,14 @@ class TeachersCollectionViewController: UICollectionViewController
             Teacherdata(teacherName: "Hussain", teacherRate: 5, teacherLocation: "Sanad", teacherPrice: 7, color: UIColor(red: (248/255.0), green: (217/255.0), blue: (15/255.0), alpha: 1)),
             Teacherdata(teacherName: "Ammar", teacherRate: 3, teacherLocation: "Manamma", teacherPrice: 9, color: UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1))
         ]
+    
+    
+    
+    
+    
+    
+    
+    
     
     
    
@@ -128,6 +139,16 @@ class TeachersCollectionViewController: UICollectionViewController
                 
     }
     
+    
+    func teachersInfo()
+    {
+        let ref = Database.database().reference()
+        
+        let uid = Auth.auth().currentUser?.uid
+        
+       
+        
+    }
 
     
     // MARK: UICollectionViewDelegate
