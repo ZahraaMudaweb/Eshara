@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class Database {
+class LocalDatabase {
     
     static let UpdatedNotification = NSNotification.Name("com.apple.BillManager.billUpdated")
 
-    static let shared = Database()
+    static let shared = LocalDatabase()
         
     private func loadNotifications() -> [UUID:Notify]? {
         var AllNotifications = [UUID:Notify]()

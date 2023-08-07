@@ -96,15 +96,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Payee" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-eq-atG">
-                                                    <rect key="frame" x="16" y="0.0" width="369" height="44"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-eq-atG">
+                                                    <rect key="frame" x="8" y="0.0" width="377" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="1wB-eq-atG" secondAttribute="bottom" id="HSF-GE-hxr"/>
-                                                <constraint firstItem="1wB-eq-atG" firstAttribute="leading" secondItem="9E6-Kg-uYM" secondAttribute="leading" constant="16" id="QMT-jr-pkb"/>
+                                                <constraint firstItem="1wB-eq-atG" firstAttribute="leading" secondItem="9E6-Kg-uYM" secondAttribute="leading" constant="8" id="QMT-jr-pkb"/>
                                                 <constraint firstItem="1wB-eq-atG" firstAttribute="top" secondItem="9E6-Kg-uYM" secondAttribute="top" id="d1Y-qT-TMl"/>
                                                 <constraint firstAttribute="trailing" secondItem="1wB-eq-atG" secondAttribute="trailing" constant="8" id="oYs-qw-4Ba"/>
                                             </constraints>
@@ -117,15 +117,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwR-oj-cbh">
-                                                    <rect key="frame" x="16" y="11.999999999999998" width="10.333333333333336" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-Vd-u57">
-                                                    <rect key="frame" x="34.333333333333343" y="0.0" width="350.66666666666663" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-Vd-u57">
+                                                    <rect key="frame" x="8" y="0.0" width="377" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="xf9-dz-BKx" id="Z8c-Se-437"/>
@@ -134,11 +128,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cgn-Vd-u57" firstAttribute="top" secondItem="tar-Ko-zFR" secondAttribute="top" id="KnX-Bm-IiT"/>
-                                                <constraint firstItem="dwR-oj-cbh" firstAttribute="centerY" secondItem="tar-Ko-zFR" secondAttribute="centerY" id="OeN-O4-Xo5"/>
+                                                <constraint firstItem="cgn-Vd-u57" firstAttribute="leading" secondItem="tar-Ko-zFR" secondAttribute="leading" constant="8" id="N0A-cX-9Si"/>
                                                 <constraint firstAttribute="trailing" secondItem="cgn-Vd-u57" secondAttribute="trailing" constant="8" id="Pif-Il-3P2"/>
                                                 <constraint firstAttribute="bottom" secondItem="cgn-Vd-u57" secondAttribute="bottom" id="f58-b5-o1a"/>
-                                                <constraint firstItem="cgn-Vd-u57" firstAttribute="leading" secondItem="dwR-oj-cbh" secondAttribute="trailing" constant="8" symbolic="YES" id="l9E-2G-GOg"/>
-                                                <constraint firstItem="dwR-oj-cbh" firstAttribute="leading" secondItem="tar-Ko-zFR" secondAttribute="leading" constant="16" id="rr5-p8-c27"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

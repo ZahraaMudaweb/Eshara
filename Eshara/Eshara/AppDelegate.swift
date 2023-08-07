@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let id = response.notification.request.identifier
-        guard var alert = Database.shared.getAlert(notificationID: id) else { completionHandler(); return }
+        guard var alert = LocalDatabase.shared.getAlert(notificationID: id) else { completionHandler(); return }
         
         switch response.actionIdentifier {
             
@@ -32,12 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             //compare to break the reminder
             
             alert.scheduleReminder(on: newRemindDate) { (updatedAlert) in
-                Database.shared.updateAndSave(updatedAlert)
+                LocalDatabase.shared.updateAndSave(updatedAlert)
             }
             
         case markAsPaidActionID:
             alert.paidDate = Date()
-            Database.shared.updateAndSave(alert)
+            LocalDatabase.shared.updateAndSave(alert)
             
         default:
             break

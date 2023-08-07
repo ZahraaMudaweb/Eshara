@@ -40,21 +40,30 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
     var paidDate: Date?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
         tapGestureRecognizer.numberOfTapsRequired = 1
         tapGestureRecognizer.numberOfTouchesRequired = 1
         tapGestureRecognizer.cancelsTouchesInView = false
+        
         tableView.addGestureRecognizer(tapGestureRecognizer)
-        amountTextField.keyboardType = .decimalPad
+        
+        //amountTextField.keyboardType = .decimalPad
+        
         paidDateLabel.text = ""
         
         dueDatePicker.date = Calendar.current.startOfDay(for: Date()).addingTimeInterval(86399)
+        
         updateDueDateUI()
         
         if let alert = alert {
             title = "Edit Alert"
+            
             payeeTextField.text = alert.payee
+            
             amountTextField.text = String(format: "%@", arguments: [(alert.amount ?? 0).formatted(.number.precision(.fractionLength(2)))])
             
             if let dueDate = alert.dueDate {
@@ -62,12 +71,17 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
             }
             
             updateDueDateUI()
+            
             remindSwitch.isOn = alert.hasReminder
             remindDatePicker.date = alert.remindDate ?? Date()
+            
             updateRemindUI()
+            
             paidSwitch.isOn = alert.isPaid
             paidDate = alert.paidDate
+            
             updatePaymentUI()
+            
             navigationItem.leftBarButtonItem = nil
             
         } else {
@@ -216,7 +230,7 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var alrt = self.alert ?? Database.shared.addAlert()
+        var alrt = self.alert ?? LocalDatabase.shared.addAlert()
         
         alrt.payee = payeeTextField.text
         alrt.amount = Double(amountTextField.text ?? "0") ?? 0.00
@@ -229,11 +243,11 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
                     self.presentNeedAuthorizationAlert()
                 }
                 
-                Database.shared.updateAndSave(updatedAlert)
+                LocalDatabase.shared.updateAndSave(updatedAlert)
             }
         } else {
             alrt.removeReminder()
-            Database.shared.updateAndSave(alrt)
+            LocalDatabase.shared.updateAndSave(alrt)
         }
     }
     
