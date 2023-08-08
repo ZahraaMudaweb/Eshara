@@ -53,34 +53,37 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
         
         //amountTextField.keyboardType = .decimalPad
         
-        paidDateLabel.text = ""
+//        paidDateLabel.text = ""
         
-        dueDatePicker.date = Calendar.current.startOfDay(for: Date()).addingTimeInterval(86399)
+//        dueDatePicker.date = Calendar.current.startOfDay(for: Date()).addingTimeInterval(86399)
         
-        updateDueDateUI()
+        //updateDueDateUI()
         
         if let alert = alert {
             title = "Edit Alert"
             
-            payeeTextField.text = alert.payee
+//            payeeTextField.text = alert.payee
+            payeeTextField.text = alert.subject
             
-            amountTextField.text = String(format: "%@", arguments: [(alert.amount ?? 0).formatted(.number.precision(.fractionLength(2)))])
+//            amountTextField.text = String(format: "%@", arguments: [(alert.amount ?? 0).formatted(.number.precision(.fractionLength(2)))])
             
-            if let dueDate = alert.dueDate {
-                dueDatePicker.date = dueDate
-            }
+            amountTextField.text = alert.description
             
-            updateDueDateUI()
+//            if let dueDate = alert.dueDate {
+//                dueDatePicker.date = dueDate
+//            }
+            
+            //updateDueDateUI()
             
             remindSwitch.isOn = alert.hasReminder
             remindDatePicker.date = alert.remindDate ?? Date()
             
             updateRemindUI()
             
-            paidSwitch.isOn = alert.isPaid
-            paidDate = alert.paidDate
-            
-            updatePaymentUI()
+//            paidSwitch.isOn = alert.isPaid
+//            paidDate = alert.paidDate
+//
+//            updatePaymentUI()
             
             navigationItem.leftBarButtonItem = nil
             
@@ -120,7 +123,7 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
     @IBAction func remindSwitchChanged(_ sender: UISwitch) {
 
         if sender.isOn {
-            isDueDatePickerShown = false
+            //isDueDatePickerShown = false
             isRemindDatePickerShown = true
         } else {
             isRemindDatePickerShown = false
@@ -216,20 +219,21 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == amountTextField {
-            let text = (textField.text ?? "") as NSString
-            let newText = text.replacingCharacters(in: range, with: string)
-            if let _ = Double(newText) {
-                return true
-            }
-            return newText.isEmpty
-        } else {
-            return true
-        }
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { return false
+////        if textField == amountTextField {
+////            let text = (textField.text ?? "") as NSString
+////            let newText = text.replacingCharacters(in: range, with: string)
+////            if let _ = Double(newText) {
+////                return true
+////            }
+////            return newText.isEmpty
+////        } else {
+////            return true
+////        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         var alrt = self.alert ?? LocalDatabase.shared.addAlert()
         
         alrt.payee = payeeTextField.text

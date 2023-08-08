@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+import FirebaseAuth
+import FirebaseDatabase
+
 class LocalDatabase {
     
     static let UpdatedNotification = NSNotification.Name("com.apple.BillManager.billUpdated")
@@ -36,6 +39,54 @@ class LocalDatabase {
         return AllNotifications
     }
     
+    
+    
+    
+    
+    private func loadNotifications2() -> [Notify]? {
+        var AllNotifications = [Notify]()
+        
+        do {
+            
+            
+            let ref = Database.database().reference()
+            //let uid = Auth.auth().currentUser?.uid
+        
+            ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value, with: {
+                snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+                
+                
+                for child in result {
+                    
+                let key = child.key
+                let value = child.value as? NSDictionary
+                        
+                let subject = value!["subject"] as! String
+                let desc = value!["desc"] as! String
+                let date = value!["date"] as! String
+                           
+                    AllNotifications.append(Notify(idStr: "", subject: subject, description: desc, date: date))
+                
+                // print(key)
+                //  print(value)
+                    
+                //let NotifyArray = try JSONDecoder().decode([Notify].self, from: value)
+                    
+//                    AllNotifications = value.reduce(into: AllNotifications) { partial, notf in
+//                    partial[notf.id] = notf
+                        
+                    //print(sub)
+                }
+            })
+            
+            
+        } catch {
+            return nil
+        }
+        
+        return AllNotifications
+    }
+    
     private func saveNotifications(_ Alerts: [UUID:Notify]) {
         do {
             let storageDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -50,6 +101,7 @@ class LocalDatabase {
     }
     
     private var _AlertsOptional: [UUID:Notify]?
+    private var _AlertsOptional2: [Notify]?
     
     private var _AlertsLookup: [UUID:Notify] {
         get {
@@ -64,14 +116,33 @@ class LocalDatabase {
         }
     }
     
+    private var _AlertsLookup2: [Notify] {
+        get {
+            if _AlertsOptional2 == nil {
+                _AlertsOptional2 = loadNotifications2() ?? []
+            }
+            
+            return _AlertsOptional2!
+        }
+        set {
+            _AlertsOptional2 = newValue
+        }
+    }
+    
     var Alerts: [Notify] {
         get {
             return Array(_AlertsLookup.values.sorted(by: <))
         }
     }
     
+    var Alerts2: [Notify] {
+        get {
+            return Array(_AlertsLookup2.sorted(by: <))
+        }
+    }
+    
     func addAlert() -> Notify {
-        let alert = Notify()
+        let alert = Notify(idStr: "")
         _AlertsLookup[alert.id] = alert
         return alert
     }

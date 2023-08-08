@@ -27,7 +27,7 @@ class AlertListTableViewController: UITableViewController {
 
     fileprivate var dataSource: SwipeableDataSource!
     
-
+var notifications = [Notify]()
 
     override func viewDidLoad() {
         
@@ -35,32 +35,63 @@ class AlertListTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
         
         
-        dataSource = SwipeableDataSource(tableView: tableView) { tableView, indexPath, bill in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath)
-            
-            let alrt = LocalDatabase.shared.Alerts[indexPath.row]
-            
-            var content = cell.defaultContentConfiguration()
-            
-            content.text = alrt.payee
-            
-            content.secondaryText = String(format: "%@ - Due: %@", arguments: [(alrt.amount ?? 0).formatted(.currency(code: "usd")), alrt.formattedDueDate])
-            
-            cell.contentConfiguration = content
-            
-            return cell
-        }
-        
-        tableView.dataSource = dataSource
-        
-        updateSnapshot()
+        //updateSnapshot()
         
         NotificationCenter.default.addObserver(forName: LocalDatabase.UpdatedNotification, object: nil, queue: nil) { _ in
             self.updateSnapshot()
         }
         
+        fetchRemiinders()
         test()
     }
+    
+    func fetchRemiinders() {
+        let ref = Database.database().reference()
+        //let uid = Auth.auth().currentUser?.uid
+    
+        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            
+            for child in result {
+                
+                let key = child.key
+                let value = child.value as? NSDictionary
+            
+                
+                guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String, let time = value!["time"] as? String  else { return }
+                    
+                self.notifications.append(Notify(idStr: "", subject: subject, description: desc, date: date, time: time))
+                
+            }
+            self.tableView.reloadData()
+        })
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return notifications.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath)
+        
+        let alrt = notifications[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        
+//            content.text = alrt.payee
+        content.text = alrt.subject
+        
+//            content.secondaryText = String(format: "%@ - Due: %@", arguments: [(alrt.amount ?? 0).formatted(.currency(code: "usd")), alrt.formattedDueDate])
+        
+        content.secondaryText = "\(alrt.description) - \(alrt.date) : \(alrt.time)"
+        
+        cell.contentConfiguration = content
+        
+        return cell
+    }
+    
     
     func updateSnapshot() {
         
@@ -93,10 +124,16 @@ class AlertListTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+//        if let indexPath = sender as? IndexPath, segue.identifier == "alertDetail" {
+//            let navigationController = segue.destination as? UINavigationController
+//            let AlertDetailTableViewController = navigationController?.viewControllers.first as? AlertDetailTableViewController
+//            AlertDetailTableViewController?.alert = LocalDatabase.shared.Alerts[indexPath.row]
+//        }
+        
         if let indexPath = sender as? IndexPath, segue.identifier == "alertDetail" {
             let navigationController = segue.destination as? UINavigationController
             let AlertDetailTableViewController = navigationController?.viewControllers.first as? AlertDetailTableViewController
-            AlertDetailTableViewController?.alert = LocalDatabase.shared.Alerts[indexPath.row]
+            AlertDetailTableViewController?.alert = notifications[indexPath.row]
         }
     }
     
@@ -109,18 +146,25 @@ class AlertListTableViewController: UITableViewController {
         let ref = Database.database().reference()
         //let uid = Auth.auth().currentUser?.uid
         
-        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").observeSingleEvent(of: .value, with: {
+        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value, with: {
             snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
             
             for child in result {
                 let key = child.key
                 let value = child.value as? NSDictionary
                 
-                print(key)
-                print(value)
+//                let key = child("Notifications").key
+//                let value = child.value as? NSDictionary
+                
+//                let sub = value!["subject"] as? String
+            
+                //print(key)
+                print(value!["subject"])
+//                print(sub)
             }
         })
     }
+    
 
     // end of the class
 }
