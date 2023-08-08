@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 // Commint
 struct Teacher
@@ -18,4 +20,9 @@ struct Teacher
     var image: UIImage?
     var color: UIColor
     
+    
+   
+    
 }
+
+

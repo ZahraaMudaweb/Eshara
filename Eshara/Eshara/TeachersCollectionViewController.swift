@@ -11,6 +11,13 @@ import FirebaseAuth
 
 private let reuseIdentifier = "Cell"
 
+struct Notification {
+    var id : String
+    var subject : String
+    var desc : String
+    var date : String
+
+}
 
 
 
@@ -27,17 +34,8 @@ class TeachersCollectionViewController: UICollectionViewController
             Teacherdata(teacherName: "Ammar", teacherRate: 3, teacherLocation: "Manamma", teacherPrice: 9, color: UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1))
         ]
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    
+    var notifications = [Notification]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,7 +59,13 @@ class TeachersCollectionViewController: UICollectionViewController
     */
 
     // MARK: UICollectionViewDataSource
-
+    
+    func generateID(prefix: String) -> String {
+        let sampleId = UUID()
+        
+        return "\(prefix)\(sampleId)"
+    }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -128,27 +132,46 @@ class TeachersCollectionViewController: UICollectionViewController
         let selectedTeacher = teacherss[indexPath.row]
         
         
-   
+        
         
         if let des =  storyboard?.instantiateViewController(withIdentifier: "teacherData") as? TeachersDataViewController
         {
             des.teacher = selectedTeacher
             
             navigationController?.pushViewController(des, animated: true)
+            
+            teacherInfo()
         }
                 
     }
     
-    
-    func teachersInfo()
+    func teacherInfo()
     {
         let ref = Database.database().reference()
         
-        let uid = Auth.auth().currentUser?.uid
         
-       
-        
+        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value)
+        { [self]
+            snapshot in
+            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result
+            {
+                let key = child.key
+                let value = child.value as? NSDictionary
+                
+                let subject = value!["subject"] as! String
+                let desc = value!["desc"] as! String
+                let date = value!["date"] as! String
+                
+                self.notifications.append(Notification(id: generateID(prefix: "Not-"), subject: subject, desc: desc, date: date))
+               // print(key)
+              //  print(value)
+            }
+            print(self.notifications)
+        }
     }
+    
 
     
     // MARK: UICollectionViewDelegate
