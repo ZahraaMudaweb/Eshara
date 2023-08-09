@@ -51,6 +51,8 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
         
         tableView.addGestureRecognizer(tapGestureRecognizer)
         
+        //tableView(tableView: tableView, viewForHeaderInSection:0)
+        
         //amountTextField.keyboardType = .decimalPad
         
 //        paidDateLabel.text = ""
@@ -60,7 +62,7 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
         //updateDueDateUI()
         
         if let alert = alert {
-            title = "Edit Alert"
+            title = "تعديل التذكير"
             
 //            payeeTextField.text = alert.payee
             payeeTextField.text = alert.subject
@@ -85,11 +87,15 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
 //
 //            updatePaymentUI()
             
-            navigationItem.leftBarButtonItem = nil
+//            navigationItem.leftBarButtonItem = nil
+            
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "إلغاء", style: .plain, target: self, action: #selector(cancelButtonTapped))
             
         } else {
-            title = "Add Alert"
-            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonTapped))
+            title = "إضافة تذكير"
+//            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonTapped))
+            
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "إلغاء", style: .plain, target: self, action: #selector(cancelButtonTapped))
         }
     }
     
@@ -106,7 +112,7 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
         if remindSwitch.isOn {
             remindStatusLabel.text = remindDatePicker.date.formatted(date: .numeric, time: .shortened)
         } else {
-            remindStatusLabel.text = "No"
+            remindStatusLabel.text = "لا"
         }
     }
     
@@ -198,6 +204,32 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
         default:
             return 44
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerText = UILabel()
+        let headerView = UIView()
+//        headerText.textColor = UIColor.lightGrayColor()
+        headerText.adjustsFontSizeToFitWidth = true
+        
+        headerView.backgroundColor = UIColor.green
+        
+        switch section{
+        case 0:
+            headerText.textAlignment = .right
+            headerText.text = "الملاحظات"
+            headerText.font = UIFont(name: "FF Hekaya", size: 25)
+        case 1:
+            headerText.textAlignment = .right
+            headerText.text = "تفاصيل التذكير"
+            headerText.font = UIFont(name: "FF Hekaya", size: 25)
+        default:
+            headerText.textAlignment = .right
+            //headerText.text = "Default Will Be Left"
+            headerText.font = UIFont(name: "FF Hekaya", size: 25)
+        }
+
+        return headerText
     }
     
     func presentNeedAuthorizationAlert() {

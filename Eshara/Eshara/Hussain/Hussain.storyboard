@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FFHekaya-Light.otf">
+            <string>FFHekaya-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item 1-->
         <scene sceneID="05V-Q8-jIW">
@@ -31,31 +36,34 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9im-T4-ulR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ReminderCell" textLabel="fTn-9J-5oz" detailTextLabel="1aT-cJ-5zX" style="IBUITableViewCellStyleSubtitle" id="Dt0-fd-Rxu">
-                                <rect key="frame" x="0.0" y="50" width="393" height="55.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="84.666664123535156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dt0-fd-Rxu" id="w77-ZF-aLU">
-                                    <rect key="frame" x="0.0" y="0.0" width="349" height="55.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="84.666664123535156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fTn-9J-5oz">
-                                            <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
+                                            <rect key="frame" x="20.000000000000004" y="10.666666666666668" width="34.333333333333336" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1aT-cJ-5zX">
-                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="44" width="52.666666666666664" height="26.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.83386701350000003" green="0.86667865509999997" blue="0.29746806619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -63,7 +71,7 @@
                             <outlet property="delegate" destination="By6-DH-JMk" id="6kL-EI-FPf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reminders" id="o83-de-1XL">
+                    <navigationItem key="navigationItem" title="التذكيرات" id="o83-de-1XL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7eq-pG-m1D">
                             <connections>
                                 <segue destination="Znx-lT-xZm" kind="presentation" identifier="addReminder" id="EUO-eO-8Q0"/>
@@ -85,9 +93,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VGh-uS-1oP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <sections>
-                            <tableViewSection headerTitle="Notifications Details" id="kE9-M1-4uV">
+                            <tableViewSection headerTitle="الملاحظات" id="kE9-M1-4uV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fv0-ha-6rP">
                                         <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="44"/>
@@ -96,9 +104,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-eq-atG">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="العنوان" textAlignment="right" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-eq-atG">
                                                     <rect key="frame" x="8" y="0.0" width="377" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -109,6 +118,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="1wB-eq-atG" secondAttribute="trailing" constant="8" id="oYs-qw-4Ba"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.54099858010000001" blue="0.22544577090000001" alpha="0.90450323200000005" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="OZF-8G-183">
                                         <rect key="frame" x="0.0" y="99.333332061767578" width="393" height="44"/>
@@ -117,9 +127,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-Vd-u57">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الوصف" textAlignment="right" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-Vd-u57">
                                                     <rect key="frame" x="8" y="0.0" width="377" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="xf9-dz-BKx" id="Z8c-Se-437"/>
@@ -133,10 +144,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="cgn-Vd-u57" secondAttribute="bottom" id="f58-b5-o1a"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.54099858010000001" blue="0.22544577090000001" alpha="0.90450323200000005" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Remind" id="yB1-dN-0e3">
+                            <tableViewSection headerTitle="تفاصيل التذكير" id="yB1-dN-0e3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h1H-U4-dXA">
                                         <rect key="frame" x="0.0" y="199.33333015441895" width="393" height="44"/>
@@ -148,25 +160,26 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="pdR-AQ-zsC">
                                                     <rect key="frame" x="16" y="0.0" width="369" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Remind?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlA-R9-N2W">
-                                                            <rect key="frame" x="0.0" y="11.999999999999998" width="65.666666666666671" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG5-d4-emH">
-                                                            <rect key="frame" x="83.666666666666671" y="11.999999999999998" width="218.33333333333331" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-Gq-B06">
-                                                            <rect key="frame" x="320" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                                                            <rect key="frame" x="0.0" y="6.6666666666666679" width="51" height="31.000000000000004"/>
                                                             <connections>
                                                                 <action selector="remindSwitchChanged:" destination="xf9-dz-BKx" eventType="valueChanged" id="a0Q-BP-uUV"/>
                                                             </connections>
                                                         </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG5-d4-emH">
+                                                            <rect key="frame" x="66.999999999999986" y="10" width="233.66666666666663" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="تذكير؟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlA-R9-N2W">
+                                                            <rect key="frame" x="318.66666666666669" y="10" width="50.333333333333314" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -176,6 +189,7 @@
                                                 <constraint firstItem="pdR-AQ-zsC" firstAttribute="leading" secondItem="tOh-dW-35b" secondAttribute="leading" constant="16" id="huC-Ig-SJI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.97737926739431391" green="0.52876079587842184" blue="0.22034602242228332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="215" id="Kc0-q9-Adb">
                                         <rect key="frame" x="0.0" y="243.33333015441895" width="393" height="215"/>
@@ -186,6 +200,7 @@
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="9VG-YC-lRU">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="215"/>
+                                                    <locale key="locale" localeIdentifier="ar_BH"/>
                                                     <connections>
                                                         <action selector="remindDatePickerValueChanged:" destination="xf9-dz-BKx" eventType="valueChanged" id="H01-Eh-ZDJ"/>
                                                     </connections>
@@ -207,8 +222,8 @@
                             <outlet property="delegate" destination="xf9-dz-BKx" id="GxL-LE-acf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add/Edit Bill" id="KU1-8W-ZGV" userLabel="Add/Edit Reminder">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NaI-ma-Heh">
+                    <navigationItem key="navigationItem" title="إضافة / تعديل تذكير" id="KU1-8W-ZGV" userLabel="Add/Edit Reminder">
+                        <barButtonItem key="rightBarButtonItem" title="حفظ" id="NaI-ma-Heh">
                             <connections>
                                 <action selector="doneButtonTapped" destination="xf9-dz-BKx" id="Exm-pt-55M"/>
                                 <segue destination="64k-39-fen" kind="unwind" identifier="saveUnwind" unwindAction="unwindFromBillDetailWithSegue:" id="4wS-Kb-C3R"/>
@@ -300,11 +315,11 @@
         <segue reference="BWq-40-Ilw"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

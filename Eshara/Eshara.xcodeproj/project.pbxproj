@@ -23,6 +23,7 @@
 		6A9917972A7AB6870032A737 /* NotifyExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9917962A7AB6870032A737 /* NotifyExtra.swift */; };
 		6A99179A2A7ABC280032A737 /* AlertDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9917992A7ABC280032A737 /* AlertDetailTableViewController.swift */; };
 		6A99179C2A7ABC700032A737 /* AlertListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A99179B2A7ABC700032A737 /* AlertListTableViewController.swift */; };
+		6AA7A6742A83E779000A19A0 /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AA7A6732A83E779000A19A0 /* FFHekaya-Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		6A9917962A7AB6870032A737 /* NotifyExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyExtra.swift; sourceTree = "<group>"; };
 		6A9917992A7ABC280032A737 /* AlertDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDetailTableViewController.swift; sourceTree = "<group>"; };
 		6A99179B2A7ABC700032A737 /* AlertListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListTableViewController.swift; sourceTree = "<group>"; };
+		6AA7A6732A83E779000A19A0 /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FFHekaya-Light.otf"; path = "Icons - Colors - Font/FFHekaya-Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		6740ACDD2A794959006CE7DA /* Eshara */ = {
 			isa = PBXGroup;
 			children = (
+				6AA7A6732A83E779000A19A0 /* FFHekaya-Light.otf */,
 				6A99178E2A7A90190032A737 /* Hussain */,
 				6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */,
 				6740ACDE2A794959006CE7DA /* AppDelegate.swift */,
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A9917902A7A938F0032A737 /* Hussain.storyboard in Resources */,
+				6AA7A6742A83E779000A19A0 /* FFHekaya-Light.otf in Resources */,
 				6740ACEB2A79495A006CE7DA /* LaunchScreen.storyboard in Resources */,
 				6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */,
 				6740ACE82A79495A006CE7DA /* Assets.xcassets in Resources */,

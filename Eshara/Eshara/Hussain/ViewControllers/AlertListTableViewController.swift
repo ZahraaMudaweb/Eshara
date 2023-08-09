@@ -34,6 +34,7 @@ var notifications = [Notify]()
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
         
+        tableView.delegate = self
         
         //updateSnapshot()
         
@@ -70,6 +71,14 @@ var notifications = [Notify]()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notifications.count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let spacing: CGFloat = 75 // Set the desired spacing between cells
+        
+        // Return the sum of the default height and the spacing for each row
+        return tableView.rowHeight + spacing
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
