@@ -33,6 +33,7 @@ class TeachersDataCollectionViewCell: UICollectionViewCell {
         
         layer.cornerRadius = 10
         layer.masksToBounds = true
+        
     }
   
     

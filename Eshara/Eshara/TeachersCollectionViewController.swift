@@ -26,6 +26,11 @@ class TeachersCollectionViewController: UICollectionViewController
    
     
     
+    
+   
+    
+    
+    
     let teacherss: [Teacherdata] =
     [
             Teacherdata(teacherName: "Ali", teacherRate: 4.5, teacherLocation: "Sitra", teacherPrice: 8, color: UIColor(red: (1/255.0), green: (145/255.0), blue: (180/255.0), alpha: 1)),
@@ -44,6 +49,7 @@ class TeachersCollectionViewController: UICollectionViewController
 
         // Register cell classes
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -94,7 +100,7 @@ class TeachersCollectionViewController: UICollectionViewController
     
     private func generateLayout() -> UICollectionViewLayout
     {
-        
+        view.backgroundColor = UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
         
         let space: CGFloat = 30
         
