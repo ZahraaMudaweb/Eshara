@@ -25,6 +25,7 @@ private class SwipeableDataSource: UITableViewDiffableDataSource<Int, Notify> {
 class AlertListTableViewController: UITableViewController {
 
 
+    
     fileprivate var dataSource: SwipeableDataSource!
     
 var notifications = [Notify]()
@@ -35,6 +36,8 @@ var notifications = [Notify]()
         navigationItem.leftBarButtonItem = editButtonItem
         
         tableView.delegate = self
+        
+       // tableView.register(GradientTableViewCell.self, forCellReuseIdentifier: "ReminderCell")
         
         //updateSnapshot()
         
@@ -75,7 +78,7 @@ var notifications = [Notify]()
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let spacing: CGFloat = 75 // Set the desired spacing between cells
+        let spacing: CGFloat = 100 // Set the desired spacing between cells
         
         // Return the sum of the default height and the spacing for each row
         return tableView.rowHeight + spacing
@@ -83,20 +86,45 @@ var notifications = [Notify]()
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath) as! GradientTableViewCell
+        
         
         let alrt = notifications[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
+//        var content = cell.defaultContentConfiguration()
         
 //            content.text = alrt.payee
-        content.text = alrt.subject
+        //content.text = alrt.subject
         
 //            content.secondaryText = String(format: "%@ - Due: %@", arguments: [(alrt.amount ?? 0).formatted(.currency(code: "usd")), alrt.formattedDueDate])
         
-        content.secondaryText = "\(alrt.description) - \(alrt.date) : \(alrt.time)"
+        //content.secondaryText = "\(alrt.description) - \(alrt.date) : \(alrt.time)"
+                
+        //content.directionalLayoutMargins = .init(top: 20.0, leading: 10.0, bottom: 20.0, trailing: 10.0)
         
-        cell.contentConfiguration = content
+//        cell.titleLabel.text = alrt.subject
+//        cell.subtitleLabel.text = "\(alrt.description) - \(alrt.date) : \(alrt.time)"
+        // Access the label inside the stack view using the outlet
+        cell.vStackView.layer.cornerRadius = 20
+        cell.vStackView.clipsToBounds = true
+        
+        cell.titleLabel.text = alrt.subject
+        cell.subtitleLabel.text = "\(alrt.description) - \(alrt.date) : \(alrt.time)"
+        
+        for subview in cell.vStackView.arrangedSubviews {
+            // Check if the subview is a label
+            if let label = subview as? UILabel {
+                // Adjust the layout margins to add the right margin
+                label.layoutMargins.right = 100 // Update the value as per your requirement
+            }
+        }
+        
+        cell.titleLabel.layoutMargins.right = 400
+        cell.subtitleLabel.layoutMargins.right = 77
+        
+//        cell.contentConfiguration = content
         
         return cell
     }
@@ -112,7 +140,8 @@ var notifications = [Notify]()
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, completionHandler) in
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "حـذف") { (contextualAction, view, completionHandler) in
             
             guard let alert = self.dataSource.itemIdentifier(for: indexPath) else { return }
             LocalDatabase.shared.delete(alert: alert)

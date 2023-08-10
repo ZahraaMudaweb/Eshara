@@ -38,32 +38,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ReminderCell" textLabel="fTn-9J-5oz" detailTextLabel="1aT-cJ-5zX" style="IBUITableViewCellStyleSubtitle" id="Dt0-fd-Rxu">
-                                <rect key="frame" x="0.0" y="50" width="393" height="84.666664123535156"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="280" id="Dt0-fd-Rxu" customClass="GradientTableViewCell" customModule="Eshara" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dt0-fd-Rxu" id="w77-ZF-aLU">
-                                    <rect key="frame" x="0.0" y="0.0" width="349" height="84.666664123535156"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fTn-9J-5oz">
-                                            <rect key="frame" x="20.000000000000004" y="10.666666666666668" width="34.333333333333336" height="29"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="24"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1aT-cJ-5zX">
-                                            <rect key="frame" x="19.999999999999996" y="44" width="52.666666666666664" height="26.666666666666668"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-8n-Sax">
+                                            <rect key="frame" x="5" y="10" width="339" height="267.33333333333331"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-sn-ffz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="267.33333333333331"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uut-3w-UpJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="177"/>
+                                                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
+                                                            <color key="textColor" red="0.320040822" green="0.42072913049999999" blue="0.61183613540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr0-wL-fEM">
+                                                            <rect key="frame" x="0.0" y="167" width="339" height="100.33333333333331"/>
+                                                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                            <color key="textColor" red="0.320040822" green="0.42072913049999999" blue="0.61183613540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.83386701350000003" green="0.86667865509999997" blue="0.29746806619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="uDz-sn-ffz" secondAttribute="bottom" id="81Y-AV-t7p"/>
+                                                <constraint firstItem="uDz-sn-ffz" firstAttribute="top" secondItem="L3w-8n-Sax" secondAttribute="top" id="FSZ-Aw-1uB"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.83386701350000003" green="0.86667865509999997" blue="0.29746806619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="L3w-8n-Sax" firstAttribute="leading" secondItem="w77-ZF-aLU" secondAttribute="leading" constant="5" id="0oO-4i-MWV"/>
+                                        <constraint firstItem="L3w-8n-Sax" firstAttribute="top" secondItem="w77-ZF-aLU" secondAttribute="topMargin" constant="-0.99999999999999645" id="3BP-AM-SwE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="L3w-8n-Sax" secondAttribute="bottom" constant="-8.3333333333333428" id="A6u-Wr-KDy"/>
+                                        <constraint firstAttribute="trailing" secondItem="L3w-8n-Sax" secondAttribute="trailing" constant="5" id="Pxq-hP-blZ"/>
+                                    </constraints>
                                     <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.40000000000000002" height="0.40000000000000002"/>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="Sr0-wL-fEM" id="vIG-X8-mDb"/>
+                                    <outlet property="titleLabel" destination="uut-3w-UpJ" id="3Fj-C2-2MZ"/>
+                                    <outlet property="vStackView" destination="uDz-sn-ffz" id="RrR-dq-ySh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -251,6 +275,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PBy-GQ-gwm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="30"/>
+                            <color key="textColor" red="0.93108457330000005" green="0.508118391" blue="0.21531534190000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -300,6 +328,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7dU-8X-v9V">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="30"/>
+                            <color key="textColor" red="0.93108457330000005" green="0.508118391" blue="0.21531534190000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
