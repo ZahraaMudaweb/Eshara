@@ -38,7 +38,6 @@ class FireBaseViewController: UIViewController
         let uid = Auth.auth().currentUser?.uid
         
         
-        
     }
     
     

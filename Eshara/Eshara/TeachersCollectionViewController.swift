@@ -27,8 +27,6 @@ class TeachersCollectionViewController: UICollectionViewController
     
     
     
-   
-    
     
     
     let teacherss: [Teacherdata] =
@@ -115,7 +113,7 @@ class TeachersCollectionViewController: UICollectionViewController
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .absolute(170.0)
-        )
+        )   
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
 
@@ -140,43 +138,43 @@ class TeachersCollectionViewController: UICollectionViewController
         
         
         
-        if let des =  storyboard?.instantiateViewController(withIdentifier: "teacherData") as? TeachersDataViewController
-        {
-            des.teacher = selectedTeacher
-            
-            navigationController?.pushViewController(des, animated: true)
-            
-            teacherInfo()
-        }
+        guard let dec = storyboard?.instantiateViewController(withIdentifier: "teacherData") as? TeachersDataViewController else {return}
+        
+        dec.teacher = selectedTeacher
+        
+        navigationController?.pushViewController(dec, animated: true)
+        
                 
     }
     
-    func teacherInfo()
-    {
-        let ref = Database.database().reference()
-        
-        
-        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value)
-        { [self]
-            snapshot in
-            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
-            
-            for child in result
-            {
-                let key = child.key
-                let value = child.value as? NSDictionary
-                
-                let subject = value!["subject"] as! String
-                let desc = value!["desc"] as! String
-                let date = value!["date"] as! String
-                
-                self.notifications.append(Notification(id: generateID(prefix: "Not-"), subject: subject, desc: desc, date: date))
-               // print(key)
-              //  print(value)
-            }
-            print(self.notifications)
-        }
-    }
+    //navigationController?.pushViewController(des, animated: true)
+    
+//    func teacherInfo()
+//    {
+//        let ref = Database.database().reference()
+//
+//
+//        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value)
+//        { [self]
+//            snapshot in
+//            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+//
+//            for child in result
+//            {
+//                let key = child.key
+//                let value = child.value as? NSDictionary
+//
+//                let subject = value!["subject"] as! String
+//                let desc = value!["desc"] as! String
+//                let date = value!["date"] as! String
+//
+//                self.notifications.append(Notification(id: generateID(prefix: "Not-"), subject: subject, desc: desc, date: date))
+//               print(key)
+//                print(value)
+//            }
+//            print(self.notifications)
+//        }
+//   }
     
 
     
