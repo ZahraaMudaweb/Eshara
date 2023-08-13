@@ -25,6 +25,8 @@ class TeachersDataCollectionViewCell: UICollectionViewCell {
         PriceLabel.text = "\(teacherPrice)"
         RateLabel.text = "\(teacherRate)"
         nameLabel.text = teacherName
+        
+        nameLabel.textAlignment = .right
     }
     
     

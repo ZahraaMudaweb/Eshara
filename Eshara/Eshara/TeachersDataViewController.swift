@@ -16,42 +16,35 @@ class TeachersDataViewController: UIViewController
 {
 
     // commetS
-    
-    @IBOutlet var locationLabel: UILabel!
-    
-    @IBOutlet var rateLabel: UILabel!
+
     
     
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var UpView: UIView!
     
     
     
-    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var DownView: UIView!
+    
+    @IBOutlet var LocationLabel: UILabel!
+    
+    @IBOutlet var RateLabel: UILabel!
     
     
+    @IBOutlet var NameLabel: UILabel!
     
+    @IBOutlet var PriceLabel: UILabel!
     
-    @IBOutlet var TeacherView: UIView!
+
     
-    
-    
-    
-    @IBOutlet var TeacherInforView: UIView!
-    
-    
-    
-    
-    
-    @IBOutlet var StudentButton: UIButton!
+    @IBOutlet var ReviewsButton: UIButton!
     
     
     
     
-    @IBOutlet var BookButton: UIButton!
+    @IBOutlet var BookmarkButton: UIButton!
     
     
     
-    @IBOutlet var ButtonsView: UIView!
     
     
     var teacher : Teacherdata?
@@ -61,7 +54,7 @@ class TeachersDataViewController: UIViewController
     {
         super.viewDidLoad()
         
-        nameLabel.text = teacher?.teacherName
+       
         
     TeacherViewLayOut()
        
@@ -72,27 +65,41 @@ class TeachersDataViewController: UIViewController
     func TeacherViewLayOut()
     {
         
-        TeacherView.layer.cornerRadius = 10
-        TeacherView.layer.masksToBounds = true
-        TeacherView.backgroundColor = UIColor(red: (1/255.0), green: (145/255.0), blue: (180/255.0), alpha: 1)
+        UpView.layer.cornerRadius = 10
+        UpView.layer.masksToBounds = true
+        UpView.backgroundColor = UIColor(red: (1/255.0), green: (145/255.0), blue: (180/255.0), alpha: 1)
         
-        TeacherInforView.layer.cornerRadius = 10
-        TeacherInforView.layer.masksToBounds = true
-        TeacherInforView.backgroundColor = UIColor(red: (211/255.0), green: (221/255.0), blue: (24/255.0), alpha:1)
-        
-        
-        StudentButton.layer.cornerRadius = 10
-        StudentButton.layer.masksToBounds = true
-        StudentButton.backgroundColor = UIColor(red: (248/255.0), green: (217/255.0), blue: (15/255.0), alpha:1)
-        
-        BookButton.layer.cornerRadius = 10
-        BookButton.layer.masksToBounds = true
-        BookButton.backgroundColor = UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1)
+        DownView.layer.cornerRadius = 10
+        DownView.layer.masksToBounds = true
+        DownView.backgroundColor = UIColor(red: (211/255.0), green: (221/255.0), blue: (24/255.0), alpha:1)
         
         
-        ButtonsView.backgroundColor = UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
+        ReviewsButton.layer.cornerRadius = 10
+        ReviewsButton.layer.masksToBounds = true
+        ReviewsButton.backgroundColor = UIColor(red: (248/255.0), green: (217/255.0), blue: (15/255.0), alpha:1)
         
+        BookmarkButton.layer.cornerRadius = 10
+        BookmarkButton.layer.masksToBounds = true
+        BookmarkButton.backgroundColor = UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1)
+        
+        
+//        ButtonsView.backgroundColor = UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
+//
         view.backgroundColor = UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
     }
     // TeacherView.backgroundColor = UIColor(red: (211/255.0), green: (221/255.0), blue: (24/255.0), alpha: 1)
+    
+    
+    @IBAction func ReviewsButtontap(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "reviews", sender: sender)
+    }
+    
+    
+    
+    @IBAction func BookMarkButtonTap(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "Book", sender: sender)
+    }
+    
 }

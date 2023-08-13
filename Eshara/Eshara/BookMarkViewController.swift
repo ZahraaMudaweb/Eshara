@@ -11,6 +11,7 @@ class BookMarkViewController: UIViewController {
 
     
     
+    @IBOutlet var ConfButtin: UIButton!
     
     @IBOutlet var bookDatePicker: UIDatePicker!
     
@@ -33,6 +34,8 @@ class BookMarkViewController: UIViewController {
     }
     
 
+    
+    
     
     
     func datePickerSet(_ datePicker: UIDatePicker)
@@ -58,16 +61,41 @@ class BookMarkViewController: UIViewController {
         datePicker.locale = Locale.current
         datePicker.timeZone = TimeZone.current
         datePicker.date = currentDate
+        
+        datepickerlabel.text = bookDatePicker.date.formatted(date: .numeric, time: .omitted)
        
-
+        Style()
 
     }
     
+    
+    func updateRemindUI()
+    {
+        datepickerlabel.text = bookDatePicker.date.formatted(date: .numeric, time: .shortened)
+    }
     
     @IBAction func ConfButtonTap(_ sender: UIButton)
     {
         performSegue(withIdentifier: "conf", sender: sender)
     }
+    
+    
+    
+    @IBAction func DatePickerTapp(_ sender: UIDatePicker)
+    {
+        updateRemindUI()
+    }
+    
+    
+    func Style()
+    {
+        ConfButtin.backgroundColor = UIColor(red: (53/255.0), green: (187/255.0), blue: (202/255.0), alpha: 1)
+        ConfButtin.layer.cornerRadius = 10
+        ConfButtin.layer.masksToBounds = true
+    //    ConfButtin.colo
+    }
+    
+    
     
     
     

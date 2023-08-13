@@ -86,9 +86,11 @@ class TeachersCollectionViewController: UICollectionViewController
         
         let teacherData = teacherss[indexPath.row]
        
+        cell.nameLabel.textAlignment = .right
         
         cell.name(teacherName: teacherData.teacherName, teacherRate: teacherData.teacherRate, teacherLocation: teacherData.teacherLocation, teacherPrice: teacherData.teacherPrice)
         cell.backgroundColor = teacherData.color
+        
         
        
 
@@ -146,6 +148,9 @@ class TeachersCollectionViewController: UICollectionViewController
         
                 
     }
+    
+    
+    
     
     //navigationController?.pushViewController(des, animated: true)
     
