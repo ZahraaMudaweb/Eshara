@@ -42,6 +42,17 @@ struct Notify: Codable {
         self.time = time
         self.remindDate = remindDate
     }
+    
+    func dictionaryRepresentation() -> [String: Any] {
+        var dict: [String: Any] = [:]
+        dict["subject"] = subject
+        dict["desc"] = description
+        dict["date"] = date
+        //dict["paidDate"] = paidDate
+        // Add any other properties you want to include in the dictionary
+        
+        return dict
+    }
 }
 
 extension Notify: Hashable {

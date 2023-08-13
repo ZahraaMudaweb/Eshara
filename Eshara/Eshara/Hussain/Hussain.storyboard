@@ -144,15 +144,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.54099858010000001" blue="0.22544577090000001" alpha="0.90450323200000005" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="OZF-8G-183">
-                                        <rect key="frame" x="0.0" y="99.333332061767578" width="393" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="OZF-8G-183">
+                                        <rect key="frame" x="0.0" y="99.333332061767578" width="393" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OZF-8G-183" id="tar-Ko-zFR">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الوصف" textAlignment="right" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-Vd-u57">
-                                                    <rect key="frame" x="8" y="0.0" width="377" height="44"/>
+                                                    <rect key="frame" x="8" y="0.0" width="377" height="100"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -175,7 +175,7 @@
                             <tableViewSection headerTitle="تفاصيل التذكير" id="yB1-dN-0e3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h1H-U4-dXA">
-                                        <rect key="frame" x="0.0" y="199.33333015441895" width="393" height="44"/>
+                                        <rect key="frame" x="0.0" y="255.33333015441895" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h1H-U4-dXA" id="tOh-dW-35b">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -216,7 +216,7 @@
                                         <color key="backgroundColor" red="0.97737926739431391" green="0.52876079587842184" blue="0.22034602242228332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="215" id="Kc0-q9-Adb">
-                                        <rect key="frame" x="0.0" y="243.33333015441895" width="393" height="215"/>
+                                        <rect key="frame" x="0.0" y="299.33333015441895" width="393" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kc0-q9-Adb" id="kNC-9U-D1l">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="215"/>

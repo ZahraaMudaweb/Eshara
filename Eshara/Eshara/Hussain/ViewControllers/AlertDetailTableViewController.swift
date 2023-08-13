@@ -7,10 +7,15 @@
 
 import UIKit
 
+import FirebaseAuth
+import FirebaseDatabase
+
+
 class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate {
     private let datePickerHeight = CGFloat(216)
     private let dueDateCellIndexPath = IndexPath(row: 2, section: 0)
     private let remindDateCellIndexPath = IndexPath(row:0, section: 1)
+    private let noteCellIndexPath = IndexPath(row:1, section: 0)
     
     @IBOutlet var payeeTextField: UITextField!
     @IBOutlet var amountTextField: UITextField!
@@ -201,6 +206,9 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
             } else {
                 return 0
             }
+        case (noteCellIndexPath.section, noteCellIndexPath.row ):
+                return 100
+            
         default:
             return 44
         }
@@ -266,30 +274,74 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        var alrt = self.alert ?? LocalDatabase.shared.addAlert()
+        //var alrt = self.alert ?? LocalDatabase.shared.addAlert()
         
-        alrt.payee = payeeTextField.text
-        alrt.amount = Double(amountTextField.text ?? "0") ?? 0.00
-        alrt.dueDate = dueDatePicker.date
-        alrt.paidDate = paidDate
+//        alrt.payee = payeeTextField.text
+//        alrt.amount = Double(amountTextField.text ?? "0") ?? 0.00
+//        alrt.dueDate = dueDatePicker.date
+//        alrt.paidDate = paidDate
+//
+//        if remindSwitch.isOn {
+//            alrt.scheduleReminder(on: remindDatePicker.date) { (updatedAlert) in
+//                if updatedAlert.notificationID == nil {
+//                    self.presentNeedAuthorizationAlert()
+//                }
+//
+//                LocalDatabase.shared.updateAndSave(updatedAlert)
+//            }
+//        } else {
+//            alrt.removeReminder()
+//            LocalDatabase.shared.updateAndSave(alrt)
+//        }
         
-        if remindSwitch.isOn {
-            alrt.scheduleReminder(on: remindDatePicker.date) { (updatedAlert) in
-                if updatedAlert.notificationID == nil {
-                    self.presentNeedAuthorizationAlert()
-                }
-                
-                LocalDatabase.shared.updateAndSave(updatedAlert)
+        var alrt = self.alert ?? Notify(id: UUID(), idStr: "")
+//        alrt.subject = payeeTextField.text ?? ""
+//        alrt.description = amountTextField!.text ?? ""
+//        alrt.dueDate = dueDatePicker.date
+//        alrt.paidDate = paidDate
+
+        let remindDateFormatter = DateFormatter()
+        remindDateFormatter.dateFormat = "yyyy-MM-dd"
+
+        
+        
+        guard let subject = payeeTextField.text,
+              let description = amountTextField!.text,
+              let remindDate = remindDateFormatter.string(from: remindDatePicker.date) as? String ,
+              let hasReminder =  remindSwitch.isOn ? 1 : 0 else { return }
+
+        alrt.subject = subject
+        alrt.description = description
+        alrt.date = remindDate
+        //alrt.paidDate = hasReminder
+//
+//        guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String, let time = value!["time"] as? String  else { return }
+//
+//        self.notifications.append(Notify(idStr: "", subject: subject, description: desc, date: date, time: time))
+        
+        // Assuming you have a Firebase reference and user ID
+        let ref = Database.database().reference().child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications")
+        let alertRef = ref.childByAutoId()
+
+        alertRef.setValue(alrt.dictionaryRepresentation()) { (error, _) in
+            
+            if let error = error {
+                // Handle the error
+                print("Error adding alert to Firebase: \(error.localizedDescription)")
+            } else {
+                // Alert added successfully
+                print("Alert added to Firebase")
             }
-        } else {
-            alrt.removeReminder()
-            LocalDatabase.shared.updateAndSave(alrt)
         }
+ 
     }
     
     @objc func cancelButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
 
 
 }
