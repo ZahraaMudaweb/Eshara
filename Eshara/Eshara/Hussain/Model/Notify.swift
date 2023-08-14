@@ -55,6 +55,12 @@ struct Notify: Codable {
     }
 }
 
+
+struct Section: Codable {
+    var title: String
+    var Alerts: [Notify]
+}
+
 extension Notify: Hashable {
 //    static func ==(_ lhs: Bill, _ rhs: Bill) -> Bool {
 //        return lhs.id == rhs.id

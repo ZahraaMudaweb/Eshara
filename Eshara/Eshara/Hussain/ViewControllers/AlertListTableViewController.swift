@@ -46,8 +46,19 @@ var notifications = [Notify]()
         }
         
         fetchRemiinders()
-        test()
+//        //test()
+//
+        tableView.reloadData()
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        // Reload the table view to refresh the displayed data
+//        //fetchRemiinders()
+//
+//        //tableView.reloadData()
+//    }
     
     func fetchRemiinders() {
         let ref = Database.database().reference()
@@ -63,9 +74,9 @@ var notifications = [Notify]()
                 let value = child.value as? NSDictionary
             
                 
-                guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String, let time = value!["time"] as? String  else { return }
-                    
-                self.notifications.append(Notify(idStr: "", subject: subject, description: desc, date: date, time: time))
+                guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String else { return }
+//                , let time = value!["time"] as? String
+                self.notifications.append(Notify(idStr: "", subject: subject, description: desc, date: date, time: "-2"))
                 
             }
             self.tableView.reloadData()
@@ -175,7 +186,48 @@ var notifications = [Notify]()
         }
     }
     
-    @IBAction func unwindFromBillDetail(segue: UIStoryboardSegue) { }
+    
+    @IBSegueAction func addEditAlerts(_ coder: NSCoder, sender: Any?) -> AlertDetailTableViewController? {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            // Editing alert
+            let alertToEdit = notifications[indexPath.item]
+            return AlertDetailTableViewController(coder: coder, alert:alertToEdit)
+        } else {
+            // Adding alert
+            return AlertDetailTableViewController(coder: coder, alert: nil)
+        }
+    }
+    
+//    todo next time
+//    func indexPath(for alert: Notify) -> IndexPath? {
+//        if let sectionIndex = sections.firstIndex(where: { $0.title == emoji.sectionTitle }),
+//            let index = sections[sectionIndex].emojis.firstIndex(where: { $0 == emoji })
+//        {
+//            return IndexPath(item: index, section: sectionIndex)
+//        }
+//
+//        return nil
+//    }
+//
+//    @IBAction func unwindToEmojiTableView(segue: UIStoryboardSegue) {
+//        guard segue.identifier == "saveUnwind",
+//            let sourceViewController = segue.source as? AddEditEmojiTableViewController,
+//            let emoji = sourceViewController.emoji else { return }
+//
+//        if let path = collectionView.indexPathsForSelectedItems?.first, let i = emojis.firstIndex(where: { $0 == emoji }) {
+//            emojis[i] = emoji
+//            updateSections()
+//
+//            collectionView.reloadItems(at: [path])
+//        } else {
+//            emojis.append(emoji)
+//            updateSections()
+//
+//            if let newIndexPath = indexPath(for: emoji) {
+//                collectionView.insertItems(at: [newIndexPath])
+//            }
+//        }
+//    }
     
     
     

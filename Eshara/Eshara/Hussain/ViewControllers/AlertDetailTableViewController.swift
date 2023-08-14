@@ -44,6 +44,18 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
     var alert: Notify?
     var paidDate: Date?
     
+    
+    init?(coder: NSCoder, alert: Notify?) {
+        self.alert = alert
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -295,6 +307,14 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
 //        }
         
         var alrt = self.alert ?? Notify(id: UUID(), idStr: "")
+        
+        if let alrtid = alrt.idStr
+        {
+            
+        }
+        else{
+            
+        }
 //        alrt.subject = payeeTextField.text ?? ""
 //        alrt.description = amountTextField!.text ?? ""
 //        alrt.dueDate = dueDatePicker.date
@@ -320,10 +340,10 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
 //        self.notifications.append(Notify(idStr: "", subject: subject, description: desc, date: date, time: time))
         
         // Assuming you have a Firebase reference and user ID
-        let ref = Database.database().reference().child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications")
+        let ref = Database.database().reference().child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").child("Not-\(UUID())")
         let alertRef = ref.childByAutoId()
 
-        alertRef.setValue(alrt.dictionaryRepresentation()) { (error, _) in
+        ref.setValue(alrt.dictionaryRepresentation()) { (error, _) in
             
             if let error = error {
                 // Handle the error
@@ -331,6 +351,13 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
             } else {
                 // Alert added successfully
                 print("Alert added to Firebase")
+                
+                if let destinationVC = segue.destination as? AlertListTableViewController {
+                       // Pass the necessary data to the destination view controller
+                   // destinationVC.fetchRemiinders()
+                    destinationVC.notifications.append(alrt)
+                    destinationVC.tableView.reloadData()
+                   }
             }
         }
  
