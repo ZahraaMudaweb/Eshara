@@ -1,55 +1,37 @@
 //
-//  ConformationforBookingViewController.swift
+//  AddReviewViewController.swift
 //  Eshara
 //
-//  Created by iOSdev on 14/08/2023.
+//  Created by A M on 8/15/23.
 //
 
 import UIKit
 
-class ConformationforBookingViewController: UIViewController
-{
+class AddReviewViewController: UIViewController {
+
+    
+    @IBOutlet var StudentCommentView: UIView!
     
     
-    @IBOutlet var ConfoView: UIView!
-    
-    @IBOutlet var SucffleBookkMarket: UILabel!
-    
-   
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var StudentButtonComment: UIButton!
     
     
-    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var rateLabel: UILabel!
     
-    var timeString = ""
+    @IBOutlet var oneLabel: UILabel!
     
-    @IBOutlet var dayLabel: UILabel!
     
-    var dayString = ""
     
-    @IBOutlet var teacherNameLabel: UILabel!
     
-    var TeacherString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
-        timeLabel.text = timeString
-        dayLabel.text = dayString
-        
     }
     
 
-    
-    
-    
-    
-  
-    
-    
-    
     /*
     // MARK: - Navigation
 
@@ -59,5 +41,16 @@ class ConformationforBookingViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    func style()
+    {
+        
+        
+        
+        
+        
+    }
 
 }

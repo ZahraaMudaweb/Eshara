@@ -7,17 +7,20 @@
 
 import UIKit
 
+
 class BookMarkViewController: UIViewController {
 
-    
+
     
     @IBOutlet var ConfButtin: UIButton!
     
     @IBOutlet var bookDatePicker: UIDatePicker!
     
-    
+  var testing = "HelloWord"
     
     @IBOutlet var datepickerlabel: UILabel!
+    
+    
     
     override func viewDidLoad()
     {
@@ -84,7 +87,34 @@ class BookMarkViewController: UIViewController {
     @IBAction func DatePickerTapp(_ sender: UIDatePicker)
     {
         updateRemindUI()
+        
+      
+ 
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "conf", let destinationVC = segue.destination as? ConformationforBookingViewController
+        {
+              let datetime = DateFormatter()
+              datetime.dateFormat = "HH:mm"
+                
+            let dateday = DateFormatter()
+            
+            dateday.dateFormat = "dd"
+            let datedaystring = dateday.string(from: bookDatePicker.date)
+       
+           
+              let dateString = datetime.string(from: bookDatePicker.date)
+            destinationVC.dayString = datedaystring
+            destinationVC.timeString = dateString
+            destinationVC.navigationItem.setHidesBackButton(true, animated: false)
+            
+        }
+       
+    }
+    
+    
     
     
     func Style()
@@ -95,8 +125,7 @@ class BookMarkViewController: UIViewController {
     //    ConfButtin.colo
     }
     
-    
-    
+ 
     
     
     /*

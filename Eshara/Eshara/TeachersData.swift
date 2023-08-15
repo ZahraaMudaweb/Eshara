@@ -22,6 +22,14 @@ struct Teacherdata
     var color: UIColor
 }
 
+struct StudentReviews
+{
+    var StudentName: String
+    var StudentRate: Double
+    var StudetComment: String
+    var studentIMage: UIImage?
+}
+
 
 //extension Teacherdata
 //{
