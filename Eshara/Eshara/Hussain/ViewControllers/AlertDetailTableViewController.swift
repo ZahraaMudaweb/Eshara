@@ -306,60 +306,22 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
 //            LocalDatabase.shared.updateAndSave(alrt)
 //        }
         
-        var alrt = self.alert ?? Notify(id: UUID(), idStr: "")
+        guard segue.identifier == "saveUnwind" else { return }
         
-        if let alrtid = alrt.idStr
-        {
-            
-        }
-        else{
-            
-        }
-//        alrt.subject = payeeTextField.text ?? ""
-//        alrt.description = amountTextField!.text ?? ""
-//        alrt.dueDate = dueDatePicker.date
-//        alrt.paidDate = paidDate
-
+    
+        let subject = payeeTextField.text ?? ""
+        let desc = amountTextField.text ?? ""
+        
         let remindDateFormatter = DateFormatter()
         remindDateFormatter.dateFormat = "yyyy-MM-dd"
 
-        
-        
-        guard let subject = payeeTextField.text,
-              let description = amountTextField!.text,
-              let remindDate = remindDateFormatter.string(from: remindDatePicker.date) as? String ,
-              let hasReminder =  remindSwitch.isOn ? 1 : 0 else { return }
+        let remindDate = remindDateFormatter.string(from: remindDatePicker.date) as? String ??  remindDateFormatter.string(from: Date())
 
-        alrt.subject = subject
-        alrt.description = description
-        alrt.date = remindDate
-        //alrt.paidDate = hasReminder
-//
-//        guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String, let time = value!["time"] as? String  else { return }
-//
-//        self.notifications.append(Notify(idStr: "", subject: subject, description: desc, date: date, time: time))
+        let hasReminder =  remindSwitch.isOn ? 1 : 0
         
-        // Assuming you have a Firebase reference and user ID
-        let ref = Database.database().reference().child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").child("Not-\(UUID())")
-        let alertRef = ref.childByAutoId()
-
-        ref.setValue(alrt.dictionaryRepresentation()) { (error, _) in
-            
-            if let error = error {
-                // Handle the error
-                print("Error adding alert to Firebase: \(error.localizedDescription)")
-            } else {
-                // Alert added successfully
-                print("Alert added to Firebase")
-                
-                if let destinationVC = segue.destination as? AlertListTableViewController {
-                       // Pass the necessary data to the destination view controller
-                   // destinationVC.fetchRemiinders()
-                    destinationVC.notifications.append(alrt)
-                    destinationVC.tableView.reloadData()
-                   }
-            }
-        }
+        self.alert = Notify(idStr: "", subject: subject, description: desc, date: remindDate, time: "-2")
+        
+ 
  
     }
     

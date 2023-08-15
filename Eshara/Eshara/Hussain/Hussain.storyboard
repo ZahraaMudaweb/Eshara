@@ -38,27 +38,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="280" id="Dt0-fd-Rxu" customClass="GradientTableViewCell" customModule="Eshara" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="280" id="Dt0-fd-Rxu" customClass="GradientTableViewCell" customModule="Eshara" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dt0-fd-Rxu" id="w77-ZF-aLU">
-                                    <rect key="frame" x="0.0" y="0.0" width="349" height="280"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-8n-Sax">
-                                            <rect key="frame" x="5" y="10" width="339" height="267.33333333333331"/>
+                                            <rect key="frame" x="5" y="10" width="383" height="267.33333333333331"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-sn-ffz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="267.33333333333331"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="383" height="267.33333333333331"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uut-3w-UpJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="177"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="383" height="177"/>
                                                             <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
                                                             <color key="textColor" red="0.320040822" green="0.42072913049999999" blue="0.61183613540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr0-wL-fEM">
-                                                            <rect key="frame" x="0.0" y="167" width="339" height="100.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="167" width="383" height="100.33333333333331"/>
                                                             <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                             <color key="textColor" red="0.320040822" green="0.42072913049999999" blue="0.61183613540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -87,6 +87,7 @@
                                     <outlet property="subtitleLabel" destination="Sr0-wL-fEM" id="vIG-X8-mDb"/>
                                     <outlet property="titleLabel" destination="uut-3w-UpJ" id="3Fj-C2-2MZ"/>
                                     <outlet property="vStackView" destination="uDz-sn-ffz" id="RrR-dq-ySh"/>
+                                    <segue destination="Znx-lT-xZm" kind="show" identifier="alertDetail" id="eql-rh-faA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,9 +103,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="Znx-lT-xZm" kind="presentation" identifier="alertDetail" id="BWq-40-Ilw"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oN-xv-9Qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +113,7 @@
             <objects>
                 <tableViewController id="xf9-dz-BKx" userLabel="Add/Edit Reminder" customClass="AlertDetailTableViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VGh-uS-1oP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96520096060000005" green="0.9409492612" blue="0.96079117059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <sections>
@@ -250,7 +248,7 @@
                         <barButtonItem key="rightBarButtonItem" title="حفظ" id="NaI-ma-Heh">
                             <connections>
                                 <action selector="doneButtonTapped" destination="xf9-dz-BKx" id="Exm-pt-55M"/>
-                                <segue destination="64k-39-fen" kind="unwind" identifier="saveUnwind" unwindAction="unwindFromBillDetailWithSegue:" id="4wS-Kb-C3R"/>
+                                <segue destination="64k-39-fen" kind="unwind" identifier="saveUnwind" unwindAction="unwindToAlertListViewWithSegue:" id="KOf-VO-k7R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -272,8 +270,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Znx-lT-xZm" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="iiV-wb-Fn0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PBy-GQ-gwm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="30"/>
@@ -282,7 +281,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xf9-dz-BKx" kind="relationship" relationship="rootViewController" id="fgW-yx-E2S"/>
+                        <segue destination="xf9-dz-BKx" kind="relationship" relationship="rootViewController" destinationCreationSelector="addEditAlerts:sender:" id="fgW-yx-E2S"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCA-GA-Uf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,7 +343,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BWq-40-Ilw"/>
+        <segue reference="eql-rh-faA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
