@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WPf-AR-HQv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FFHekaya-Light.otf">
+            <string>FFHekaya-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Pre QuizVC-->
+        <scene sceneID="P1P-3X-GPr">
+            <objects>
+                <viewController id="WPf-AR-HQv" customClass="preQuizVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Btp-5P-tQm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quizBG" translatesAutoresizingMaskIntoConstraints="NO" id="una-Ml-d1E">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="m27-h3-NXz">
+                                <rect key="frame" x="71.999999999999986" y="475.33333333333331" width="248.66666666666663" height="232.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="52W-pQ-reX">
+                                        <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="71.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد أنهيت الدرس!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKV-jp-7rn">
+                                                <rect key="frame" x="56" y="0.0" width="136.66666666666666" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هل أنت مستعد لبدء التحدي؟" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZt-9W-IF7">
+                                                <rect key="frame" x="0.0" y="35.666666666666686" width="248.66666666666666" height="36"/>
+                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="30"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RIj-jc-Uo6">
+                                        <rect key="frame" x="18" y="122.66666666666669" width="213" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I14-vp-gQK">
+                                                <rect key="frame" x="0.0" y="0.0" width="213" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="213" id="heL-Zp-XaL"/>
+                                                    <constraint firstAttribute="height" constant="47" id="nhL-nd-F4g"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="بالتأكيد!">
+                                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                                        <color key="backgroundColor" red="0.37647059560000001" green="0.72156864399999998" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sz-p0-Ada">
+                                                <rect key="frame" x="0.0" y="63" width="213" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="4wT-Gk-mjv"/>
+                                                    <constraint firstAttribute="width" constant="213" id="9Zo-ck-TGg"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="كلا، خذني إلى الدرس">
+                                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                                        <color key="backgroundColor" red="0.92941176889999999" green="0.50588238240000005" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rc7-Gh-q4j"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="una-Ml-d1E" firstAttribute="leading" secondItem="rc7-Gh-q4j" secondAttribute="leading" id="DYa-41-xCf"/>
+                            <constraint firstItem="una-Ml-d1E" firstAttribute="top" secondItem="Btp-5P-tQm" secondAttribute="top" id="Fw9-b0-ZS4"/>
+                            <constraint firstAttribute="bottom" secondItem="una-Ml-d1E" secondAttribute="bottom" id="ROa-aR-qOa"/>
+                            <constraint firstItem="una-Ml-d1E" firstAttribute="trailing" secondItem="rc7-Gh-q4j" secondAttribute="trailing" id="XQa-Of-56K"/>
+                            <constraint firstItem="m27-h3-NXz" firstAttribute="leading" secondItem="rc7-Gh-q4j" secondAttribute="leading" constant="72" id="buq-Uy-ZTC"/>
+                            <constraint firstItem="rc7-Gh-q4j" firstAttribute="trailing" secondItem="m27-h3-NXz" secondAttribute="trailing" constant="72.329999999999998" id="iNe-7v-l7W"/>
+                            <constraint firstItem="rc7-Gh-q4j" firstAttribute="bottom" secondItem="m27-h3-NXz" secondAttribute="bottom" constant="110" id="m66-Tv-IYN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HTf-JS-L2F"/>
+                    <connections>
+                        <segue destination="1mP-lv-tC0" kind="show" identifier="toImageQuiz" id="nHz-XV-IbY"/>
+                        <segue destination="IFf-Xk-0gZ" kind="show" identifier="toVideoQuiz" id="wdg-BQ-IWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njt-uG-yu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031.2977099236641" y="-13.380281690140846"/>
+        </scene>
+        <!--QuizVC-->
+        <scene sceneID="Xmn-II-d42">
+            <objects>
+                <viewController storyboardIdentifier="imageQuiz" id="1mP-lv-tC0" customClass="QuizVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OTx-Wf-4aW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-Ct-sIy">
+                                <rect key="frame" x="20" y="30" width="353" height="21"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="juF-Tj-snB">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-11 1" translatesAutoresizingMaskIntoConstraints="NO" id="YcJ-CI-wwi">
+                                                <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="Q4s-mo-c1F"/>
+                                                    <constraint firstAttribute="height" constant="21" id="mlI-xY-cRg"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REu-dD-fOX">
+                                                <rect key="frame" x="30" y="0.0" width="22" height="21"/>
+                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rra-zW-q2a">
+                                        <rect key="frame" x="66" y="8.6666666666666643" width="287" height="4"/>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="نص السؤال" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdm-8g-seW">
+                                <rect key="frame" x="70" y="237" width="255" height="31.333333333333332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="26"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ieW-vv-7P0">
+                                <rect key="frame" x="70" y="306" width="255" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ieW-vv-7P0" secondAttribute="height" multiplier="1:1" id="JIQ-NC-OTN"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-Zd-4FP">
+                                <rect key="frame" x="70" y="588" width="255" height="198"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wr-HF-qgk">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="137"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="afe-Nd-dWS">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="137"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-M9-JOh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="4J6-M9-JOh" secondAttribute="height" multiplier="119:64" id="Mai-MD-7hk"/>
+                                                            <constraint firstAttribute="height" constant="64" id="g4G-07-u37"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IY-9I-UMj">
+                                                        <rect key="frame" x="0.0" y="73" width="119" height="64"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-Bn-Zn6">
+                                                <rect key="frame" x="136" y="0.0" width="119" height="137"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlG-rl-GnV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CS-fZ-qro">
+                                                        <rect key="frame" x="0.0" y="73" width="119" height="64"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvs-lr-C5f">
+                                        <rect key="frame" x="0.0" y="154" width="255" height="44"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="التالي">
+                                            <backgroundConfiguration key="background" cornerRadius="30">
+                                                <color key="backgroundColor" red="0.37647059560000001" green="0.72156864399999998" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6p9-iz-WAn"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6p9-iz-WAn" firstAttribute="trailing" secondItem="Baw-Ct-sIy" secondAttribute="trailing" constant="20" id="7WT-qX-4Kn"/>
+                            <constraint firstItem="Baw-Ct-sIy" firstAttribute="top" secondItem="6p9-iz-WAn" secondAttribute="top" constant="30" id="eTO-C9-ZMP"/>
+                            <constraint firstItem="Baw-Ct-sIy" firstAttribute="leading" secondItem="6p9-iz-WAn" secondAttribute="leading" constant="20" id="rrX-7L-w7i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PBo-BQ-jY2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="JNM-3p-hA0"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPx-El-MZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2954.9618320610684" y="-13.380281690140846"/>
+        </scene>
+        <!--Video QuizVC-->
+        <scene sceneID="Nsj-8P-hWh">
+            <objects>
+                <viewController storyboardIdentifier="videoQuiz" id="IFf-Xk-0gZ" customClass="VideoQuizVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BVz-wz-Ysp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Eeu-zf-gX0">
+                                <rect key="frame" x="21" y="138" width="351" height="21"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-6a-lxA">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-11 1" translatesAutoresizingMaskIntoConstraints="NO" id="s31-vZ-6HJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Yyc-Su-qgc"/>
+                                                    <constraint firstAttribute="width" constant="22" id="dp5-wx-G1g"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioo-fF-XdM">
+                                                <rect key="frame" x="30" y="0.0" width="22" height="21"/>
+                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0yN-y4-rtf">
+                                        <rect key="frame" x="66" y="8.6666666666666661" width="285" height="4"/>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="نص السؤال" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5S-ch-GLy">
+                                <rect key="frame" x="70" y="237" width="255" height="31.333333333333332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="26"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKP-gV-gfe">
+                                <rect key="frame" x="70" y="306" width="255" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yKP-gV-gfe" secondAttribute="height" multiplier="1:1" id="f6c-P1-HT9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IY-DG-VL5">
+                                <rect key="frame" x="70" y="588" width="255" height="198"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2h-9F-2Jd">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="137"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="XpI-na-yzQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="137"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVy-Qq-hb8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="2PN-CA-Mqa"/>
+                                                            <constraint firstAttribute="width" secondItem="UVy-Qq-hb8" secondAttribute="height" multiplier="119:64" id="6wS-NK-fub"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-P6-NJO">
+                                                        <rect key="frame" x="0.0" y="73" width="119" height="64"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qCE-MW-eeP">
+                                                <rect key="frame" x="136" y="0.0" width="119" height="137"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obp-BQ-uJd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNz-x1-gWy">
+                                                        <rect key="frame" x="0.0" y="73" width="119" height="64"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-eU-QTK">
+                                        <rect key="frame" x="0.0" y="154" width="255" height="44"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="التالي">
+                                            <backgroundConfiguration key="background" cornerRadius="30">
+                                                <color key="backgroundColor" red="0.37647059560000001" green="0.72156864399999998" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ep-uj-nTX"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="728-VT-pmi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="4o1-YP-CtQ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLg-xQ-e7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2955" y="739"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart-11 1" width="1081" height="1081"/>
+        <image name="quizBG" width="1180" height="2557"/>
+    </resources>
+</document>
