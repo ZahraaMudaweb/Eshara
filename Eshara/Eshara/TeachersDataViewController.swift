@@ -94,21 +94,12 @@ class TeachersDataViewController: UIViewController
        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.identifier == "reviews", let destinationVC = segue.destination as? ReviewsCollectionViewController
-        {
-            // MARK: Send the datePicker Data to the ReviewsCollectionViewController to check if hte user is able to add a review
-            // use destinationVC.<the datayou want to check> 
-            
-           
-        }
-        
-    }
+ 
     
     @IBAction func BookMarkButtonTap(_ sender: UIButton)
     {
         //performSegue(withIdentifier: "Book", sender: sender)
     }
     
+ 
 }

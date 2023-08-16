@@ -9,9 +9,15 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ReviewsCollectionViewController: UICollectionViewController {
 
+class ReviewsCollectionViewController: UICollectionViewController{
+   
     
+   
+    
+   
+   
+ 
     
     
     let Student: [StudentReviews] =
@@ -24,18 +30,22 @@ class ReviewsCollectionViewController: UICollectionViewController {
     
     
 
-    
+    var dataRev = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
+    
+      
+        
+      
+        
         
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
 //       
@@ -119,11 +129,13 @@ class ReviewsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ReviewsCollectionViewCell
     
         // Configure the cell
-        
-        
+       
         let student = Student[indexPath.row]
         
-        cell.studentName.text = student.StudentName
+       
+       // cell.studentName.text = studentComment
+        cell.StudentName.text = dataRev
+      //  cell.studentName.text = studentComment
        // cell.StudentComment.text = student.StudetComment
         
     //    cell.StudentRevir(StudentName: student.StudentName, StudentRate: student.StudentRate, StudentSomment: student.StudetComment)
@@ -132,7 +144,16 @@ class ReviewsCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+         
+    }
+    
 
+    
+   
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*

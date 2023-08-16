@@ -11,17 +11,11 @@ class ReviewsCollectionViewCell: UICollectionViewCell
 {
 
     @IBOutlet var studentRate: UILabel!
-    @IBOutlet var studentName: UILabel!
+    @IBOutlet var StudentName: UILabel!
     @IBOutlet var StudentComment: UILabel!
     
-    
-    func StudentRevir(StudentName: String, StudentRate: Double, StudentSomment: String)
-    {
-        StudentComment.text = StudentSomment
-        studentName.text = StudentName
-        studentRate.text = "\(StudentRate)"
-        
-    }
+    var testing = ""
+  
     
     
     
