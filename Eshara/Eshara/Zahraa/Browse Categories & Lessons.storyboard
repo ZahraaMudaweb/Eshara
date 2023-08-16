@@ -496,7 +496,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="71.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد أنهيت الدرس!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-5z-R9N">
-                                                <rect key="frame" x="56" y="0.0" width="136.66666666666666" height="32.666666666666664"/>
+                                                <rect key="frame" x="56" y="0.0" width="136.66666666666663" height="32.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1023,7 +1023,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MV8-ek-GGV"/>
+        <segue reference="LKi-DC-B0L"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BACK" width="1081" height="1081"/>
