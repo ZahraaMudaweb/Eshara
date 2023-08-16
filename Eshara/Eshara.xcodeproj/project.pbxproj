@@ -20,6 +20,7 @@
 		671155592A8D199500FC3EA0 /* Quizzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711554C2A8D199500FC3EA0 /* Quizzes.swift */; };
 		6711555A2A8D199500FC3EA0 /* CatrgoryVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711554E2A8D199500FC3EA0 /* CatrgoryVFL.swift */; };
 		6711555B2A8D199500FC3EA0 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711554F2A8D199500FC3EA0 /* CategoryCollectionViewCell.swift */; };
+		6711555D2A8D1B1E00FC3EA0 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6711555C2A8D1B1E00FC3EA0 /* Media.xcassets */; };
 		6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACDE2A794959006CE7DA /* AppDelegate.swift */; };
 		6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACE02A794959006CE7DA /* SceneDelegate.swift */; };
 		6740ACE32A794959006CE7DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACE22A794959006CE7DA /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		6711554C2A8D199500FC3EA0 /* Quizzes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quizzes.swift; sourceTree = "<group>"; };
 		6711554E2A8D199500FC3EA0 /* CatrgoryVFL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatrgoryVFL.swift; sourceTree = "<group>"; };
 		6711554F2A8D199500FC3EA0 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6711555C2A8D1B1E00FC3EA0 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Eshara/Media.xcassets; sourceTree = SOURCE_ROOT; };
 		6740ACDB2A794959006CE7DA /* Eshara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eshara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6740ACDE2A794959006CE7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6740ACE02A794959006CE7DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +86,10 @@
 		671155402A8D199500FC3EA0 /* Zahraa */ = {
 			isa = PBXGroup;
 			children = (
-				671155412A8D199500FC3EA0 /* Quizzes.storyboard */,
+				6711555C2A8D1B1E00FC3EA0 /* Media.xcassets */,
 				671155422A8D199500FC3EA0 /* Controller */,
 				671155492A8D199500FC3EA0 /* Browse Categories & Lessons.storyboard */,
+				671155412A8D199500FC3EA0 /* Quizzes.storyboard */,
 				6711554A2A8D199500FC3EA0 /* Model */,
 				6711554D2A8D199500FC3EA0 /* View */,
 			);
@@ -228,6 +231,7 @@
 			files = (
 				6740ACEB2A79495A006CE7DA /* LaunchScreen.storyboard in Resources */,
 				6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */,
+				6711555D2A8D1B1E00FC3EA0 /* Media.xcassets in Resources */,
 				671155572A8D199500FC3EA0 /* Browse Categories & Lessons.storyboard in Resources */,
 				6710177E2A7A915E00739B7A /* FFHekaya-Light.otf in Resources */,
 				671155502A8D199500FC3EA0 /* Quizzes.storyboard in Resources */,
