@@ -20,6 +20,7 @@ struct Notify: Codable {
     var description: String
     var date: String
     var time: String
+    var isReminder : Bool
     var remindDate: Date?
     
 //    init(id: UUID = UUID()) {
@@ -28,9 +29,9 @@ struct Notify: Codable {
 //
 //    }
     
-    init(id: UUID = UUID(), idStr: String?, amount: Double? = nil, dueDate: Date? = nil, notificationID: String? = nil, paidDate: Date? = nil, payee: String? = nil, subject: String = "", description: String = "", date: String = "", time : String = "", remindDate: Date? = nil) {
+    init(id: UUID = UUID(), idStr: String?, amount: Double? = nil, dueDate: Date? = nil, notificationID: String? = nil, paidDate: Date? = nil, payee: String? = nil, subject: String = "", description: String = "", date: String = "", time : String = "", remindDate: Date? = nil, isReminder: Bool = false) {
         self.id = id
-        self.idStr = "not-\(id)"
+        self.idStr =  (idStr != nil) ? idStr : "not-\(id)"
         self.amount = amount
         self.dueDate = dueDate
         self.notificationID = notificationID
@@ -40,6 +41,7 @@ struct Notify: Codable {
         self.description = description
         self.date = date
         self.time = time
+        self.isReminder = isReminder
         self.remindDate = remindDate
     }
     
@@ -48,6 +50,8 @@ struct Notify: Codable {
         dict["subject"] = subject
         dict["desc"] = description
         dict["date"] = date
+        dict["time"] = time
+        dict["hasReminder"] = hasReminder
         //dict["paidDate"] = paidDate
         // Add any other properties you want to include in the dictionary
         

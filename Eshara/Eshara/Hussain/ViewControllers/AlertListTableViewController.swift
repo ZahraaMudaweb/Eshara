@@ -76,10 +76,12 @@ var notifications = [Notify]()
                 let value = child.value as? NSDictionary
             
                 
-                guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String else { return }
+                guard let subject = value!["subject"] as? String, let desc = value!["desc"] as? String,let date = value!["date"] as? String, let time = value!["time"] as? String, let isReminder = value!["hasReminder"] as? Bool else { return }
 //                , let time = value!["time"] as? String
                 
-                self.notifications.append(Notify(idStr: key, subject: subject, description: desc, date: date, time: "-2"))
+               // var uuID = UUID(uuidString: key.replacingOccurrences(of: "not-", with: ""))
+                
+                self.notifications.append(Notify(idStr: key, subject: subject, description: desc, date: date, time: time, isReminder: isReminder ))
                 
             }
             self.tableView.reloadData()

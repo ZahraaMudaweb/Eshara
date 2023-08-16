@@ -93,9 +93,12 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
 //            }
             
             //updateDueDateUI()
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd h:mm a"
             
-            remindSwitch.isOn = alert.hasReminder
-            remindDatePicker.date = alert.remindDate ?? Date()
+            remindSwitch.isOn = alert.isReminder
+            
+            remindDatePicker.date = (alert.date != nil) ? dateFormatter.date(from: "\(alert.date) \(alert.time)")!  : Date()
             
             updateRemindUI()
             
@@ -315,11 +318,16 @@ class AlertDetailTableViewController: UITableViewController, UITextFieldDelegate
         let remindDateFormatter = DateFormatter()
         remindDateFormatter.dateFormat = "yyyy-MM-dd"
 
+        let remindTimeFormatter = DateFormatter()
+        remindTimeFormatter.dateFormat = "hh:mm a"
+        
         let remindDate = remindDateFormatter.string(from: remindDatePicker.date) as? String ??  remindDateFormatter.string(from: Date())
+        
+        let remindTime = remindTimeFormatter.string(from: remindDatePicker.date) as? String ??  remindTimeFormatter.string(from: Date())
 
         let hasReminder =  remindSwitch.isOn ? 1 : 0
         
-        self.alert = Notify(idStr: "", subject: subject, description: desc, date: remindDate, time: "-2")
+        self.alert = Notify(idStr: self.alert?.idStr, subject: subject, description: desc, date: remindDate, time: remindTime, isReminder:  remindSwitch.isOn )
         
  
  
