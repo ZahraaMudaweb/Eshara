@@ -59,12 +59,6 @@ class BookMarkViewController: UIViewController {
         datePicker.layer.masksToBounds = true
         
         
-    
-        // Set the locale and time zone
-        datePicker.locale = Locale.current
-        datePicker.timeZone = TimeZone.current
-        datePicker.date = currentDate
-        
         datepickerlabel.text = bookDatePicker.date.formatted(date: .numeric, time: .omitted)
        
         Style()
@@ -97,7 +91,10 @@ class BookMarkViewController: UIViewController {
         if segue.identifier == "conf", let destinationVC = segue.destination as? ConformationforBookingViewController
         {
               let datetime = DateFormatter()
-              datetime.dateFormat = "HH:mm"
+            
+            datetime.dateFormat = "HH:mm a"
+          datetime.locale = .current
+          datetime.timeStyle = .short
                 
             let dateday = DateFormatter()
             

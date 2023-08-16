@@ -6,14 +6,20 @@
 //
 
 import UIKit
-protocol ViewControllerBDelegate: AnyObject {
-    func sendData(data: String)
-}
+import FirebaseDatabase
+import FirebaseAuth
+
+
 
 class ConformationforBookingViewController: UIViewController
 {
     
-    weak var delegate: ViewControllerBDelegate?
+
+    
+   
+    
+    
+  
     
     var sending = "Hellowworld"
     
@@ -44,7 +50,7 @@ class ConformationforBookingViewController: UIViewController
 
         // Do any additional setup after loading the view.
         
-        
+        data()
         timeLabel.text = timeString
         dayLabel.text = dayString
         
@@ -70,35 +76,60 @@ class ConformationforBookingViewController: UIViewController
    
     @IBAction func DontButtontap(_ sender: Any)
     {
-        delegate?.sendData(data: "Hello World")
+        
+        guard let dec = storyboard?.instantiateViewController(withIdentifier: "revist") as? ReviewsCollectionViewController else {return}
+        
+        var sending = "Hello World"
+        
+        dec.dataRev = sending
+        
+       // navigationController?.pushViewController(dec, animated: true)
+      //  delegate?.sendData(data: "Hello World")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        
+      
         
         if segue.identifier == "ConfToReview",
            let dec = segue.destination as? ReviewsCollectionViewController
         {
             let send = "Hellow World"
             dec.dataRev = send
+            
         }
         else
         {
-            print("error")
+           // print("error")
         }
     }
     
   
-    @IBSegueAction func testing(_ coder: NSCoder, sender: Any?) -> ReviewsCollectionViewController?
+   
+    @IBSegueAction func sendingcon(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> ReviewsCollectionViewController?
     {
+        if segueIdentifier == "revcon"
+        {
+            print("send")
+        }
+        else
+        {
+            print("Error")
+        }
         
-        let dec =  ReviewsCollectionViewController(coder: coder)
-        dec?.dataRev = "Hellow world"
-        return dec
+        return ReviewsCollectionViewController(coder: coder)
     }
     
     
- 
+ func data()
+    {
+        let ref = Database.database().reference()
+        
+        let dateData: [String: Any] = ["name": "Ahmed", "age": 25, "email":"test@example.com"]
+        
+       // ref.child("user").child("testing").setValue(dateData)
+    }
     
     
     /*
