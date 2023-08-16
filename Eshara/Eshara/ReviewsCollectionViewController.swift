@@ -10,7 +10,9 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 
-class ReviewsCollectionViewController: UICollectionViewController{
+class ReviewsCollectionViewController: UICollectionViewController, ViewControllerBDelegate{
+   
+    
    
     
    
@@ -32,7 +34,9 @@ class ReviewsCollectionViewController: UICollectionViewController{
 
     var dataRev = ""
     
-    
+    func sendData(data: String) {
+        dataRev = data
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,8 +45,13 @@ class ReviewsCollectionViewController: UICollectionViewController{
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
+        guard let dec = storyboard?.instantiateViewController(withIdentifier: "Conf") as? ConformationforBookingViewController else {
+            print("error")
+            return}
+        
+        dec.delegate = self
     
-      
+     
         
       
         
@@ -130,6 +139,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
     
         // Configure the cell
        
+       
         let student = Student[indexPath.row]
         
        
@@ -146,7 +156,10 @@ class ReviewsCollectionViewController: UICollectionViewController{
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ReviewsCollectionViewCell
+        print("Press")
+     
+        cell.StudentName.text = dataRev
     }
     
 

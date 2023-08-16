@@ -76,15 +76,18 @@ class ConformationforBookingViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         
+        delegate?.sendData(data: "Hello wrold")
+        
         if segue.identifier == "ConfToReview",
            let dec = segue.destination as? ReviewsCollectionViewController
         {
             let send = "Hellow World"
             dec.dataRev = send
+            
         }
         else
         {
-            print("error")
+           // print("error")
         }
     }
     
