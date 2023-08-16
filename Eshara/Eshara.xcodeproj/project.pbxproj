@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670A5C882A8A327000E9524E /* Quizzes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670A5C872A8A327000E9524E /* Quizzes.storyboard */; };
+		670A5C8A2A8A4C0800E9524E /* VideoQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A5C892A8A4C0700E9524E /* VideoQuizVC.swift */; };
 		6710177E2A7A915E00739B7A /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6710177D2A7A915E00739B7A /* FFHekaya-Light.otf */; };
 		6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACDE2A794959006CE7DA /* AppDelegate.swift */; };
 		6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740ACE02A794959006CE7DA /* SceneDelegate.swift */; };
@@ -19,13 +21,23 @@
 		6740ACF82A7949E7006CE7DA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6740ACF72A7949E7006CE7DA /* FirebaseStorage */; };
 		6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */; };
 		6755F6652A7964D8008C496B /* Browse Categories & Lessons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6755F6642A7964D8008C496B /* Browse Categories & Lessons.storyboard */; };
-		6755F66A2A796564008C496B /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6755F6692A796564008C496B /* Categories.swift */; };
+		67B073A72A7FE0F0009B6329 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B073A62A7FE0F0009B6329 /* LessonsVC.swift */; };
+		67B073A92A7FEA3F009B6329 /* preQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B073A82A7FEA3F009B6329 /* preQuizVC.swift */; };
+		67B073AB2A8000DE009B6329 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B073AA2A8000DE009B6329 /* QuizVC.swift */; };
+		67B1A2522A7B82E600D81CF6 /* CatrgoryVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1A2512A7B82E600D81CF6 /* CatrgoryVFL.swift */; };
+		67B1A2542A7B86BF00D81CF6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1A2532A7B86BF00D81CF6 /* Colors.swift */; };
 		67B279F32A7A3A6600E3A67B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67B279F22A7A3A6600E3A67B /* Media.xcassets */; };
 		67B279F52A7A426F00E3A67B /* CategoriesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B279F42A7A426F00E3A67B /* CategoriesCollectionVC.swift */; };
 		67B279F72A7A44D200E3A67B /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B279F62A7A44D200E3A67B /* CategoryCollectionViewCell.swift */; };
+		67E1ADFD2A8BA40400D2B4EB /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */; };
+		67EAC5132A891CDC002837D8 /* VideoLessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EAC5122A891CDC002837D8 /* VideoLessonsVC.swift */; };
+		67EC835B2A7BF5530088BEF3 /* StagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EC835A2A7BF5530088BEF3 /* StagesVC.swift */; };
+		67FF7C6D2A85210F00BACC78 /* Quizzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF7C6C2A85210F00BACC78 /* Quizzes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670A5C872A8A327000E9524E /* Quizzes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quizzes.storyboard; sourceTree = "<group>"; };
+		670A5C892A8A4C0700E9524E /* VideoQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoQuizVC.swift; sourceTree = "<group>"; };
 		6710177D2A7A915E00739B7A /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FFHekaya-Light.otf"; path = "../../../../../Downloads/Icons - Colors - Font/FFHekaya-Light.otf"; sourceTree = "<group>"; };
 		6740ACDB2A794959006CE7DA /* Eshara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eshara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6740ACDE2A794959006CE7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,10 +49,18 @@
 		6740ACEC2A79495A006CE7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6755F6642A7964D8008C496B /* Browse Categories & Lessons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Browse Categories & Lessons.storyboard"; sourceTree = "<group>"; };
-		6755F6692A796564008C496B /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		67B073A62A7FE0F0009B6329 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonsVC.swift; path = Eshara/Zahraa/Controller/LessonsVC.swift; sourceTree = SOURCE_ROOT; };
+		67B073A82A7FEA3F009B6329 /* preQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preQuizVC.swift; sourceTree = "<group>"; };
+		67B073AA2A8000DE009B6329 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		67B1A2512A7B82E600D81CF6 /* CatrgoryVFL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatrgoryVFL.swift; sourceTree = "<group>"; };
+		67B1A2532A7B86BF00D81CF6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		67B279F22A7A3A6600E3A67B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Eshara/Media.xcassets; sourceTree = SOURCE_ROOT; };
 		67B279F42A7A426F00E3A67B /* CategoriesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionVC.swift; sourceTree = "<group>"; };
 		67B279F62A7A44D200E3A67B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = Eshara/Zahraa/ResultsVC.swift; sourceTree = SOURCE_ROOT; };
+		67EAC5122A891CDC002837D8 /* VideoLessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLessonsVC.swift; sourceTree = "<group>"; };
+		67EC835A2A7BF5530088BEF3 /* StagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesVC.swift; sourceTree = "<group>"; };
+		67FF7C6C2A85210F00BACC78 /* Quizzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizzes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,13 +113,47 @@
 		6755F6682A796544008C496B /* Zahraa */ = {
 			isa = PBXGroup;
 			children = (
+				67FF7C6B2A851D0000BACC78 /* Model */,
+				67FF7C692A851CA700BACC78 /* View */,
+				67FF7C6A2A851CCD00BACC78 /* Controller */,
 				67B279F22A7A3A6600E3A67B /* Media.xcassets */,
 				6755F6642A7964D8008C496B /* Browse Categories & Lessons.storyboard */,
-				67B279F42A7A426F00E3A67B /* CategoriesCollectionVC.swift */,
-				67B279F62A7A44D200E3A67B /* CategoryCollectionViewCell.swift */,
-				6755F6692A796564008C496B /* Categories.swift */,
+				670A5C872A8A327000E9524E /* Quizzes.storyboard */,
 			);
 			path = Zahraa;
+			sourceTree = "<group>";
+		};
+		67FF7C692A851CA700BACC78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67B279F62A7A44D200E3A67B /* CategoryCollectionViewCell.swift */,
+				67B1A2512A7B82E600D81CF6 /* CatrgoryVFL.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		67FF7C6A2A851CCD00BACC78 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */,
+				67B073A82A7FEA3F009B6329 /* preQuizVC.swift */,
+				67B073AA2A8000DE009B6329 /* QuizVC.swift */,
+				670A5C892A8A4C0700E9524E /* VideoQuizVC.swift */,
+				67B073A62A7FE0F0009B6329 /* LessonsVC.swift */,
+				67EAC5122A891CDC002837D8 /* VideoLessonsVC.swift */,
+				67EC835A2A7BF5530088BEF3 /* StagesVC.swift */,
+				67B279F42A7A426F00E3A67B /* CategoriesCollectionVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		67FF7C6B2A851D0000BACC78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67B1A2532A7B86BF00D81CF6 /* Colors.swift */,
+				67FF7C6C2A85210F00BACC78 /* Quizzes.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +226,7 @@
 				6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */,
 				6710177E2A7A915E00739B7A /* FFHekaya-Light.otf in Resources */,
 				6755F6652A7964D8008C496B /* Browse Categories & Lessons.storyboard in Resources */,
+				670A5C882A8A327000E9524E /* Quizzes.storyboard in Resources */,
 				6740ACE82A79495A006CE7DA /* Assets.xcassets in Resources */,
 				67B279F32A7A3A6600E3A67B /* Media.xcassets in Resources */,
 				6740ACE62A794959006CE7DA /* Main.storyboard in Resources */,
@@ -185,12 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67FF7C6D2A85210F00BACC78 /* Quizzes.swift in Sources */,
 				6740ACE32A794959006CE7DA /* ViewController.swift in Sources */,
-				6755F66A2A796564008C496B /* Categories.swift in Sources */,
+				670A5C8A2A8A4C0800E9524E /* VideoQuizVC.swift in Sources */,
+				67EAC5132A891CDC002837D8 /* VideoLessonsVC.swift in Sources */,
+				67EC835B2A7BF5530088BEF3 /* StagesVC.swift in Sources */,
+				67E1ADFD2A8BA40400D2B4EB /* ResultsVC.swift in Sources */,
+				67B1A2522A7B82E600D81CF6 /* CatrgoryVFL.swift in Sources */,
 				6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */,
+				67B073AB2A8000DE009B6329 /* QuizVC.swift in Sources */,
+				67B1A2542A7B86BF00D81CF6 /* Colors.swift in Sources */,
 				6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */,
 				67B279F72A7A44D200E3A67B /* CategoryCollectionViewCell.swift in Sources */,
+				67B073A72A7FE0F0009B6329 /* LessonsVC.swift in Sources */,
 				67B279F52A7A426F00E3A67B /* CategoriesCollectionVC.swift in Sources */,
+				67B073A92A7FEA3F009B6329 /* preQuizVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
