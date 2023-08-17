@@ -155,26 +155,38 @@ var notifications = [Notify]()
         
     }
     
+
+    
+    
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "حـذف") { (contextualAction, view, completionHandler) in
             
-            guard let alert = self.dataSource.itemIdentifier(for: indexPath) else { return }
-//            LocalDatabase.shared.delete(alert: alert)
-//            LocalDatabase.shared.save()
-//            self.updateSnapshot()
+//            guard let alert = self.dataSource.itemIdentifier(for: indexPath) else { return }
+            let alert = self.notifications[indexPath.row]
+                
+           
+            self.notifications.remove(at: indexPath.row)
+            tableView.reloadData()
             
             
-                    // Assuming you have a Firebase reference and user ID
-                    let userId = " UaNyISDxSpgTQUidtkb23z5n0Ct2"
-                    let ref = Database.database().reference().child("user").child(userId).child("Notifications").child(String(alert.idStr ?? ""))
-                    //let alertRef = ref.childByAutoId()
-
-                    ref.removeValue { error, _ in
-
-                        print(error)
-                    }
+                //            LocalDatabase.shared.delete(alert: alert)
+                //            LocalDatabase.shared.save()
+                //            self.updateSnapshot()
+                
+                // Assuming you have a Firebase reference and user ID
+                let userId = " UaNyISDxSpgTQUidtkb23z5n0Ct2"
+                let ref = Database.database().reference().child("user").child(userId).child("Notifications").child(String(alert.idStr ?? ""))
+                //let alertRef = ref.childByAutoId()
             
+           
+            
+                ref.removeValue { error, _ in
+                    
+                    print(error)
+                }
+            
+         
             
             completionHandler(true)
         }
@@ -183,6 +195,9 @@ var notifications = [Notify]()
 
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+ 
+    
+    
     
 //old: accessary : details
 //    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {

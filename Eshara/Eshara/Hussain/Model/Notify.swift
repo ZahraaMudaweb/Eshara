@@ -51,7 +51,8 @@ struct Notify: Codable {
         dict["desc"] = description
         dict["date"] = date
         dict["time"] = time
-        dict["hasReminder"] = hasReminder
+        dict["hasReminder"] = isReminder
+        
         //dict["paidDate"] = paidDate
         // Add any other properties you want to include in the dictionary
         
