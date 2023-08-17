@@ -18,7 +18,7 @@
 		6740ACF82A7949E7006CE7DA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6740ACF72A7949E7006CE7DA /* FirebaseStorage */; };
 		6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */; };
 		6A03A51C2A7A9CB500367ED6 /* Teachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51B2A7A9CB500367ED6 /* Teachers.swift */; };
-		6A03A51E2A7AA01D00367ED6 /* TeachersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */; };
+		6A03A51E2A7AA01D00367ED6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A03A51D2A7AA01D00367ED6 /* UserData.swift */; };
 		6A27B9832A813DF600255146 /* FireBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27B9822A813DF600255146 /* FireBaseViewController.swift */; };
 		6A27B9852A8A5F7E00255146 /* ConformationforBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27B9842A8A5F7E00255146 /* ConformationforBookingViewController.swift */; };
 		6A27B9872A8A643700255146 /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A27B9862A8A621E00255146 /* FFHekaya-Light.otf */; };
@@ -44,7 +44,7 @@
 		6740ACEC2A79495A006CE7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A03A51B2A7A9CB500367ED6 /* Teachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teachers.swift; sourceTree = "<group>"; };
-		6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersData.swift; sourceTree = "<group>"; };
+		6A03A51D2A7AA01D00367ED6 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		6A27B9822A813DF600255146 /* FireBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewController.swift; sourceTree = "<group>"; };
 		6A27B9842A8A5F7E00255146 /* ConformationforBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationforBookingViewController.swift; sourceTree = "<group>"; };
 		6A27B9862A8A621E00255146 /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FFHekaya-Light.otf"; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6A03A51B2A7A9CB500367ED6 /* Teachers.swift */,
-				6A03A51D2A7AA01D00367ED6 /* TeachersData.swift */,
+				6A03A51D2A7AA01D00367ED6 /* UserData.swift */,
 				81DCFDF02A7CD80600EBE3D7 /* TeachersCollectionViewController.swift */,
 				81DCFDF22A7CD81A00EBE3D7 /* TeachersDataCollectionViewCell.swift */,
 				815805452A7E62A80073AE7A /* Theme.swift */,
@@ -218,7 +218,7 @@
 				8187C4372A8BE0B00069088A /* AddReviewViewController.swift in Sources */,
 				6A27B9832A813DF600255146 /* FireBaseViewController.swift in Sources */,
 				6A27B9852A8A5F7E00255146 /* ConformationforBookingViewController.swift in Sources */,
-				6A03A51E2A7AA01D00367ED6 /* TeachersData.swift in Sources */,
+				6A03A51E2A7AA01D00367ED6 /* UserData.swift in Sources */,
 				8187C4352A8BE0960069088A /* ReviewsCollectionViewController.swift in Sources */,
 				6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */,
 				6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */,

@@ -112,19 +112,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2J-qJ-6q9">
-                                <rect key="frame" x="120" y="103" width="153" height="24"/>
+                                <rect key="frame" x="120" y="155" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التقييم:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5u-j9-DdA">
-                                <rect key="frame" x="280" y="177" width="73" height="24"/>
+                                <rect key="frame" x="280" y="229" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1FM-YB-Ali">
-                                <rect key="frame" x="53" y="224" width="290" height="45"/>
+                                <rect key="frame" x="53" y="273" width="290" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70n-Ox-lz1">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="45"/>
@@ -159,12 +159,15 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHc-3g-obf">
-                                <rect key="frame" x="20" y="313" width="353" height="236"/>
+                                <rect key="frame" x="20" y="362" width="353" height="236"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-rU-y5I">
                                         <rect key="frame" x="5" y="5" width="343" height="226"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textField:" destination="Mbh-zW-JZi" eventType="editingDidEnd" id="WJb-4e-uiw"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -176,9 +179,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIn-eo-MLR">
-                                <rect key="frame" x="120" y="588.66666666666663" width="153" height="34.333333333333371"/>
+                                <rect key="frame" x="120" y="637.66666666666663" width="153" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="eHG-Ui-VtM" kind="unwind" identifier="saveButton" unwindAction="unwidtoAddRevieWithSegue:" id="TxM-73-gCy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="934-qG-42C"/>
@@ -208,6 +214,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nJZ-jK-UqL"/>
                     <connections>
+                        <outlet property="CommenttextField" destination="Qxh-rU-y5I" id="giD-xB-Pwh"/>
                         <outlet property="StudentButtonComment" destination="xIn-eo-MLR" id="hal-bo-wME"/>
                         <outlet property="StudentCommentView" destination="mHc-3g-obf" id="mh3-db-bfl"/>
                         <outlet property="oneLabel" destination="AeL-Do-Rbf" id="epU-Q8-o2n"/>
@@ -216,6 +223,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuX-gG-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="eHG-Ui-VtM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2281.679389312977" y="1341.549295774648"/>
         </scene>
@@ -276,7 +284,9 @@
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <size key="customSize" width="383" height="128"/>
                                 <connections>
+                                    <outlet property="StudentComment" destination="Rcz-vh-bY5" id="wcy-DA-Mka"/>
                                     <outlet property="StudentName" destination="auP-UR-sY9" id="wRv-jf-aZC"/>
+                                    <outlet property="studentRate" destination="o0h-9W-EAB" id="nf5-iu-z4i"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -293,7 +303,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Mbh-zW-JZi" kind="show" identifier="AddRevi" id="u3B-ak-nlI"/>
+                        <segue destination="Mbh-zW-JZi" kind="show" identifier="AddRevi" destinationCreationSelector="addreviedata:sender:" id="u3B-ak-nlI"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qb-wX-oGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -648,7 +658,6 @@
                         <outlet property="dayLabel" destination="5ST-oN-qjv" id="fCc-CE-dcP"/>
                         <outlet property="teacherNameLabel" destination="vYK-wK-vZ4" id="9EX-Vk-VQO"/>
                         <outlet property="timeLabel" destination="hkV-4n-1h8" id="Mhv-aC-gCT"/>
-                        <segue destination="pEt-Ia-vAi" kind="show" identifier="ConfToReview" destinationCreationSelector="testing:sender:" id="QXk-sy-xxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjp-AR-xb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -675,9 +684,6 @@
             <point key="canvasLocation" x="127.48091603053435" y="-91.549295774647888"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="QXk-sy-xxi"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="person" catalog="system" width="128" height="121"/>

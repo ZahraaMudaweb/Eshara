@@ -6,14 +6,11 @@
 //
 
 import UIKit
-protocol ViewControllerBDelegate: AnyObject {
-    func sendData(data: String)
-}
 
 class ConformationforBookingViewController: UIViewController
 {
     
-    weak var delegate: ViewControllerBDelegate?
+   
     
     var sending = "Hellowworld"
     
@@ -70,13 +67,13 @@ class ConformationforBookingViewController: UIViewController
    
     @IBAction func DontButtontap(_ sender: Any)
     {
-        delegate?.sendData(data: "Hello World")
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         
-        delegate?.sendData(data: "Hello wrold")
+        
         
         if segue.identifier == "ConfToReview",
            let dec = segue.destination as? ReviewsCollectionViewController

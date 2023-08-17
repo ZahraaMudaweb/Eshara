@@ -17,7 +17,12 @@ class ReviewsCollectionViewCell: UICollectionViewCell
     var testing = ""
   
     
-    
+    func update(with Comment: AddStudentrevie)
+    {
+        studentRate.text = Comment.studentRate
+        StudentName.text = Comment.studentname
+        StudentComment.text = Comment.StudentCommrnt
+    }
     
     
     override func layoutSubviews() {

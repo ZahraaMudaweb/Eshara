@@ -10,33 +10,25 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 
-class ReviewsCollectionViewController: UICollectionViewController, ViewControllerBDelegate{
-   
-    
-   
-    
-   
-    
-   
-   
+class ReviewsCollectionViewController: UICollectionViewController{
  
     
     
-    let Student: [StudentReviews] =
+    var Student: [AddStudentrevie] =
     [
-           StudentReviews(StudentName: "Ahmed", StudentRate: 4, StudetComment: "It was a fun "),
-           StudentReviews(StudentName: "Ahmed", StudentRate: 4, StudetComment: "It was a fun "),
-           StudentReviews(StudentName: "Ahmed", StudentRate: 4, StudetComment: "It was a fun "),
-           StudentReviews(StudentName: "Ahmed", StudentRate: 4, StudetComment: "It was a fun ")
+        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5")
     ]
+   
     
     
 
     var dataRev = ""
     
-    func sendData(data: String) {
-        dataRev = data
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,16 +37,7 @@ class ReviewsCollectionViewController: UICollectionViewController, ViewControlle
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        guard let dec = storyboard?.instantiateViewController(withIdentifier: "Conf") as? ConformationforBookingViewController else {
-            print("error")
-            return}
-        
-        dec.delegate = self
-    
-     
-        
-      
-        
+
         
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
 //       
@@ -119,8 +102,37 @@ class ReviewsCollectionViewController: UICollectionViewController, ViewControlle
         {
             performSegue(withIdentifier: "AddRevi", sender: sender)
 
-        }
+            
+        }   
     }
+    
+    
+    
+    @IBAction func unwidtoAddRevie(segue: UIStoryboardSegue)
+    {
+        guard  segue.identifier == "saveButton",
+               let sours = segue.source as? AddReviewViewController,
+               let addCommet = sours.AddstudentRevie else {return}
+        
+       
+       
+            let newindepath = IndexPath(row: Student.count, section: 0)
+            Student.append(addCommet)
+            collectionView.insertItems(at: [newindepath])
+        
+       
+        
+    }
+    
+    
+    
+    @IBSegueAction func addreviedata(_ coder: NSCoder, sender: Any?) -> AddReviewViewController?
+    {
+       
+        
+        return AddReviewViewController(coder: coder, AddstudentRevie: nil)
+    }
+    
     
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -142,9 +154,11 @@ class ReviewsCollectionViewController: UICollectionViewController, ViewControlle
        
         let student = Student[indexPath.row]
         
+        cell.update(with: student)
+        //collectionView.reloadData()
        
        // cell.studentName.text = studentComment
-        cell.StudentName.text = dataRev
+        
       //  cell.studentName.text = studentComment
        // cell.StudentComment.text = student.StudetComment
         
