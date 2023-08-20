@@ -8,9 +8,12 @@
 import UIKit
 import AVFoundation
 import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class QuizVC: UIViewController {
 
+    @IBOutlet var heartsLabel: UILabel!
     @IBOutlet var option1: UIButton!
     @IBOutlet var option2: UIButton!
     @IBOutlet var option3: UIButton!
@@ -19,8 +22,8 @@ class QuizVC: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var nextBtn: UIButton!
     @IBOutlet var quizProgress: UIProgressView!
+    @IBOutlet var answerButtons: [UIButton]!
     var btnsArray = [UIButton]()
-    
     
     var categoryName: String?
     var score: Int = 0
@@ -85,6 +88,7 @@ class QuizVC: UIViewController {
                 // color the background of the correct/wrong answer
                 if question.isAnswered {
                     self.btnsArray[question.correctAns].backgroundColor = .green
+                    
                     if question.wrongAns >= 0 {
                         self.btnsArray[question.correctAns].backgroundColor = .red
                     }
@@ -105,7 +109,7 @@ class QuizVC: UIViewController {
         }
     }
     @IBAction func nextStage(_ sender: UIButton) {
-        if sender == nextBtn && currentStage == hospitalQuestions.count - 1{
+        if sender == nextBtn && currentStage == hospitalQuestions.count - 1 {
             let vc = ResultsVC()
             vc.score = score
             navigationController?.pushViewController(vc, animated: true)
@@ -114,9 +118,36 @@ class QuizVC: UIViewController {
         }
     }
     
-    func didChooseAnswer() {
-        
+    @IBAction func didChooseAnswer(_ sender: UIButton) {
+        let selectedAnsIndex = answerButtons.firstIndex(of: sender)
     }
+
+    func populateLabels() {
+
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+
+        guard uid != nil else {
+            print("Error Fetching user ID")
+            return
+        }
+
+        ref.child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
+            if let userData = snapshot.value as? [String: Any] {
+                    if var hearts = userData["hearts"] as? Int {
+                        hearts += 1
+                    }
+                }
+            }
+        ref.child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
+            if let userData = snapshot.value as? [String: Any] {
+                    if var points = userData["points"] as? Int {
+                        points += 10
+                    }
+                }
+            }
+        }
+    
     /*
     // MARK: - Navigation
 

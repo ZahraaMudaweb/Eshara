@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="886" y="-58"/>
         </scene>
-        <!--Browse Categories & Lessons-->
+        <!--Home-->
         <scene sceneID="XGc-gB-4iZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Browse Categories &amp; Lessons" id="vdq-Rp-Sc8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" id="vdq-Rp-Sc8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZbK-Ch-9oA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMH-He-uRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
