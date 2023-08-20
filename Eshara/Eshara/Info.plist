@@ -6,6 +6,8 @@
 	<array>
 		<string>FFHekaya-Light.otf</string>
 	</array>
+	<key>CFBundleExecutable</key>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string></string>
 	<key>UIApplicationSceneManifest</key>
