@@ -13,7 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if UserDefaults.standard.object(forKey: "user_uid_key") != nil{
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
@@ -22,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             loginViewController.performSegue(withIdentifier: "profile", sender: nil)
             print(navigationController)
         }
-        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

@@ -8,9 +8,12 @@
 import UIKit
 import AVFoundation
 import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class QuizVC: UIViewController {
 
+    @IBOutlet var heartsLabel: UILabel!
     @IBOutlet var option1: UIButton!
     @IBOutlet var option2: UIButton!
     @IBOutlet var option3: UIButton!
@@ -19,8 +22,8 @@ class QuizVC: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var nextBtn: UIButton!
     @IBOutlet var quizProgress: UIProgressView!
+    @IBOutlet var answerButtons: [UIButton]!
     var btnsArray = [UIButton]()
-    
     
     var categoryName: String?
     var score: Int = 0
@@ -105,7 +108,7 @@ class QuizVC: UIViewController {
         }
     }
     @IBAction func nextStage(_ sender: UIButton) {
-        if sender == nextBtn && currentStage == hospitalQuestions.count - 1{
+        if sender == nextBtn && currentStage == hospitalQuestions.count - 1 {
             let vc = ResultsVC()
             vc.score = score
             navigationController?.pushViewController(vc, animated: true)
@@ -114,17 +117,23 @@ class QuizVC: UIViewController {
         }
     }
     
-    func didChooseAnswer() {
-        
+    @IBAction func didChooseAnswer(_ sender: UIButton) {
+        let selectedAnsIndex = answerButtons.firstIndex(of: sender)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func populateLabels() {
+
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+
+        guard uid != nil else {
+            print("Error Fetching user ID")
+            return
+        }
+
     }
-    */
+    
+ }
+    
 
-}
+

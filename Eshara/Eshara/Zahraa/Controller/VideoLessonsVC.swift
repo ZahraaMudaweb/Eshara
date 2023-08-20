@@ -13,8 +13,7 @@ class VideoLessonsVC: UIViewController {
 
     private let storage = Storage.storage().reference()
     var categoryName : String?
-
-    
+    var itemIndex: Int?
     var currentStage = 0
     var videosString = [String]()
     var player : AVPlayer?
@@ -98,7 +97,7 @@ class VideoLessonsVC: UIViewController {
     }
     
     func updateUI() {
-        lessonsProgress.progress = Float(currentStage + 1) / Float(videosString.count)
+        lessonsProgress.progress = Float(currentStage) / Float(videosString.count)
     }
     
     func nextStage() {
@@ -109,7 +108,10 @@ class VideoLessonsVC: UIViewController {
     
     @IBAction func nextStage(_ sender: UIButton) {
         if sender == nextButton && currentStage == videosString.count - 1 {
-            performSegue(withIdentifier: "videoToQuiz", sender: nil)
+            let preVC = storyboard?.instantiateViewController(identifier: "preQuiz") as! preQuizVC
+            preVC.categoryName = categoryName
+            preVC.itemIndex = itemIndex
+            navigationController?.pushViewController(preVC, animated: true)
         }  else {
             nextStage()
         }

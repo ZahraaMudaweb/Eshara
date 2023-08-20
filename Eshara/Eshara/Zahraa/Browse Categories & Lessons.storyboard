@@ -183,7 +183,6 @@
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="startQuizTapped:" destination="mvv-fl-z7V" eventType="touchUpInside" id="mu5-Xe-bq3"/>
-                                            <segue destination="zpu-gl-n8k" kind="show" id="aDE-Et-F4B"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -307,7 +306,13 @@
                             <constraint firstItem="MYg-1f-5ai" firstAttribute="trailing" secondItem="P13-8d-bjn" secondAttribute="trailing" constant="20" id="QNP-Mb-CLT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hvY-wG-Gnx"/>
+                    <navigationItem key="navigationItem" id="hvY-wG-Gnx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="n23-ur-Q8K">
+                            <connections>
+                                <segue destination="xus-nX-xua" kind="unwind" unwindAction="unwindToStages:" id="NNM-cR-NNg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="Stm-BY-qbh" id="U7T-BA-IiA"/>
                         <outlet property="doneButton" destination="191-MY-xyB" id="ou9-ZS-Xur"/>
@@ -318,8 +323,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdd-cY-gP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xus-nX-xua" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="-870"/>
+            <point key="canvasLocation" x="3740" y="-837"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qhV-YL-XfS">
@@ -464,7 +470,13 @@
                             <constraint firstItem="0gQ-3U-hAT" firstAttribute="trailing" secondItem="skb-PF-NQx" secondAttribute="trailing" constant="39" id="zX3-na-uzK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kzc-Fi-Smy"/>
+                    <navigationItem key="navigationItem" id="kzc-Fi-Smy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="I5u-AP-AKI">
+                            <connections>
+                                <segue destination="lMW-cV-r6x" kind="unwind" unwindAction="unwindToStages:" id="g5b-Sd-yKi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="dHg-qn-HjL" id="OIT-r0-dUK"/>
                         <outlet property="lessonsProgress" destination="gIE-CC-AWI" id="DW6-1n-WMl"/>
@@ -475,6 +487,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgA-X3-aly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lMW-cV-r6x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2381" y="23"/>
         </scene>
@@ -496,7 +509,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="71.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد أنهيت الدرس!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-5z-R9N">
-                                                <rect key="frame" x="56" y="0.0" width="136.66666666666663" height="32.666666666666664"/>
+                                                <rect key="frame" x="56" y="0.0" width="136.66666666666666" height="32.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -544,6 +557,9 @@
                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backbtnTapped:" destination="zpu-gl-n8k" eventType="touchUpInside" id="6qw-Jw-d1V"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -570,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc8-Rc-EOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="1088"/>
+            <point key="canvasLocation" x="2381" y="1166"/>
         </scene>
         <!--QuizVC-->
         <scene sceneID="T4z-Ko-5LJ">
@@ -725,9 +741,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xuC-mO-HQq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="PJT-Kr-mmj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="PJT-Kr-mmj">
+                            <connections>
+                                <segue destination="2mH-ZR-I2O" kind="unwind" unwindAction="unwindToStages:" id="AqW-GQ-HwF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="heartsLabel" destination="aXs-zq-LyY" id="ysm-kt-wmh"/>
                         <outlet property="imageView" destination="kWG-Ce-8F0" id="Wxx-JF-ise"/>
                         <outlet property="nextBtn" destination="1yv-ST-D1Q" id="0kL-6d-uJS"/>
                         <outlet property="option1" destination="hJh-8e-jIe" id="UmC-xe-WOE"/>
@@ -736,11 +757,17 @@
                         <outlet property="option4" destination="Dlm-Ub-u3B" id="kxq-h5-ybc"/>
                         <outlet property="questionLabel" destination="ePu-LS-0jm" id="iFR-Ua-zxZ"/>
                         <outlet property="quizProgress" destination="R13-aO-UBp" id="vkL-zL-yWZ"/>
+                        <outletCollection property="answerButtons" destination="hJh-8e-jIe" collectionClass="NSMutableArray" id="pu4-dO-oKo"/>
+                        <outletCollection property="answerButtons" destination="bou-37-dpL" collectionClass="NSMutableArray" id="YFL-Nx-ecy"/>
+                        <outletCollection property="answerButtons" destination="UYR-dE-5XP" collectionClass="NSMutableArray" id="c6b-8e-rmN"/>
+                        <outletCollection property="answerButtons" destination="Dlm-Ub-u3B" collectionClass="NSMutableArray" id="qFw-Qp-X7j"/>
+                        <segue destination="mgS-XQ-vpc" kind="show" id="8XA-xq-AVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rV-Kf-N96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2mH-ZR-I2O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="480"/>
+            <point key="canvasLocation" x="3740" y="739"/>
         </scene>
         <!--ResultsVC-->
         <scene sceneID="Wg1-JS-I3E">
@@ -751,7 +778,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-Lz-7eo">
-                                <rect key="frame" x="41.666666666666657" y="576.33333333333337" width="309.66666666666674" height="21"/>
+                                <rect key="frame" x="41.666666666666657" y="620.33333333333337" width="309.66666666666674" height="21"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="OQg-5r-sZW">
                                         <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="21"/>
@@ -803,13 +830,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انتصار ساحق!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-Tc-x8i">
-                                <rect key="frame" x="122.66666666666669" y="123.00000000000001" width="148" height="45.666666666666671"/>
+                                <rect key="frame" x="122.66666666666669" y="167" width="148" height="45.666666666666657"/>
+
                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="38"/>
                                 <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="VON-Tw-7j7">
-                                <rect key="frame" x="76.666666666666686" y="218.66666666666666" width="240" height="307.66666666666674"/>
+                                <rect key="frame" x="76.666666666666686" y="262.66666666666663" width="240" height="307.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7B-1O-jyM">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -818,7 +846,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أحسنت" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-0L-gQp">
-                                        <rect key="frame" x="82.666666666666657" y="268" width="74.666666666666657" height="39.666666666666686"/>
+                                        <rect key="frame" x="82.666666666666657" y="267.99999999999994" width="74.666666666666657" height="39.666666666666686"/>
                                         <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="33"/>
                                         <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -849,7 +877,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3S-bT-PB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4879" y="799"/>
+            <point key="canvasLocation" x="5028" y="1143"/>
         </scene>
         <!--Video QuizVC-->
         <scene sceneID="c9l-1w-m40">
@@ -1005,9 +1033,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KHA-BA-AGt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="g23-JQ-nP9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="g23-JQ-nP9">
+                            <connections>
+                                <segue destination="861-r4-WbU" kind="unwind" unwindAction="unwindToStages:" id="Zg3-O4-fdH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="heartsLabel" destination="ucu-bq-yzJ" id="sNt-j9-fbK"/>
+                        <outlet property="nextBtn" destination="g6s-oM-FNR" id="JWn-hL-4bi"/>
                         <outlet property="option1" destination="ao1-R9-vap" id="5Vq-dl-oDc"/>
                         <outlet property="option2" destination="WZ4-eP-JoA" id="iL5-aM-Xfl"/>
                         <outlet property="option3" destination="brm-5c-4JZ" id="MSN-en-oS7"/>
@@ -1015,15 +1049,18 @@
                         <outlet property="questionLabel" destination="ESi-FZ-2ym" id="FhR-jh-uZu"/>
                         <outlet property="quizProgress" destination="NVV-gN-yn3" id="OHJ-aX-2AN"/>
                         <outlet property="videoView" destination="Ebi-Ba-IeE" id="G3r-Ef-Xbb"/>
+                        <segue destination="mgS-XQ-vpc" kind="show" id="CJs-TJ-LxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab3-Ho-Qr9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="861-r4-WbU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3741" y="1327"/>
+            <point key="canvasLocation" x="3740" y="1485"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LKi-DC-B0L"/>
+        <segue reference="CJs-TJ-LxM"/>
+        <segue reference="IfF-U4-G1V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BACK" width="1081" height="1081"/>

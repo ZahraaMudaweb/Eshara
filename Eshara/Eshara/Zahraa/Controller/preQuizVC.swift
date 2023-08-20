@@ -10,10 +10,10 @@ import UIKit
 class preQuizVC: UIViewController {
     
     var categoryName: String?
-    
+    var itemIndex: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -27,9 +27,24 @@ class preQuizVC: UIViewController {
         } else {
             navigationController?.pushViewController(videoVC, animated: true)
             videoVC.categoryName = categoryName
+            videoVC.itemIndex = itemIndex
         }
+    }
         
-        /*
+    @IBAction func backbtnTapped(_ sender: Any) {
+        let videoVC = storyboard?.instantiateViewController(identifier: "videos") as! VideoLessonsVC
+        
+        let imagesVC = storyboard?.instantiateViewController(withIdentifier: "lessons") as! LessonsVC
+        
+        if categoryName == "في المستشفى" {
+            navigationController?.pushViewController(imagesVC, animated: true)
+        } else {
+            navigationController?.pushViewController(videoVC, animated: true)
+            videoVC.categoryName = categoryName
+            videoVC.itemIndex = itemIndex
+        }
+    }
+    /*
          // MARK: - Navigation
          
          // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -38,6 +53,4 @@ class preQuizVC: UIViewController {
          // Pass the selected object to the new view controller.
          }
          */
-        
-    }
 }
