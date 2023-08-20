@@ -88,7 +88,6 @@ class QuizVC: UIViewController {
                 // color the background of the correct/wrong answer
                 if question.isAnswered {
                     self.btnsArray[question.correctAns].backgroundColor = .green
-                    
                     if question.wrongAns >= 0 {
                         self.btnsArray[question.correctAns].backgroundColor = .red
                     }
@@ -132,30 +131,9 @@ class QuizVC: UIViewController {
             return
         }
 
-        ref.child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
-            if let userData = snapshot.value as? [String: Any] {
-                    if var hearts = userData["hearts"] as? Int {
-                        hearts += 1
-                    }
-                }
-            }
-        ref.child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
-            if let userData = snapshot.value as? [String: Any] {
-                    if var points = userData["points"] as? Int {
-                        points += 10
-                    }
-                }
-            }
-        }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+ }
+    
 
-}
+

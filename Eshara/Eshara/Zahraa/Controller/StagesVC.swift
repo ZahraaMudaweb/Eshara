@@ -14,6 +14,7 @@ class StagesVC: UIViewController {
     var categoryName : String?
     
     var itemIndex: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         continueLearningView.layer.cornerRadius = 30
@@ -27,7 +28,6 @@ class StagesVC: UIViewController {
  
     
     @IBAction func startQuizTapped(_ sender: UIButton) {
-        
         let preVC = storyboard?.instantiateViewController(withIdentifier: "preQuiz") as! preQuizVC
         preVC.categoryName = categoryName
         preVC.itemIndex = itemIndex

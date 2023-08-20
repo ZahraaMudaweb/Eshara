@@ -14,8 +14,6 @@ class VideoLessonsVC: UIViewController {
     private let storage = Storage.storage().reference()
     var categoryName : String?
     var itemIndex: Int?
-
-    
     var currentStage = 0
     var videosString = [String]()
     var player : AVPlayer?

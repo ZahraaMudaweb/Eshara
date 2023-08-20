@@ -12,6 +12,7 @@ import FirebaseStorage
 class VideoQuizVC: UIViewController {
 
     @IBOutlet var heartsLabel: UILabel!
+
     @IBOutlet var option1: UIButton!
     @IBOutlet var option2: UIButton!
     @IBOutlet var option3: UIButton!
@@ -20,10 +21,7 @@ class VideoQuizVC: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var quizProgress: UIProgressView!
     @IBOutlet var nextBtn: UIButton!
-    
-    
-    
-    
+ 
     var categoryName: String?
     var score: Int = 0
     var currentQuestionNumber = 1

@@ -203,7 +203,6 @@
                         <outlet property="startQuizView" destination="lDr-ib-5nX" id="CCI-1H-cum"/>
                         <segue destination="8Sp-Vu-OkT" kind="show" identifier="toLessons" id="pEw-8c-mr2"/>
                         <segue destination="ga2-nm-Cfd" kind="show" identifier="toVideoLessons" id="eIV-RU-mtJ"/>
-                        <segue destination="zpu-gl-n8k" kind="show" identifier="toPreQuiz" id="IfF-U4-G1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYk-it-m8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -832,6 +831,7 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انتصار ساحق!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-Tc-x8i">
                                 <rect key="frame" x="122.66666666666669" y="167" width="148" height="45.666666666666657"/>
+
                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="38"/>
                                 <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
