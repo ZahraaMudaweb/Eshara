@@ -3,10 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>UIAppFonts</key>
-	<array/>
-	<key>Item 0</key>
-	<string>FFHekaya-Light.otf</string>
-
+	<array>
+		<string>FFHekaya-Light.otf</string>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
