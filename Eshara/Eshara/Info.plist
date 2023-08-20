@@ -6,7 +6,6 @@
 	<array/>
 	<key>Item 0</key>
 	<string>FFHekaya-Light.otf</string>
-
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,7 +20,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>Home</string>
 				</dict>
 			</array>
 		</dict>

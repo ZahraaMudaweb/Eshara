@@ -11,6 +11,7 @@ import FirebaseStorage
 
 class VideoQuizVC: UIViewController {
 
+    @IBOutlet var heartsLabel: UILabel!
     @IBOutlet var option1: UIButton!
     @IBOutlet var option2: UIButton!
     @IBOutlet var option3: UIButton!
@@ -18,6 +19,7 @@ class VideoQuizVC: UIViewController {
     @IBOutlet var videoView: UIView!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var quizProgress: UIProgressView!
+    @IBOutlet var nextBtn: UIButton!
     
     
     
@@ -92,7 +94,6 @@ class VideoQuizVC: UIViewController {
                 self.option3.titleLabel?.text = questionsArray[self.itemIndex!][self.currentStage].options[2]
                 self.option4.titleLabel?.text = questionsArray[self.itemIndex!][self.currentStage].options[3]
                 self.updateUI()
-                
             }
         })
     }
@@ -111,8 +112,14 @@ class VideoQuizVC: UIViewController {
         loadVideos()
     }
     
-    @IBAction func nextStage(_ sender: Any) {
-        nextStage()
+    @IBAction func nextStage(_ sender: UIButton) {
+        if sender == nextBtn && currentStage == hospitalQuestions.count - 1 {
+            let vc = ResultsVC()
+            vc.score = score
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            nextStage()
+        }
     }
 
     /*

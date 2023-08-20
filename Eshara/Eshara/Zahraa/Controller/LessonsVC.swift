@@ -16,6 +16,7 @@ class LessonsVC: UIViewController {
     
     var currentStage = 0
     var imagesString = [String]()
+    var categoryName : String?
 
     @IBOutlet var translationLabel: UILabel!
     @IBOutlet var lessonsProgress: UIProgressView!
@@ -76,7 +77,7 @@ class LessonsVC: UIViewController {
     }
     
     func updateUI() {
-        lessonsProgress.progress = Float(currentStage + 1) / Float(imagesString.count)
+        lessonsProgress.progress = Float(currentStage) / Float(imagesString.count)
     }
     
     func nextStage() {
@@ -88,7 +89,9 @@ class LessonsVC: UIViewController {
     
     @IBAction func nextStage(_ sender: UIButton) {
         if sender == doneButton && currentStage == imagesString.count - 1 {
-            performSegue(withIdentifier: "lessonToQuiz", sender: nil)
+            let preVC = storyboard?.instantiateViewController(identifier: "preQuiz") as! preQuizVC
+            preVC.categoryName = "في المستشفى"
+            navigationController?.pushViewController(preVC, animated: true)
         }  else {
             nextStage()
         }
