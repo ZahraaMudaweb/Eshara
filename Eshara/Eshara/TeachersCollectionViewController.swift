@@ -158,32 +158,32 @@ class TeachersCollectionViewController: UICollectionViewController
     
     //navigationController?.pushViewController(des, animated: true)
     
-//    func teacherInfo()
-//    {
-//        let ref = Database.database().reference()
-//
-//
-//        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value)
-//        { [self]
-//            snapshot in
-//            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
-//
-//            for child in result
-//            {
-//                let key = child.key
-//                let value = child.value as? NSDictionary
-//
-//                let subject = value!["subject"] as! String
-//                let desc = value!["desc"] as! String
-//                let date = value!["date"] as! String
-//
-//                self.notifications.append(Notification(id: generateID(prefix: "Not-"), subject: subject, desc: desc, date: date))
-//               print(key)
-//                print(value)
-//            }
-//            print(self.notifications)
-//        }
-//   }
+    func teacherInfo()
+    {
+        let ref = Database.database().reference()
+
+
+        ref.child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("Notifications").observeSingleEvent(of: .value)
+        { [self]
+            snapshot in
+            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+
+            for child in result
+            {
+                let key = child.key
+                let value = child.value as? NSDictionary
+
+                let subject = value!["subject"] as! String
+                let desc = value!["desc"] as! String
+                let date = value!["date"] as! String
+
+                self.notifications.append(Notification(id: generateID(prefix: "Not-"), subject: subject, desc: desc, date: date))
+               print(key)
+                print(value as Any)
+            }
+            print(self.notifications)
+        }
+   }
     
 
     

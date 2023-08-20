@@ -30,6 +30,14 @@ struct StudentReviews
     var studentIMage: UIImage?
 }
 
+struct AddStudentrevie
+{
+    var studentRate: String
+    var StudentCommrnt: String
+    var studentname: String
+}
+
+
 
 //extension Teacherdata
 //{
