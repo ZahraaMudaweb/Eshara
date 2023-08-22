@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
                 return
             }
             UserDefaults.standard.set(Auth.auth().currentUser!.uid, forKey: "user_uid_key")
-            self.performSegue(withIdentifier: "profile", sender: sender)          
+//            self.performSegue(withIdentifier: "profile", sender: sender)
             
         })
       

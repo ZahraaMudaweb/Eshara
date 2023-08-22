@@ -157,11 +157,10 @@ class profileViewController: UIViewController,
         do{
             try FirebaseAuth.Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: "user_uid_key")
+            self.navigationController?.popToRootViewController(animated: true)
         }catch{
             print("Error Signing out")
         }
-        self.navigationController?.popToRootViewController(animated: true)
-        
     }
     
     

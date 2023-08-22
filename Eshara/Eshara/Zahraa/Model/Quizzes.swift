@@ -26,7 +26,7 @@ let familyQuestions = [familyQ1, familyQ2, familyQ3, familyQ4, familyQ5]
 
 let chatQ1 = Question(imgName: "السلام عليكم", questionText: "متى تُستخدم هذه الإشارة؟", options: ["للوداع", "للتحية", "للنداء", "للمساعدة"], correctAns: 1, wrongAns: -1, isAnswered: false)
 let chatQ2 = Question(imgName: "كيف حالك؟", questionText: "عمّ نسأل باستخدام هذه الإشارة؟", options: ["المكان", "الزمان", "الحال", "الاسم"], correctAns: 2, wrongAns: -1, isAnswered: false)
-let chatQ3 = Question(imgName: "أنا بخير", questionText: "ما معنى هذه الإشارة؟", options: ["أنا بخير", "أحسنت", "لا تقلق", "ممتاز"], correctAns: 0, wrongAns: -1, isAnswered: false)
+let chatQ3 = Question(imgName: "أنا بخير", questionText: "ما معنى هذه الإشارة؟", options: ["أنا بخير", "أحسنت", "لا تقلق", "ممتاز"], correctAns: 0, wrongAns: -1, isAnswered: false)
 let chatQ4 = Question(imgName: "آسف", questionText: "لماذا تُستخدم هذه الإشارة؟", options: ["للاعتذار", "لطلب المساعدة", "للاستئذان", "للشكر"], correctAns: 0, wrongAns: -1, isAnswered: false)
 let chatQ5 = Question(imgName: "لو سمحت", questionText: "ما معنى هذه الإشارة؟", options: ["عذرًا", "أخبرني", "تفضل", "لو سمحت"], correctAns: 3, wrongAns: -1, isAnswered: false)
 

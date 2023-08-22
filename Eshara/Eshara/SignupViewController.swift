@@ -90,7 +90,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
            
            let ref = Database.database().reference()
            let uid = Auth.auth().currentUser?.uid
-           ref.child("user").child(uid!).setValue(["Email" : email, "Name" : username, /*"dob": self.dobDate.date, */"userType" : usertype, "location":location, "price": price
+           ref.child("user").child(uid!).setValue(["Email" : email, "Name" : username, /*"dob": self.dobDate.date, */"userType" : usertype, "location":location, "price": price, "points": 100, "hearts": 5
                                                    /*,"setting":[
             ["switche": false, "name": "الإشعارات"],
             ["switche": false, "name": "الأصوات"],
@@ -118,13 +118,15 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
                })
            })
            let alert = UIAlertController(title: "نجاح", message: "تم انشاء الحساب بنجاح", preferredStyle: .alert)
-           alert.addAction(UIAlertAction(title: "حسنا", style: .cancel, handler: { _ in
-
-               self.navigationController?.popToRootViewController(animated: true)
+           alert.addAction(UIAlertAction(title: "حسنا", style: .cancel, handler: { [self]
+               _ in
+               performSegue(withIdentifier: "toHome", sender: sender)
+//               self.navigationController?.popToRootViewController(animated: true)
            }))
            self.present(alert, animated: true)
+//           performSegue(withIdentifier: "toHome", sender: nil)
            self.navigationController?.popToRootViewController(animated: true)
-                               
+
             })
         
     }

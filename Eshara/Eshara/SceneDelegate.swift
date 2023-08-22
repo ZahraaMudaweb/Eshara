@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
             let navigationController = MainNavigationController(rootViewController: loginViewController)
             self.window?.rootViewController = navigationController
-            loginViewController.performSegue(withIdentifier: "profile", sender: nil)
+            loginViewController.performSegue(withIdentifier: "Home", sender: nil)
             print(navigationController)
         }
         guard let _ = (scene as? UIWindowScene) else { return }

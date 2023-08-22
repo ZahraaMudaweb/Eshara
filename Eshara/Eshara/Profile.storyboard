@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nOl-Gb-fLg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="C75-qV-2o7">
+            <objects>
+                <viewController id="nOl-Gb-fLg" customClass="profileViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FNT-ih-fmY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-8E-Ajl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Ukj-hH-ZiS">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="821.66666666666663"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XhQ-61-OWb">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="220.33333333333334"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الملف الشخصي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TI-FW-MhA">
+                                                        <rect key="frame" x="144.66666666666666" y="0.0" width="103.66666666666666" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T7Y-gG-4Vg">
+                                                        <rect key="frame" x="121.66666666666669" y="25.333333333333329" width="150" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="RU6-Pc-qdN"/>
+                                                            <constraint firstAttribute="width" constant="150" id="zgO-pB-yJt"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpo-al-Bnp">
+                                                        <rect key="frame" x="143.33333333333334" y="180.33333333333334" width="106.66666666666666" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="XUr-XF-vl5"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="تغيير الصورة">
+                                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="changeImage:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="sVF-Fo-T3g"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8lb-Rz-z0K">
+                                                <rect key="frame" x="0.0" y="251.33333333333337" width="393" height="289"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="البريد الإلكتروني" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn7-1N-pPX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFY-Yl-9Vm">
+                                                        <rect key="frame" x="0.0" y="21.999999999999972" width="393" height="34"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم المستخدم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-qL-SrL">
+                                                        <rect key="frame" x="0.0" y="57.999999999999972" width="393" height="20"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvG-kg-XOZ">
+                                                        <rect key="frame" x="0.0" y="79.999999999999972" width="393" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاريخ الميلاد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b8-kD-3Rz">
+                                                        <rect key="frame" x="0.0" y="115.99999999999997" width="393" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayw-Gs-c7A">
+                                                        <rect key="frame" x="0.0" y="138.33333333333334" width="393" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الموقع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-zM-2Bn">
+                                                        <rect key="frame" x="0.0" y="174.33333333333334" width="393" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXh-Ji-ce7">
+                                                        <rect key="frame" x="0.0" y="196.66666666666666" width="393" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="السعر" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtS-6U-WSa">
+                                                        <rect key="frame" x="0.0" y="232.66666666666666" width="393" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUD-h9-7Is">
+                                                        <rect key="frame" x="0.0" y="255" width="393" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldA-d1-Yj9">
+                                                        <rect key="frame" x="0.0" y="217" width="370" height="20.333333333333343"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yho-Fg-KAt">
+                                                        <rect key="frame" x="0.0" y="246.33333333333337" width="370" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="ldA-d1-Yj9"/>
+                                                        <exclude reference="yho-Fg-KAt"/>
+                                                    </mask>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="L72-2D-i09">
+                                                <rect key="frame" x="0.0" y="571.33333333333337" width="393" height="54.333333333333371"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-z5-Jg0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.66666666666666" height="54.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="تغيير كلمة المرور">
+                                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="nNv-Lv-Tk2" kind="show" id="zxd-WQ-Afe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmk-Yh-FGm">
+                                                        <rect key="frame" x="261.66666666666669" y="0.0" width="131.33333333333331" height="54.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="حفظ التغييرات">
+                                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="updateProfile:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="aeH-kK-JVM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR1-6F-J4S">
+                                                <rect key="frame" x="0.0" y="656.66666666666663" width="393" height="34.333333333333371"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="اللإعدادات">
+                                                    <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="phonesetting:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="hD0-9E-RYj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uol-RS-En7">
+                                                <rect key="frame" x="0.0" y="722" width="393" height="34.333333333333371"/>
+                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.20784313730000001" green="0.73333333329999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="تسجيل خروج">
+                                                    <color key="baseBackgroundColor" red="0.20784313730000001" green="0.73333333329999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signout:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="N2s-gg-8mN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nN-Np-vjc">
+                                                <rect key="frame" x="0.0" y="787.33333333333337" width="393" height="34.333333333333371"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="حذف الحساب">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="deleteAccount:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="3nh-yd-Pxx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tRf-1b-CKf">
+                                        <rect key="frame" x="-3.6666666666666572" y="159" width="400.33333333333326" height="500"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pgn-nk-Xs4">
+                                                <rect key="frame" x="0.0" y="0.0" width="400.33333333333331" height="250"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أهلا بك في إشارة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-XF-8CE">
+                                                        <rect key="frame" x="120.66666666666669" y="0.0" width="159" height="141"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مصدرك الأمثل لتعلم لغة الإشارة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-yE-WAP">
+                                                        <rect key="frame" x="87.666666666666671" y="141" width="225.33333333333331" height="109"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="WtC-gK-HOr"/>
+                                                    <constraint firstAttribute="height" constant="250" id="tja-Xc-K2Y"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxx-Uy-jAf">
+                                                <rect key="frame" x="0.0" y="250" width="400.33333333333331" height="250"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ana-yE-x9T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200.33333333333334" height="250"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="تسجيل الدخول">
+                                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-Q9-Mn9">
+                                                        <rect key="frame" x="200.33333333333331" y="0.0" width="200" height="250"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="إنشاء حساب">
+                                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TxS-Sm-Wo9" firstAttribute="top" secondItem="Ukj-hH-ZiS" secondAttribute="top" id="5Nx-ra-wfF"/>
+                                    <constraint firstItem="Ukj-hH-ZiS" firstAttribute="bottom" secondItem="TxS-Sm-Wo9" secondAttribute="bottom" id="GgW-cs-jCV"/>
+                                    <constraint firstItem="Ukj-hH-ZiS" firstAttribute="leading" secondItem="TxS-Sm-Wo9" secondAttribute="leading" id="QdL-GY-Kcn"/>
+                                    <constraint firstItem="tRf-1b-CKf" firstAttribute="centerY" secondItem="0hc-8E-Ajl" secondAttribute="centerY" id="Sbj-4Z-VWc"/>
+                                    <constraint firstItem="Ukj-hH-ZiS" firstAttribute="centerX" secondItem="0hc-8E-Ajl" secondAttribute="centerX" id="pim-OF-wq4"/>
+                                    <constraint firstItem="Ukj-hH-ZiS" firstAttribute="trailing" secondItem="TxS-Sm-Wo9" secondAttribute="trailing" id="uqW-MZ-vjQ"/>
+                                    <constraint firstItem="tRf-1b-CKf" firstAttribute="centerX" secondItem="0hc-8E-Ajl" secondAttribute="centerX" id="yOB-gm-Ci4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="TxS-Sm-Wo9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="35V-MP-fAj"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d0Y-oh-rcw"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0hc-8E-Ajl" firstAttribute="trailing" secondItem="d0Y-oh-rcw" secondAttribute="trailing" id="Brg-Ex-EQl"/>
+                            <constraint firstItem="d0Y-oh-rcw" firstAttribute="bottom" secondItem="0hc-8E-Ajl" secondAttribute="bottom" id="Pee-cJ-AWg"/>
+                            <constraint firstItem="0hc-8E-Ajl" firstAttribute="top" secondItem="FNT-ih-fmY" secondAttribute="top" id="ujZ-kO-jow"/>
+                            <constraint firstItem="0hc-8E-Ajl" firstAttribute="leading" secondItem="d0Y-oh-rcw" secondAttribute="leading" id="uon-db-ziZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="znM-dV-SHA"/>
+                    <connections>
+                        <outlet property="changeImageButton" destination="Gpo-al-Bnp" id="xtp-It-aCr"/>
+                        <outlet property="changePassButton" destination="Umu-z5-Jg0" id="rdb-Gp-tCN"/>
+                        <outlet property="deleteAccountButton" destination="6nN-Np-vjc" id="gRE-dr-lmO"/>
+                        <outlet property="dobLabel" destination="2b8-kD-3Rz" id="aa8-1Z-d3m"/>
+                        <outlet property="dobTextField" destination="ayw-Gs-c7A" id="Dog-de-uGh"/>
+                        <outlet property="emailLabel" destination="tn7-1N-pPX" id="fH6-Lg-RCH"/>
+                        <outlet property="emailTextField" destination="fFY-Yl-9Vm" id="eAW-hD-zrV"/>
+                        <outlet property="imageView" destination="T7Y-gG-4Vg" id="NbG-Az-Gol"/>
+                        <outlet property="locationLabel" destination="Ptk-zM-2Bn" id="ZEh-vm-lad"/>
+                        <outlet property="locationTextfield" destination="HXh-Ji-ce7" id="EGG-Cc-mY4"/>
+                        <outlet property="passTextfield" destination="yho-Fg-KAt" id="sLT-EF-XIJ"/>
+                        <outlet property="priceLabel" destination="VtS-6U-WSa" id="NGk-rO-Cht"/>
+                        <outlet property="priceTextfield" destination="sUD-h9-7Is" id="6LX-D7-LbB"/>
+                        <outlet property="profileStackView" destination="Ukj-hH-ZiS" id="Yue-QW-pCk"/>
+                        <outlet property="redirectLogin" destination="tRf-1b-CKf" id="8cb-U6-hvQ"/>
+                        <outlet property="saveChangeButton" destination="Nmk-Yh-FGm" id="PJw-JM-BXW"/>
+                        <outlet property="scrollView" destination="0hc-8E-Ajl" id="dfJ-lr-Mmx"/>
+                        <outlet property="signOutButton" destination="uol-RS-En7" id="BZw-RZ-Ntm"/>
+                        <outlet property="titleLabel" destination="9TI-FW-MhA" id="Xu7-Z4-l7G"/>
+                        <outlet property="userNameTextfield" destination="JvG-kg-XOZ" id="RmC-PK-FI1"/>
+                        <outlet property="usernameLabel" destination="tJ5-qL-SrL" id="7kQ-Ae-Vhj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKc-8K-LPU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="749"/>
+        </scene>
+        <!--Change Pass View Controller-->
+        <scene sceneID="o27-yr-zPb">
+            <objects>
+                <viewController id="nNv-Lv-Tk2" customClass="ChangePassViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pAB-FP-OF4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGk-BK-dak">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZGB-PE-m0k">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="223"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور الجديدة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzP-xC-VyB">
+                                                <rect key="frame" x="10" y="0.0" width="373" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSp-SU-pzO">
+                                                <rect key="frame" x="10" y="40.333333333333336" width="373" height="34.000000000000007"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكيد كلمة المرور الجديدة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39S-I6-rTP">
+                                                <rect key="frame" x="10" y="94.333333333333329" width="373" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3we-a4-f6B">
+                                                <rect key="frame" x="10" y="134.66666666666666" width="373" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-Za-nVT">
+                                                <rect key="frame" x="128.66666666666666" y="188.66666666666666" width="135.99999999999997" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="تغيير كلمة المرور">
+                                                    <color key="baseBackgroundColor" red="0.20784313730000001" green="0.73333333329999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changePass:" destination="nNv-Lv-Tk2" eventType="touchUpInside" id="Zyn-Ys-2sV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fzP-xC-VyB" secondAttribute="trailing" constant="10" id="RyP-SF-Mwb"/>
+                                            <constraint firstAttribute="trailing" secondItem="3we-a4-f6B" secondAttribute="trailing" constant="10" id="Y3C-qR-Tgd"/>
+                                            <constraint firstAttribute="trailing" secondItem="39S-I6-rTP" secondAttribute="trailing" constant="10" id="bZi-Hb-5hi"/>
+                                            <constraint firstItem="3we-a4-f6B" firstAttribute="leading" secondItem="ZGB-PE-m0k" secondAttribute="leading" constant="10" id="n4r-wa-pI8"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZSp-SU-pzO" secondAttribute="trailing" constant="10" id="tS8-iP-TuN"/>
+                                            <constraint firstItem="ZSp-SU-pzO" firstAttribute="leading" secondItem="ZGB-PE-m0k" secondAttribute="leading" constant="10" id="vF1-lG-R0Z"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZGB-PE-m0k" firstAttribute="top" secondItem="ong-3O-izF" secondAttribute="top" id="8iB-Ov-whk"/>
+                                    <constraint firstItem="ZGB-PE-m0k" firstAttribute="bottom" secondItem="ong-3O-izF" secondAttribute="bottom" id="JXH-Cs-yXg"/>
+                                    <constraint firstItem="ZGB-PE-m0k" firstAttribute="leading" secondItem="ong-3O-izF" secondAttribute="leading" id="aGN-SR-7Eb"/>
+                                    <constraint firstItem="ZGB-PE-m0k" firstAttribute="trailing" secondItem="ong-3O-izF" secondAttribute="trailing" id="kyY-Ob-4kb"/>
+                                    <constraint firstItem="ZGB-PE-m0k" firstAttribute="centerX" secondItem="NGk-BK-dak" secondAttribute="centerX" id="rix-m6-bZ4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ong-3O-izF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hue-8t-qs8"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uMr-sl-tFh"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NGk-BK-dak" secondAttribute="trailing" id="BZZ-hH-r4k"/>
+                            <constraint firstItem="NGk-BK-dak" firstAttribute="top" secondItem="uMr-sl-tFh" secondAttribute="top" id="I9V-GA-I4K"/>
+                            <constraint firstItem="NGk-BK-dak" firstAttribute="leading" secondItem="pAB-FP-OF4" secondAttribute="leading" id="LRK-81-fqg"/>
+                            <constraint firstItem="uMr-sl-tFh" firstAttribute="bottom" secondItem="NGk-BK-dak" secondAttribute="bottom" id="y42-u2-F1o"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TG0-Et-1qW"/>
+                    <connections>
+                        <outlet property="changePassLabel" destination="GEH-Za-nVT" id="LWa-eb-0ia"/>
+                        <outlet property="confirmPassLabel" destination="39S-I6-rTP" id="cW2-6b-2kK"/>
+                        <outlet property="confirmPassTextfield" destination="3we-a4-f6B" id="e9g-wb-mM1"/>
+                        <outlet property="newPassLabel" destination="fzP-xC-VyB" id="tPK-ix-Vkd"/>
+                        <outlet property="newPassTextfield" destination="ZSp-SU-pzO" id="KlC-2i-rBV"/>
+                        <outlet property="scrollView" destination="NGk-BK-dak" id="MhA-Yq-NTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2j-DP-n8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046" y="1572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

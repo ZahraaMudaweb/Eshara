@@ -8,6 +8,8 @@
 import UIKit
 import AVFoundation
 import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class VideoQuizVC: UIViewController {
 
@@ -20,12 +22,11 @@ class VideoQuizVC: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var quizProgress: UIProgressView!
     @IBOutlet var nextBtn: UIButton!
-    
+    var btnsArray = [UIButton]()
     
     
     
     var categoryName: String?
-    var score: Int = 0
     var currentQuestionNumber = 1
     var itemIndex: Int?
     
@@ -64,6 +65,7 @@ class VideoQuizVC: UIViewController {
     }
     
     func loadVideos() {
+        btnsArray = [option1, option2, option3, option4]
         guard currentStage >= 0 && currentStage < videosString.count else {return}
         
         let vidString = "\(questionsArray[itemIndex!][self.currentStage].imgName).mov"
@@ -88,11 +90,12 @@ class VideoQuizVC: UIViewController {
                 //play video
                 self.playVideo()
                 
-                self.questionLabel.text = questionsArray[self.itemIndex!][self.currentStage].questionText
-                self.option1.titleLabel?.text = questionsArray[self.itemIndex!][self.currentStage].options[0]
-                self.option2.titleLabel?.text = questionsArray[self.itemIndex!][self.currentStage].options[1]
-                self.option3.titleLabel?.text = questionsArray[self.itemIndex!][self.currentStage].options[2]
-                self.option4.titleLabel?.text = questionsArray[self.itemIndex!][self.currentStage].options[3]
+                let question = questionsArray[self.itemIndex!][self.currentStage]
+                self.questionLabel.text = question.questionText
+                self.option1.setTitle(question.options[0], for: .normal)
+                self.option2.setTitle(question.options[1], for: .normal)
+                self.option3.setTitle(question.options[2], for: .normal)
+                self.option4.setTitle(question.options[3], for: .normal)
                 self.updateUI()
             }
         })
@@ -109,19 +112,121 @@ class VideoQuizVC: UIViewController {
     func nextStage() {
         guard currentStage < videosString.count else {return}
         currentStage += 1
+        enableButtons()
         loadVideos()
     }
     
     @IBAction func nextStage(_ sender: UIButton) {
         if sender == nextBtn && currentStage == hospitalQuestions.count - 1 {
             let vc = ResultsVC()
-            vc.score = score
             navigationController?.pushViewController(vc, animated: true)
         } else {
             nextStage()
         }
     }
+    @IBAction func didChooseAnswer(_ sender: UIButton) {
+        btnsArray = [option1, option2, option3, option4]
+        var question = questionsArray[self.itemIndex!][self.currentStage]
 
+        question.isAnswered = true
+        self.btnsArray[question.correctAns].backgroundColor = .green
+
+        switch sender {
+        case option1:
+            if question.correctAns == 0 {
+                increasePoints()
+            } else  {
+                decreaseHearts()
+                self.btnsArray[0].backgroundColor = .red
+            }
+            disableButtons()
+        case option2:
+            if  question.correctAns == 1 {
+                increasePoints()
+            } else {
+                decreaseHearts()
+                self.btnsArray[1].backgroundColor = .red
+            }
+            disableButtons()
+        case option3:
+            if question.correctAns == 2 {
+                increasePoints()
+            } else {
+                decreaseHearts()
+                self.btnsArray[2].backgroundColor = .red
+            }
+            disableButtons()
+        case option4:
+            if question.correctAns == 3 {
+                increasePoints()
+            } else {
+                decreaseHearts()
+                self.btnsArray[3].backgroundColor = .red
+            }
+            disableButtons()
+        default:
+            question.isAnswered = false
+            enableButtons()
+        }
+    
+    }
+     
+    func increasePoints() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        // increase user points
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "points" {
+                    guard let value = child.value as? Int else {return}
+                    let newValue = value + 10
+                    ref.child("user").child(uid!).updateChildValues(["points" : (newValue)])
+                    let vc = ResultsVC()
+                    vc.score += 10
+                }
+                
+            }
+        })
+    }
+
+    func decreaseHearts() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        // decrease user hearts
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    let newValue = value - 1
+                    ref.child("user").child(uid!).updateChildValues(["hearts" : (newValue)])
+                    self.heartsLabel.text = "\(newValue)"
+                }
+            }
+        })
+    
+    }
+    func disableButtons() {
+        option1.isEnabled = false
+        option2.isEnabled = false
+        option3.isEnabled = false
+        option4.isEnabled = false
+    }
+    func enableButtons() {
+        option1.isEnabled = true
+        option2.isEnabled = true
+        option3.isEnabled = true
+        option4.isEnabled = true
+        option1.backgroundColor = .clear
+        option2.backgroundColor = .clear
+        option3.backgroundColor = .clear
+        option4.backgroundColor = .clear
+
+    }
+    
     /*
     // MARK: - Navigation
 

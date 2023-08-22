@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class ResultsVC: UIViewController {
-
+    
+    let ref = Database.database().reference()
+    let uid = Auth.auth().currentUser?.uid
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
@@ -17,15 +21,15 @@ class ResultsVC: UIViewController {
     @IBOutlet var pointsLabel: UILabel!
     @IBOutlet var heartsLabel: UILabel!
    
-    var score: Int?
-    var hearts: Int?
-    var totalScore: Int?
-    var points: Int?
+    var score = 0
+    let totalScore = 50
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateHearts()
+        updatePoints()
         // Do any additional setup after loading the view.
         showRating()
     }
@@ -35,7 +39,7 @@ class ResultsVC: UIViewController {
             var title = ""
             var color = UIColor.black
             var image = ""
-            guard let score = score, let totalScore = totalScore else { return }
+            let score = score
             let avgScore = score * 100 / totalScore
             if avgScore < 10 {
                 rating = "تحتاج للتدريب :("
@@ -68,10 +72,34 @@ class ResultsVC: UIViewController {
         titleLabel.text = "\(title)"
         titleLabel.textColor = color
         imageView.image = UIImage(named: image)
-        pointsLabel.text = "\(points!)"
-        heartsLabel.text = "\(hearts!)"
+
         }
     
+    func updateHearts() {
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    self.heartsLabel.text = "\(value)"
+                }
+            }
+        })
+    }
+    
+    func updatePoints() {
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "points" {
+                    guard let value = child.value as? Int else {return}
+                    self.pointsLabel.text = "\(value)"
+                }
+            }
+        })
+    }
     /*
     // MARK: - Navigation
 
