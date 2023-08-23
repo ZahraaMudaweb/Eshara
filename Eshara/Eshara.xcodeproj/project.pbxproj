@@ -65,6 +65,9 @@
 		67562C0D2A926C9E00102CF9 /* NotifyExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67562C062A926C9E00102CF9 /* NotifyExtra.swift */; };
 		67B073A72A7FE0F0009B6329 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B073A62A7FE0F0009B6329 /* LessonsVC.swift */; };
 		67E1ADFD2A8BA40400D2B4EB /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */; };
+		6A382E382A968B4200D40658 /* PremuimPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A382E372A968B4200D40658 /* PremuimPackageViewController.swift */; };
+		6A382E3A2A968BE400D40658 /* PremiumPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A382E392A968BE400D40658 /* PremiumPayViewController.swift */; };
+		6A382E3C2A968CF100D40658 /* PremiumPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A382E3B2A968CF100D40658 /* PremiumPackage.swift */; };
 		6AA626F62A964F7100D636E0 /* BokmarkDtae.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA626F52A964F7100D636E0 /* BokmarkDtae.swift */; };
 		6AD17E262A94F1B900C8267E /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD17E252A94F1B900C8267E /* FFHekaya-Light.otf */; };
 		6AD17E292A94F20000C8267E /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD17E282A94F20000C8267E /* Leaderboard.storyboard */; };
@@ -138,6 +141,9 @@
 		67B073A62A7FE0F0009B6329 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonsVC.swift; path = Eshara/Zahraa/Controller/LessonsVC.swift; sourceTree = SOURCE_ROOT; };
 		67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = Eshara/Zahraa/Controller/ResultsVC.swift; sourceTree = SOURCE_ROOT; };
 		6AA626F52A964F7100D636E0 /* BokmarkDtae.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BokmarkDtae.swift; sourceTree = "<group>"; };
+		6A382E372A968B4200D40658 /* PremuimPackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremuimPackageViewController.swift; sourceTree = "<group>"; };
+		6A382E392A968BE400D40658 /* PremiumPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPayViewController.swift; sourceTree = "<group>"; };
+		6A382E3B2A968CF100D40658 /* PremiumPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPackage.swift; sourceTree = "<group>"; };
 		6AD17E252A94F1B900C8267E /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FFHekaya-Light.otf"; sourceTree = "<group>"; };
 		6AD17E282A94F20000C8267E /* Leaderboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
 		6AD17E2A2A94F3DF00C8267E /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +276,9 @@
 				67562BE22A926C8300102CF9 /* TeachersDataViewController.swift */,
 				67562BD32A926C8300102CF9 /* Theme.swift */,
 				67562BD42A926C8300102CF9 /* UserData.swift */,
+				6A382E372A968B4200D40658 /* PremuimPackageViewController.swift */,
+				6A382E3B2A968CF100D40658 /* PremiumPackage.swift */,
+				6A382E392A968BE400D40658 /* PremiumPayViewController.swift */,
 				6740ACE42A794959006CE7DA /* Main.storyboard */,
 				673B703E2A93A74C0030837C /* Profile.storyboard */,
 				6740ACE72A79495A006CE7DA /* Assets.xcassets */,
@@ -456,6 +465,7 @@
 				6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */,
 				6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */,
 				67562BF52A926C8300102CF9 /* setting.swift in Sources */,
+				6A382E382A968B4200D40658 /* PremuimPackageViewController.swift in Sources */,
 				67562BED2A926C8300102CF9 /* BookMarkViewController.swift in Sources */,
 				67562BEE2A926C8300102CF9 /* TeachersCollectionViewController.swift in Sources */,
 				6AD17E392A95195800C8267E /* addFriendViewController.swift in Sources */,
@@ -467,10 +477,12 @@
 				67562BF72A926C8300102CF9 /* TeachersDataViewController.swift in Sources */,
 				67562BEA2A926C8300102CF9 /* ReviewsCollectionViewCell.swift in Sources */,
 				671155542A8D199500FC3EA0 /* preQuizVC.swift in Sources */,
+				6A382E3C2A968CF100D40658 /* PremiumPackage.swift in Sources */,
 				6AD17E352A95155200C8267E /* FriendViewController.swift in Sources */,
 				67562C0D2A926C9E00102CF9 /* NotifyExtra.swift in Sources */,
 				67562BFC2A926C8400102CF9 /* SettingTableViewCell.swift in Sources */,
 				67562BF32A926C8300102CF9 /* ReviewsCollectionViewController.swift in Sources */,
+				6A382E3A2A968BE400D40658 /* PremiumPayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
