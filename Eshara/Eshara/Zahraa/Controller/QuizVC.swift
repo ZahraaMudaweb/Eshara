@@ -26,7 +26,7 @@ class QuizVC: UIViewController {
     var btnsArray = [UIButton]()
     
     var categoryName: String?
-    
+    var score = 0
     var currentStage = 0
     var imagesString = [String]()
     var player : AVPlayer?
@@ -40,7 +40,22 @@ class QuizVC: UIViewController {
         quizProgress.trackTintColor = .white
         // Do any additional setup after loading the view.
         fetchImageStrings()
-
+        showHearts()
+    }
+    
+    func showHearts() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    self.heartsLabel.text = "\(value)"
+                }
+            }
+        })
     }
     
     func fetchImageStrings() {
@@ -101,7 +116,8 @@ class QuizVC: UIViewController {
     }
     @IBAction func nextStage(_ sender: UIButton) {
         if sender == nextBtn && currentStage == hospitalQuestions.count - 1 {
-            let vc = ResultsVC()
+            guard let vc = self.storyboard?.instantiateViewController(identifier: "results") as? ResultsVC else {return}
+            vc.score = self.score
             navigationController?.pushViewController(vc, animated: true)
         } else {
             nextStage()
@@ -167,10 +183,8 @@ class QuizVC: UIViewController {
                     guard let value = child.value as? Int else {return}
                     let newValue = value + 10
                     ref.child("user").child(uid!).updateChildValues(["points" : (newValue)])
-                    let vc = ResultsVC()
-                    vc.score += 10
+                    self.score += 10
                 }
-                
             }
         })
     }
@@ -208,7 +222,6 @@ class QuizVC: UIViewController {
         option2.backgroundColor = .clear
         option3.backgroundColor = .clear
         option4.backgroundColor = .clear
-
     }
     
     /*

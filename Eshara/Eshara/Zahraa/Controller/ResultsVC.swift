@@ -21,17 +21,17 @@ class ResultsVC: UIViewController {
     @IBOutlet var pointsLabel: UILabel!
     @IBOutlet var heartsLabel: UILabel!
    
-    var score = 0
+    var score: Int?
     let totalScore = 50
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateHearts()
-        updatePoints()
         // Do any additional setup after loading the view.
         showRating()
+        updateHearts()
+        updatePoints()
     }
     
     func showRating() {
@@ -39,7 +39,7 @@ class ResultsVC: UIViewController {
             var title = ""
             var color = UIColor.black
             var image = ""
-            let score = score
+        guard let score = score else { return }
             let avgScore = score * 100 / totalScore
             if avgScore < 10 {
                 rating = "تحتاج للتدريب :("
@@ -49,7 +49,7 @@ class ResultsVC: UIViewController {
             }  else if avgScore < 40 {
                 rating = "باجتهادك حتمًا ستصل"
                 title = "حاول مرة أخرى"
-                color = orange!
+                color = red!
                 image = "lose"
             } else if avgScore < 60 {
                 rating = "جيّد جدًّا"
@@ -59,7 +59,7 @@ class ResultsVC: UIViewController {
             } else if avgScore < 80 {
                 rating = "أنت رائع!"
                 title = "لقد انتصرت!"
-                color = lightBlue!
+                color = blue!
                 image = "win"
             } else if avgScore <= 100 {
                 rating = "لا أحد أفضل منك 😎"

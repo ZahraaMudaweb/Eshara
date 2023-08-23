@@ -29,7 +29,7 @@ class VideoQuizVC: UIViewController {
     var categoryName: String?
     var currentQuestionNumber = 1
     var itemIndex: Int?
-    
+    var score = 0
     var currentStage = 0
     var videosString = [String]()
     var player : AVPlayer?
@@ -43,7 +43,22 @@ class VideoQuizVC: UIViewController {
         quizProgress.trackTintColor = .white
         // Do any additional setup after loading the view.
         fetchVideoStrings()
-
+        showHearts()
+    }
+    
+    func showHearts() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    self.heartsLabel.text = "\(value)"
+                }
+            }
+        })
     }
     
     func fetchVideoStrings() {
@@ -106,7 +121,7 @@ class VideoQuizVC: UIViewController {
     }
     
     func updateUI() {
-        quizProgress.progress = Float(currentStage + 1) / Float(questionsArray[self.itemIndex!].count)
+        quizProgress.progress = Float(currentStage) / Float(questionsArray[self.itemIndex!].count)
     }
     
     func nextStage() {
@@ -118,7 +133,8 @@ class VideoQuizVC: UIViewController {
     
     @IBAction func nextStage(_ sender: UIButton) {
         if sender == nextBtn && currentStage == hospitalQuestions.count - 1 {
-            let vc = ResultsVC()
+            guard let vc = self.storyboard?.instantiateViewController(identifier: "results") as? ResultsVC else {return}
+            vc.score = self.score
             navigationController?.pushViewController(vc, animated: true)
         } else {
             nextStage()
@@ -183,10 +199,8 @@ class VideoQuizVC: UIViewController {
                     guard let value = child.value as? Int else {return}
                     let newValue = value + 10
                     ref.child("user").child(uid!).updateChildValues(["points" : (newValue)])
-                    let vc = ResultsVC()
-                    vc.score += 10
+                    self.score += 10
                 }
-                
             }
         })
     }
@@ -203,7 +217,7 @@ class VideoQuizVC: UIViewController {
                     guard let value = child.value as? Int else {return}
                     let newValue = value - 1
                     ref.child("user").child(uid!).updateChildValues(["hearts" : (newValue)])
-                    self.heartsLabel.text = "\(newValue)"
+                    self.heartsLabel.text = "\(value)"
                 }
             }
         })
