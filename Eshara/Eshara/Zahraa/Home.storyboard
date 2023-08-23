@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="hg6-7O-lkI">
             <objects>
                 <viewController id="gg9-8K-ZFc" customClass="HomeVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,7 +238,7 @@
                             <constraint firstItem="3lg-NR-DJ4" firstAttribute="centerX" secondItem="9AU-eV-bq6" secondAttribute="centerX" id="lIk-kx-3Bi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sAy-4y-23J"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="sAy-4y-23J"/>
                     <connections>
                         <outlet property="friends" destination="WGi-KZ-WFf" id="hTc-pO-vkE"/>
                         <outlet property="heartsLabel" destination="WJd-6p-8Pd" id="IUb-2C-XoR"/>
@@ -255,7 +255,7 @@
         <scene sceneID="ie3-5w-1nT">
             <objects>
                 <viewControllerPlaceholder storyboardName="Ahmed" id="VMD-8w-CQy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="المعلمين" selectedImage="HomePage-18" id="vPr-iE-W4D"/>
+                    <tabBarItem key="tabBarItem" title="المعلمين" selectedImage="person.line.dotted.person.fill" catalog="system" id="vPr-iE-W4D"/>
                     <navigationItem key="navigationItem" id="NoI-Vi-hn3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfS-b0-Mf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,7 +266,7 @@
         <scene sceneID="uoh-OD-rAC">
             <objects>
                 <viewControllerPlaceholder storyboardName="Browse Categories &amp; Lessons" id="g4Q-2g-Q80" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="الدروس" selectedImage="HomePage-16" id="iM7-mS-Pgo"/>
+                    <tabBarItem key="tabBarItem" title="الدروس" selectedImage="book" catalog="system" id="iM7-mS-Pgo"/>
                     <navigationItem key="navigationItem" id="Ybc-R9-04u"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sr-dd-D3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,7 +285,7 @@
         <scene sceneID="Yff-vI-ehK">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="55N-mg-KT6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="4fR-kp-NED"/>
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="4fR-kp-NED"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMF-5K-prI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,14 +314,18 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ane-cC-gEU"/>
-        <segue reference="E2i-1m-rKp"/>
+        <segue reference="mjk-US-spu"/>
+        <segue reference="SNJ-bT-irb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HomePage-16" width="1081" height="1081"/>
         <image name="HomePage-17" width="1081" height="1081"/>
         <image name="HomePage-18" width="1081" height="1081"/>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="heart" width="1081" height="1081"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.line.dotted.person.fill" catalog="system" width="128" height="58"/>
         <image name="star" width="1081" height="1081"/>
     </resources>
 </document>
