@@ -485,18 +485,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ONp-tc-nb3">
-                                <rect key="frame" x="36.666666666666657" y="318" width="320" height="216"/>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
-                                    <!--1970-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="725713200">
-                                    <!--2023-12-31 11:00:00 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="DatePickerTapp:" destination="Og8-NL-yXh" eventType="valueChanged" id="Wye-up-vP4"/>
-                                </connections>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrH-M5-MV1">
                                 <rect key="frame" x="16" y="718" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -508,6 +496,18 @@
                                     <action selector="ConfButtonTap:" destination="Og8-NL-yXh" eventType="touchUpInside" id="21G-hd-Gft"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ONp-tc-nb3">
+                                <rect key="frame" x="36" y="318" width="320" height="216"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="725713200">
+                                    <!--2023-12-31 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="DatePickerTapp:" destination="Og8-NL-yXh" eventType="valueChanged" id="Wye-up-vP4"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SgT-1v-f0G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -722,6 +722,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="duq-o5-0zz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zMT-Xi-PAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -773,6 +774,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="KeU-kW-loy"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iCI-ul-j5e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
