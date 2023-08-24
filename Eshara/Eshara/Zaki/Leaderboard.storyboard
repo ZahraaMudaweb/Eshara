@@ -107,7 +107,7 @@
                                                 <rect key="frame" x="0.0" y="62" width="97.666666666666671" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="piont player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1T-Qi-pDg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666686" height="8.6666666666666661"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="8.6666666666666661"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2Ph-9K-qFK" customClass="leaderBoardCollectionViewCell" customModule="Eshara" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leaderboardCell" id="2Ph-9K-qFK" customClass="leaderBoardCollectionViewCell" customModule="Eshara" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jy1-DQ-exY">
@@ -199,6 +199,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Nx-e3-LN8" id="vCM-Pj-bqj"/>
+                                    <outlet property="delegate" destination="6Nx-e3-LN8" id="Y2v-3i-VT8"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pO7-c0-d3j"/>
@@ -216,6 +220,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="xJb-WQ-vRp" id="pjL-lA-jIy"/>
                         <outlet property="imgPlayer1" destination="Fi6-rx-jUw" id="wDc-6f-vdO"/>
                         <outlet property="imgPlayer2" destination="mEz-sd-4Oh" id="spf-g2-LrE"/>
                         <outlet property="imgPlayer3" destination="sfZ-jO-gg9" id="irE-0O-xZ8"/>
@@ -610,6 +615,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="udG-Pr-0g2" id="iF5-iu-t3H"/>
+                                    <outlet property="delegate" destination="udG-Pr-0g2" id="QsD-qd-ci9"/>
+                                </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="Gq0-WP-fbX">
                                 <rect key="frame" x="20" y="123" width="353" height="69"/>
