@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6710177E2A7A915E00739B7A /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6710177D2A7A915E00739B7A /* FFHekaya-Light.otf */; };
+		041235882A9746D100A1A5B4 /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */; };
 		671155502A8D199500FC3EA0 /* Quizzes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671155412A8D199500FC3EA0 /* Quizzes.storyboard */; };
 		671155512A8D199500FC3EA0 /* VideoQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671155432A8D199500FC3EA0 /* VideoQuizVC.swift */; };
 		671155522A8D199500FC3EA0 /* StagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671155442A8D199500FC3EA0 /* StagesVC.swift */; };
@@ -69,7 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6710177D2A7A915E00739B7A /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FFHekaya-Light.otf"; path = "../../../../../Downloads/Icons - Colors - Font/FFHekaya-Light.otf"; sourceTree = "<group>"; };
+		041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FFHekaya-Light.otf"; path = "../../../../Desktop/FFHekaya-Light.otf"; sourceTree = "<group>"; };
 		671155412A8D199500FC3EA0 /* Quizzes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Quizzes.storyboard; sourceTree = "<group>"; };
 		671155432A8D199500FC3EA0 /* VideoQuizVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoQuizVC.swift; sourceTree = "<group>"; };
 		671155442A8D199500FC3EA0 /* StagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagesVC.swift; sourceTree = "<group>"; };
@@ -220,8 +220,8 @@
 			children = (
 				6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */,
 				6740ACDE2A794959006CE7DA /* AppDelegate.swift */,
+				041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */,
 				6740ACE02A794959006CE7DA /* SceneDelegate.swift */,
-				6710177D2A7A915E00739B7A /* FFHekaya-Light.otf */,
 				67562BCF2A926C5900102CF9 /* AddReviewViewController.swift */,
 				67562BD12A926C6100102CF9 /* Ahmed.storyboard */,
 				6740ACE22A794959006CE7DA /* ViewController.swift */,
@@ -358,11 +358,11 @@
 				6711555D2A8D1B1E00FC3EA0 /* Media.xcassets in Resources */,
 				6754069D2A9252AD009C23A2 /* Home.storyboard in Resources */,
 				67562C072A926C9E00102CF9 /* Hussain.storyboard in Resources */,
+				041235882A9746D100A1A5B4 /* FFHekaya-Light.otf in Resources */,
 				673B703F2A93A74C0030837C /* Profile.storyboard in Resources */,
 				67562BD22A926C6100102CF9 /* Ahmed.storyboard in Resources */,
 				6711555E2A8D32F000FC3EA0 /* Main.storyboard in Resources */,
 				671155572A8D199500FC3EA0 /* Browse Categories & Lessons.storyboard in Resources */,
-				6710177E2A7A915E00739B7A /* FFHekaya-Light.otf in Resources */,
 				671155502A8D199500FC3EA0 /* Quizzes.storyboard in Resources */,
 				67562BF82A926C8300102CF9 /* Settings.bundle in Resources */,
 				6740ACE82A79495A006CE7DA /* Assets.xcassets in Resources */,

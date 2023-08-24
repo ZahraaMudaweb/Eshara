@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EOO-DE-8aH">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -82,7 +82,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDZ-Qp-ICD"/>
-                                                    <segue destination="5aw-Cd-OHr" kind="show" identifier="Home" id="Rat-o2-sCu"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أو:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fed-C3-kBa">
@@ -161,6 +160,7 @@
                         <outlet property="scrollView" destination="dnu-Q4-fNh" id="0JP-FW-Q46"/>
                         <outlet property="secondTitleLabel" destination="8oZ-u2-W6g" id="tXd-f5-4TK"/>
                         <outlet property="signupButton" destination="IQs-4h-Mqa" id="d2n-dT-epx"/>
+                        <segue destination="5aw-Cd-OHr" kind="show" identifier="Home" id="SIN-uj-Rcu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,7 +175,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kP4-7A-LAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659" y="527"/>
+            <point key="canvasLocation" x="1697" y="114"/>
         </scene>
         <!--Forget Pass View Controller-->
         <scene sceneID="la1-aq-FzG">
@@ -527,7 +527,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rat-o2-sCu"/>
+        <segue reference="SIN-uj-Rcu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
