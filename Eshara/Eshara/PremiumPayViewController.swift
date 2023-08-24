@@ -9,13 +9,46 @@ import UIKit
 
 class PremiumPayViewController: UIViewController {
 
+    
+    
+    
+    var price: String = ""
+    var Period: String = ""
+    
+    
+    @IBOutlet var packegPrice: UILabel!
+    
+    
+    @IBOutlet var periodPakeh: UILabel!
+    var packeag: PremiumPackage?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(packeag)
+        
+        if let packeag = packeag {
+            
+         packegPrice.text = packeag.price
+         periodPakeh.text = packeag.period
+            
+        }
+      
+        
         // Do any additional setup after loading the view.
     }
     
+    
 
+    @IBAction func purchasePackage(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -25,5 +58,7 @@ class PremiumPayViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

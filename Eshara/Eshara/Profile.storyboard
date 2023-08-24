@@ -161,6 +161,9 @@
                                                 <rect key="frame" x="0.0" y="656.66666666666663" width="393" height="34.333333333333371"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Be Premuim User"/>
+                                                <connections>
+                                                    <segue destination="Zti-Yu-OUJ" kind="show" id="JNb-Qt-F2g"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-rm-iDS">
                                                 <rect key="frame" x="0.0" y="722" width="393" height="20.333333333333371"/>
@@ -306,14 +309,14 @@
             <objects>
                 <viewController id="Zti-Yu-OUJ" customClass="PremiumPackageViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ePS-ah-qER">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Jh-Nr2">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkL-97-M11">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="235.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="224"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price: 10 BHD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed7-vq-zdV">
                                                 <rect key="frame" x="8" y="116" width="377" height="21"/>
@@ -332,8 +335,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJJ-qR-hmO">
                                                 <rect key="frame" x="8" y="192" width="377" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="pay1"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Subscribe"/>
+                                                <connections>
+                                                    <action selector="payPackage1:" destination="Zti-Yu-OUJ" eventType="touchUpInside" id="xx8-vx-L5h"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="package name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7W-7W-VGH">
                                                 <rect key="frame" x="8" y="24" width="377" height="21"/>
@@ -346,7 +353,7 @@
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8LC-ZC-xhD">
-                                        <rect key="frame" x="0.0" y="261.66666666666669" width="393" height="235.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="250" width="393" height="224"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="package name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e83-ah-sqH">
                                                 <rect key="frame" x="8" y="-0.66666666666674246" width="377" height="62"/>
@@ -383,7 +390,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h25-Im-Azn">
-                                        <rect key="frame" x="0.0" y="523.33333333333337" width="393" height="235.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="500" width="393" height="224"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price: 10 BHD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3V-B1-dHt">
                                                 <rect key="frame" x="8" y="71" width="377" height="47"/>
@@ -427,8 +434,21 @@
                             <constraint firstItem="tje-Jh-Nr2" firstAttribute="top" secondItem="ses-Cs-wZ4" secondAttribute="top" id="oe7-69-A3d"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wJN-fu-9tF"/>
                     <connections>
-                        <segue destination="kGQ-eC-NqE" kind="show" identifier="paySeg" id="ExL-8q-H7G"/>
+                        <outlet property="elitePackeg" destination="Vs5-5k-VZQ" id="JQU-Oh-uLQ"/>
+                        <outlet property="fiftenBHD" destination="PWD-xq-hvH" id="YWh-nB-8xC"/>
+                        <outlet property="packegStander" destination="b7W-7W-VGH" id="CfW-nA-WqD"/>
+                        <outlet property="pay1" destination="ZJJ-qR-hmO" id="uti-jA-yca"/>
+                        <outlet property="pay2" destination="OSf-nv-Epf" id="HWu-Nf-lff"/>
+                        <outlet property="pay3" destination="AEZ-lB-9Wj" id="YQi-dm-aj4"/>
+                        <outlet property="premuimPackeg" destination="e83-ah-sqH" id="NaA-Ka-I5m"/>
+                        <outlet property="sixmothnLabel" destination="6zQ-bh-zZF" id="Fp5-lm-oNx"/>
+                        <outlet property="tenBDLabel" destination="ed7-vq-zdV" id="Q3W-ex-SRX"/>
+                        <outlet property="threeMothenLabel" destination="aTB-g3-RtD" id="rhd-kL-So9"/>
+                        <outlet property="twintyBHD" destination="r3V-B1-dHt" id="X3i-Qv-jGZ"/>
+                        <outlet property="yearPackeg" destination="U3Q-38-xer" id="Z7z-oY-T3j"/>
+                        <segue destination="kGQ-eC-NqE" kind="show" identifier="pay1" id="eBL-1l-ik0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgU-Mv-49O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -438,7 +458,7 @@
         <!--Premium Pay View Controller-->
         <scene sceneID="nxQ-lg-xe9">
             <objects>
-                <viewController id="kGQ-eC-NqE" customClass="PremiumPayViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PayPackeg" id="kGQ-eC-NqE" customClass="PremiumPayViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCG-4X-FDV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,6 +487,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Confirmation Purchase"/>
+                                <connections>
+                                    <action selector="purchasePackage:" destination="kGQ-eC-NqE" eventType="touchUpInside" id="e2Q-3f-6Qm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aa-aT-mcI">
                                 <rect key="frame" x="16" y="123" width="361" height="21"/>
@@ -507,6 +530,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Cm-wZ-rXQ"/>
+                    <connections>
+                        <outlet property="packegPrice" destination="8aa-aT-mcI" id="5fd-u6-dDd"/>
+                        <outlet property="periodPakeh" destination="n5B-RE-Cux" id="U2f-q6-8cY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1R-9N-7DA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
