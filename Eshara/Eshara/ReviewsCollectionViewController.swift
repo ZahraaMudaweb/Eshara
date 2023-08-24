@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 private let reuseIdentifier = "Cell"
 
@@ -13,6 +15,11 @@ private let reuseIdentifier = "Cell"
 class ReviewsCollectionViewController: UICollectionViewController{
 
  
+    
+    @IBOutlet var AddRevireButton: UIBarButtonItem!
+    
+    
+    
     
     var Student: [AddStudentrevie] =
     [
@@ -25,14 +32,24 @@ class ReviewsCollectionViewController: UICollectionViewController{
    
     
     
-
-   
-    
+ 
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+      //  AddRevireButton.isEnabled = false
+        fetchDatePicker { result in
+            if result == true
+            {
+                self.AddRevireButton.isEnabled = true
+              
+            }
+            else
+            {
+                self.AddRevireButton.isEnabled = false
+                
+            }
+        }
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
 //       
 
@@ -92,12 +109,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
     
     @IBAction func AddReviewsButton(_ sender: UIBarButtonItem)
     {
-        if true
-        {
-            performSegue(withIdentifier: "AddRevi", sender: sender)
-
-            
-        }   
+        performSegue(withIdentifier: "toAddReviews", sender: sender)
     }
     
     
@@ -120,14 +132,11 @@ class ReviewsCollectionViewController: UICollectionViewController{
     // testing
     
     
-    @IBSegueAction func addreviedata(_ coder: NSCoder, sender: Any?) -> AddReviewViewController?
+    @IBSegueAction func dd(_ coder: NSCoder, sender: Any?) -> AddReviewViewController?
     {
-       
-        
         return AddReviewViewController(coder: coder, AddstudentRevie: nil)
+        
     }
-    
-    
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -149,21 +158,40 @@ class ReviewsCollectionViewController: UICollectionViewController{
         let student = Student[indexPath.row]
         
         cell.update(with: student)
-        //collectionView.reloadData()
-       
-       // cell.studentName.text = studentComment
-        
-      //  cell.studentName.text = studentComment
-       // cell.StudentComment.text = student.StudetComment
-        
-    //    cell.StudentRevir(StudentName: student.StudentName, StudentRate: student.StudentRate, StudentSomment: student.StudetComment)
-        
-        
+
         return cell
     }
     
     
 
+    
+    func fetchDatePicker(completion: @escaping (Bool) -> Void) {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        let todayDate = Date().formatted()
+
+        ref.child("user").child(uid!).child("Bookmark").child("date").observe(.value) { snapshot in
+            guard let firebaseDate = snapshot.value as? String else {
+                
+                completion(false)
+                return
+            }
+            
+            print(firebaseDate)
+
+            if todayDate.compare(firebaseDate) == .orderedAscending {
+                // The current date is earlier than the Firebase date
+                completion(false)
+            } else if todayDate.compare(firebaseDate) == .orderedDescending {
+                // The current date is later than the Firebase date
+                completion(true)
+            } else {
+                // The current date is equal to the Firebase date
+                completion(false)
+            }
+        }
+    }
+    
     
    
     

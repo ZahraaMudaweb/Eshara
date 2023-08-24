@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIa-cS-8Qm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIa-cS-8Qm">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -250,7 +251,7 @@
         <scene sceneID="ie3-5w-1nT">
             <objects>
                 <viewControllerPlaceholder storyboardName="Ahmed" id="VMD-8w-CQy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Teachers" image="person.fill" catalog="system" selectedImage="person.line.dotted.person.fill" id="vPr-iE-W4D"/>
+                    <tabBarItem key="tabBarItem" title="Teachers" image="person.fill" catalog="system" selectedImage="square.and.arrow.down.on.square" id="vPr-iE-W4D"/>
                     <navigationItem key="navigationItem" id="NoI-Vi-hn3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfS-b0-Mf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,8 +315,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ane-cC-gEU"/>
-        <segue reference="E2i-1m-rKp"/>
+        <segue reference="mjk-US-spu"/>
+        <segue reference="SNJ-bT-irb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HomePage-16" width="1081" height="1081"/>
@@ -326,7 +327,7 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="person.line.dotted.person.fill" catalog="system" width="128" height="58"/>
+        <image name="square.and.arrow.down.on.square" catalog="system" width="122" height="128"/>
         <image name="star" width="1081" height="1081"/>
     </resources>
 </document>

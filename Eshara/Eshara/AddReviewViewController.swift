@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class AddReviewViewController: UIViewController {
 
@@ -88,5 +90,32 @@ class AddReviewViewController: UIViewController {
        AddstudentRevie = AddStudentrevie(studentRate: rate, StudentCommrnt: comment, studentname: studentname)
       
     }
-
+    
+    func sendRevietofire()
+    {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        
+        ref.child("user").child(uid!).child("Reviews").setValue(["Reviews": "\(CommenttextField.text ?? "")"])
+        {
+            (error, _)
+            in if let error = error
+            {
+                print(error)
+            }
+            else
+            {
+                print("Done")
+            }
+        }
+        
+    }
+    
+    
+    @IBAction func CommentTextButton(_ sender: UIButton)
+    {
+        sendRevietofire()   
+    }
+    
+    
 }
