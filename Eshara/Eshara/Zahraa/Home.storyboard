@@ -153,9 +153,6 @@
                                         <rect key="frame" x="0.0" y="110" width="315" height="70"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <segue destination="g4Q-2g-Q80" kind="show" id="Ane-cC-gEU"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-6I-k6V">
                                         <rect key="frame" x="0.0" y="220" width="315" height="70"/>
@@ -262,17 +259,6 @@
             </objects>
             <point key="canvasLocation" x="1799" y="686"/>
         </scene>
-        <!--Browse Categories & Lessons-->
-        <scene sceneID="uoh-OD-rAC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Browse Categories &amp; Lessons" id="g4Q-2g-Q80" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="الدروس" selectedImage="book" catalog="system" id="iM7-mS-Pgo"/>
-                    <navigationItem key="navigationItem" id="Ybc-R9-04u"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2sr-dd-D3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="946" y="1074"/>
-        </scene>
         <!--Hussain-->
         <scene sceneID="OR6-UB-dYN">
             <objects>
@@ -285,7 +271,7 @@
         <scene sceneID="Yff-vI-ehK">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="55N-mg-KT6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="4fR-kp-NED"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="4fR-kp-NED"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMF-5K-prI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,27 +290,35 @@
                     <connections>
                         <segue destination="gg9-8K-ZFc" kind="relationship" relationship="viewControllers" id="XCr-8D-02O"/>
                         <segue destination="VMD-8w-CQy" kind="relationship" relationship="viewControllers" id="SNJ-bT-irb"/>
-                        <segue destination="g4Q-2g-Q80" kind="relationship" relationship="viewControllers" id="mjk-US-spu"/>
                         <segue destination="55N-mg-KT6" kind="relationship" relationship="viewControllers" id="q2W-T8-7xl"/>
+                        <segue destination="ASL-c3-xV2" kind="relationship" relationship="viewControllers" id="xuZ-Ct-6v8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1O-et-57A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="49.618320610687022" y="685.91549295774655"/>
         </scene>
+        <!--Browse Categories & Lessons-->
+        <scene sceneID="kDT-Cc-lio">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Browse Categories &amp; Lessons" id="ASL-c3-xV2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الدروس" id="P45-6n-jig"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tl-7K-Glw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="1078"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mjk-US-spu"/>
         <segue reference="SNJ-bT-irb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HomePage-16" width="1081" height="1081"/>
         <image name="HomePage-17" width="1081" height="1081"/>
         <image name="HomePage-18" width="1081" height="1081"/>
-        <image name="book" catalog="system" width="128" height="99"/>
         <image name="heart" width="1081" height="1081"/>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="58"/>
         <image name="star" width="1081" height="1081"/>
     </resources>

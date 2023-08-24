@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041235882A9746D100A1A5B4 /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */; };
 		671155502A8D199500FC3EA0 /* Quizzes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671155412A8D199500FC3EA0 /* Quizzes.storyboard */; };
 		671155512A8D199500FC3EA0 /* VideoQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671155432A8D199500FC3EA0 /* VideoQuizVC.swift */; };
 		671155522A8D199500FC3EA0 /* StagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671155442A8D199500FC3EA0 /* StagesVC.swift */; };
@@ -64,12 +63,12 @@
 		67562C0B2A926C9E00102CF9 /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67562C042A926C9E00102CF9 /* LocalDatabase.swift */; };
 		67562C0C2A926C9E00102CF9 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67562C052A926C9E00102CF9 /* Notify.swift */; };
 		67562C0D2A926C9E00102CF9 /* NotifyExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67562C062A926C9E00102CF9 /* NotifyExtra.swift */; };
+		676F1CCE2A9779DD00C90BCC /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 676F1CCD2A9779DD00C90BCC /* FFHekaya-Light.otf */; };
 		67B073A72A7FE0F0009B6329 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B073A62A7FE0F0009B6329 /* LessonsVC.swift */; };
 		67E1ADFD2A8BA40400D2B4EB /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FFHekaya-Light.otf"; path = "../../../../Desktop/FFHekaya-Light.otf"; sourceTree = "<group>"; };
 		671155412A8D199500FC3EA0 /* Quizzes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Quizzes.storyboard; sourceTree = "<group>"; };
 		671155432A8D199500FC3EA0 /* VideoQuizVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoQuizVC.swift; sourceTree = "<group>"; };
 		671155442A8D199500FC3EA0 /* StagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagesVC.swift; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		67562C042A926C9E00102CF9 /* LocalDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
 		67562C052A926C9E00102CF9 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		67562C062A926C9E00102CF9 /* NotifyExtra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyExtra.swift; sourceTree = "<group>"; };
+		676F1CCD2A9779DD00C90BCC /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FFHekaya-Light.otf"; sourceTree = "<group>"; };
 		67B073A62A7FE0F0009B6329 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonsVC.swift; path = Eshara/Zahraa/Controller/LessonsVC.swift; sourceTree = SOURCE_ROOT; };
 		67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = Eshara/Zahraa/Controller/ResultsVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -219,8 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */,
+				676F1CCD2A9779DD00C90BCC /* FFHekaya-Light.otf */,
 				6740ACDE2A794959006CE7DA /* AppDelegate.swift */,
-				041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */,
 				6740ACE02A794959006CE7DA /* SceneDelegate.swift */,
 				67562BCF2A926C5900102CF9 /* AddReviewViewController.swift */,
 				67562BD12A926C6100102CF9 /* Ahmed.storyboard */,
@@ -358,7 +358,7 @@
 				6711555D2A8D1B1E00FC3EA0 /* Media.xcassets in Resources */,
 				6754069D2A9252AD009C23A2 /* Home.storyboard in Resources */,
 				67562C072A926C9E00102CF9 /* Hussain.storyboard in Resources */,
-				041235882A9746D100A1A5B4 /* FFHekaya-Light.otf in Resources */,
+				676F1CCE2A9779DD00C90BCC /* FFHekaya-Light.otf in Resources */,
 				673B703F2A93A74C0030837C /* Profile.storyboard in Resources */,
 				67562BD22A926C6100102CF9 /* Ahmed.storyboard in Resources */,
 				6711555E2A8D32F000FC3EA0 /* Main.storyboard in Resources */,
