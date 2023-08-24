@@ -2,12 +2,20 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nOl-Gb-fLg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Storyboard Reference-->
+        <scene sceneID="cBS-L9-NNQ">
+            <objects>
+                <viewControllerPlaceholder id="HFL-vk-Xjj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6I-sJ-QcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="1035"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="C75-qV-2o7">
             <objects>
@@ -226,6 +234,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="تسجيل الدخول">
                                                             <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="loginBtn:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="tku-fJ-0Jg"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-Q9-Mn9">
                                                         <rect key="frame" x="200.33333333333331" y="0.0" width="200" height="250"/>
@@ -233,6 +244,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="إنشاء حساب">
                                                             <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="signUpBtn:" destination="nOl-Gb-fLg" eventType="touchUpInside" id="Kgf-Me-rbz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
