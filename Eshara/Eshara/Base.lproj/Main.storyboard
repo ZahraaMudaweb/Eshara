@@ -256,7 +256,7 @@
         <!--Signup View Controller-->
         <scene sceneID="VMq-uh-DyR">
             <objects>
-                <viewController id="hEv-0N-rsf" customClass="SignupViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" id="hEv-0N-rsf" customClass="SignupViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q9x-qG-0QA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -527,7 +527,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SIN-uj-Rcu"/>
+        <segue reference="1fH-zC-pCb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
