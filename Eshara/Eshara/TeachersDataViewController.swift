@@ -16,6 +16,21 @@ class TeachersDataViewController: UIViewController
 {
 
 
+    @IBOutlet var main: UILabel!
+    
+    
+    @IBOutlet var mainone: UILabel!
+    
+    
+    
+    @IBOutlet var maintwo: UILabel!
+    
+    
+    @IBOutlet var mainthree: UILabel!
+    
+    
+    @IBOutlet var mainfour: UILabel!
+    
     
     
     @IBOutlet var UpView: UIView!
@@ -92,6 +107,12 @@ class TeachersDataViewController: UIViewController
 //        ButtonsView.backgroundColor = UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
 //
         view.backgroundColor = UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
+        
+        main.text = "البيانات"
+        mainone.text = "خبرة ١٠ سنوات في التحدث بلغ الاشارة"
+        maintwo.text = "معد دورات تعليمة للغة الاشارة"
+        mainthree.text = "مترجم لغة الاشارة معتمدة"
+        mainfour.text = "موظف في جمعية الصم و البكم - الشاخورة"
     }
     // TeacherView.backgroundColor = UIColor(red: (211/255.0), green: (221/255.0), blue: (24/255.0), alpha: 1)
     

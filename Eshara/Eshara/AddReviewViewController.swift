@@ -26,6 +26,12 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
     }
     
 
+    @IBOutlet var addratelabel: UILabel!
+    
+    
+    @IBOutlet var addcomentlabel: UILabel!
+    
+    
     var boomar: BookMarkDate?
     var AddstudentRevie: AddStudentrevie?
     var ReviewArray: [String] = []
@@ -34,7 +40,7 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
     
     @IBOutlet var CommenttextField: UITextField!
     
-    
+    var locolusername: String?
    
     @IBOutlet var StudentButtonComment: UIButton!
     
@@ -113,7 +119,10 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "saveButton" else {return}
         
-        fetchUsername()
+        let comment = self.CommenttextField.text ?? ""
+        let rate = self.textfieldpicker.text ?? ""
+        let newReviw = AddStudentrevie(studentRate: rate, StudentCommrnt: comment, studentname: locolusername ?? "")
+        AddstudentRevie = newReviw
     }
     
     func sendRevietofire()
@@ -195,56 +204,39 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
        
         
         view.backgroundColor =  UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
+        addcomentlabel.text = "ضع تعليقا"
+        addratelabel.text = "ضع تقييمك"
         
         
     }
     
-    
-    
-    
+
     func fetchUsername() {
         guard let uid = Auth.auth().currentUser?.uid else {
             return
         }
-        
+
         let ref = Database.database().reference()
-        
-        let group = DispatchGroup() // Create a DispatchGroup
-        
-        var username: String?
-        
-        group.enter() // Enter the group before starting the asynchronous task
-        ref.child("user").child(uid).child("Name").observe(.value) { snapshot in
-            defer { group.leave() } // Leave the group when the closure finishes
-            
-            guard let fetchedUsername = snapshot.value as? String else {
+
+        ref.child("user").child(uid).child("Name").observe(.value) {  snapshot in
+            guard let username = snapshot.value as? String else {
                 print("Error: Failed to fetch username.")
                 return
             }
-            
-            print("Username: \(fetchedUsername)")
-            username = fetchedUsername
-        }
-        
-        group.notify(queue: .main) {
-            // Runs after the closure has completed
-            
-            guard let username = username else {
-                print("Username is nil.")
-                return
-            }
+
+            print("Username: \(username)")
+
+            self.locolusername = username
             
             DispatchQueue.main.async {
-                let comment = self.CommenttextField.text ?? ""
-                let rate = self.textfieldpicker.text ?? ""
-                self.AddstudentRevie = AddStudentrevie(studentRate: rate, StudentCommrnt: comment, studentname: username)
-              
-                // Use 'addStudentRevie' as needed
-            }
+                          let comment = self.CommenttextField.text ?? ""
+                          let rate = self.textfieldpicker.text ?? ""
+                          let newReviw = AddStudentrevie(studentRate: rate, StudentCommrnt: comment, studentname: username)
+                            self.AddstudentRevie = newReviw
+                          // Use 'addStudentRevie' as needed
+                      }
+
+
         }
-        let comment = self.CommenttextField.text ?? ""
-        let rate = self.textfieldpicker.text ?? ""
-        AddstudentRevie = AddStudentrevie(studentRate: rate, StudentCommrnt: comment, studentname: username ?? "")
-        
     }
 }

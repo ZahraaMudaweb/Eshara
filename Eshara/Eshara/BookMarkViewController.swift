@@ -122,6 +122,7 @@ class BookMarkViewController: UIViewController {
         ConfButtin.layer.cornerRadius = 10
         ConfButtin.layer.masksToBounds = true
     //    ConfButtin.colo
+        view.backgroundColor =  UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
     }
     
     

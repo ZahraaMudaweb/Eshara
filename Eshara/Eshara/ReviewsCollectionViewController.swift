@@ -21,12 +21,12 @@ class ReviewsCollectionViewController: UICollectionViewController{
     
     
     
-    var Student: [AddStudentrevie] = []
-//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5")
+    var Student: [AddStudentrevie] =
+    [    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+         AddStudentrevie(studentRate: "Ammar", StudentCommrnt: "Nice Teacher", studentname: "4"),
+        AddStudentrevie(studentRate: "Hussain", StudentCommrnt: "it was fun ", studentname: "4.5")
+    ]
+
    
     
     
@@ -49,13 +49,10 @@ class ReviewsCollectionViewController: UICollectionViewController{
             }
         }
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
-//       
+    
 
-        // Do any additional setup after loading the view.
         
-        fetchUserReview { name in
-            print(name)
-        }
+      
     }
 
     /*
@@ -127,18 +124,17 @@ class ReviewsCollectionViewController: UICollectionViewController{
             let newindepath = IndexPath(row: Student.count, section: 0)
             Student.append(addCommet)
             collectionView.insertItems(at: [newindepath])
-        
-       
+     
         
     }
-    // testing
     
     
-    @IBSegueAction func dd(_ coder: NSCoder, sender: Any?) -> AddReviewViewController?
-    {
+
+    
+    @IBSegueAction func aa(_ coder: NSCoder, sender: Any?) -> AddReviewViewController? {
         return AddReviewViewController(coder: coder, AddstudentRevie: nil)
-        
     }
+    
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -196,48 +192,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
     }
     
     
-    func fetchUserReview(completion: @escaping (String) -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else {
-            completion("")
-            return
-        }
-        
-        let ref = Database.database().reference()
-        
-        ref.child("user").child(uid).child("Name").observe(.value) { nameSnapshot in
-            guard let username = nameSnapshot.value as? String else {
-                completion("")
-                return
-            }
-            
-            completion(username)
-            
-            ref.child("user").child(uid).child("Reviews").observeSingleEvent(of: .value) { snapshot in
-                guard let result = snapshot.children.allObjects as? [DataSnapshot] else {
-                    return
-                }
-                
-                for child in result {
-                    let key = child.key
-                    guard let value = child.value as? [String: Any],
-                          let review = value["Review"] as? String,
-                          let rate = value["Rate"] as? String else {
-                        return
-                    }
-                    
-                    let newReview = AddStudentrevie(studentRate: rate, StudentCommrnt: review, studentname: "sasas")
-                    self.Student.append(newReview)
-                    
-                    // Print the review
-                    print("Review: \(review)")
-                    print("Rate: \(rate)")
-                   
-                }
-            
-            }
-           
-        }
-    }
+ 
     
    
     

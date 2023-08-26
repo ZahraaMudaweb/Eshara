@@ -14,7 +14,7 @@ class ReviewsCollectionViewCell: UICollectionViewCell
     @IBOutlet var StudentName: UILabel!
     @IBOutlet var StudentComment: UILabel!
     
-    var testing = ""
+    
   
     
     func update(with Comment: AddStudentrevie)
