@@ -55,6 +55,7 @@ class PremiumPayViewController: UIViewController {
         {
             if let destions  = segue.destination as? profileViewController
             {
+                
 
                 updateHearts()
 

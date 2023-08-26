@@ -390,6 +390,32 @@ class profileViewController: UIViewController,
               let sourceViewController = segue.source
                 as? PremiumPayViewController else { return }
        
+        updateHearts()
         getHearts()
     }
+    
+    
+    func updateHearts() {
+        
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        // decrease user hearts
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    
+                    let newValue = value + 999999999 // to make it unlimited
+                    
+                    ref.child("user").child(uid!).updateChildValues(["hearts" : (newValue)])
+                    
+                }
+            }
+        })
+    
+    }
+
+    
 }
