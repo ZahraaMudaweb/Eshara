@@ -32,7 +32,6 @@ class CategoriesCollectionVC: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return categories.count
     }
 
@@ -64,6 +63,7 @@ class CategoriesCollectionVC: UICollectionViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "stages") as? StagesVC else {return}
         
         vc.categoryName = categories[indexPath.row]
+        vc.itemIndex = indexPath.item
         
         navigationController?.pushViewController(vc, animated: true)
         
@@ -71,15 +71,6 @@ class CategoriesCollectionVC: UICollectionViewController {
         
         vcQuiz.itemIndex = indexPath.row
         vcQuiz.categoryName = categories[indexPath.row]
-
-        
-//        guard let preVC = storyboard?.instantiateViewController(identifier: "preQuiz") as? preQuizVC else {return}
-//
-//        preVC.categoryName = categories[indexPath.row]
-        
-
-//        navigationController?.pushViewController(vcQuiz, animated: true)
-
        
     }
 }

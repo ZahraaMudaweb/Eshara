@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uaf-4o-8BZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aOa-nq-Oyc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -77,7 +77,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSv-I3-Fxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614.50381679389307" y="22.535211267605636"/>
+            <point key="canvasLocation" x="2467.93893129771" y="22.535211267605636"/>
         </scene>
         <!--StagesVC-->
         <scene sceneID="L7r-kq-PDw">
@@ -183,7 +183,6 @@
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="startQuizTapped:" destination="mvv-fl-z7V" eventType="touchUpInside" id="mu5-Xe-bq3"/>
-                                            <segue destination="zpu-gl-n8k" kind="show" id="aDE-Et-F4B"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -204,11 +203,12 @@
                         <outlet property="startQuizView" destination="lDr-ib-5nX" id="CCI-1H-cum"/>
                         <segue destination="8Sp-Vu-OkT" kind="show" identifier="toLessons" id="pEw-8c-mr2"/>
                         <segue destination="ga2-nm-Cfd" kind="show" identifier="toVideoLessons" id="eIV-RU-mtJ"/>
+                        <segue destination="zpu-gl-n8k" kind="show" identifier="toPreQuiz" id="IfF-U4-G1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYk-it-m8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448.0916030534352" y="22.535211267605636"/>
+            <point key="canvasLocation" x="3301.5267175572517" y="22.535211267605636"/>
         </scene>
         <!--LessonsVC-->
         <scene sceneID="s7v-uc-awG">
@@ -307,7 +307,13 @@
                             <constraint firstItem="MYg-1f-5ai" firstAttribute="trailing" secondItem="P13-8d-bjn" secondAttribute="trailing" constant="20" id="QNP-Mb-CLT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hvY-wG-Gnx"/>
+                    <navigationItem key="navigationItem" id="hvY-wG-Gnx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="n23-ur-Q8K">
+                            <connections>
+                                <segue destination="xus-nX-xua" kind="unwind" unwindAction="unwindToStages:" id="NNM-cR-NNg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="Stm-BY-qbh" id="U7T-BA-IiA"/>
                         <outlet property="doneButton" destination="191-MY-xyB" id="ou9-ZS-Xur"/>
@@ -318,26 +324,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdd-cY-gP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xus-nX-xua" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="-870"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qhV-YL-XfS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uaf-4o-8BZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zrc-Ke-c57">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y9o-c9-EpK" kind="relationship" relationship="rootViewController" id="ily-cf-xSQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ghc-L9-qtR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-312.21374045801525" y="22.535211267605636"/>
+            <point key="canvasLocation" x="4192" y="-924"/>
         </scene>
         <!--Video LessonsVC-->
         <scene sceneID="jhd-LO-oGC">
@@ -464,7 +453,13 @@
                             <constraint firstItem="0gQ-3U-hAT" firstAttribute="trailing" secondItem="skb-PF-NQx" secondAttribute="trailing" constant="39" id="zX3-na-uzK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kzc-Fi-Smy"/>
+                    <navigationItem key="navigationItem" id="kzc-Fi-Smy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="I5u-AP-AKI">
+                            <connections>
+                                <segue destination="lMW-cV-r6x" kind="unwind" unwindAction="unwindToStages:" id="g5b-Sd-yKi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="dHg-qn-HjL" id="OIT-r0-dUK"/>
                         <outlet property="lessonsProgress" destination="gIE-CC-AWI" id="DW6-1n-WMl"/>
@@ -475,8 +470,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgA-X3-aly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lMW-cV-r6x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2381" y="23"/>
+            <point key="canvasLocation" x="4234.3511450381675" y="22.535211267605636"/>
         </scene>
         <!--Pre QuizVC-->
         <scene sceneID="eUG-kh-7an">
@@ -493,10 +489,10 @@
                                 <rect key="frame" x="71.999999999999986" y="475.33333333333331" width="248.66666666666663" height="232.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="tUY-qg-FAP">
-                                        <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="71.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="248.66666666666669" height="71.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد أنهيت الدرس!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-5z-R9N">
-                                                <rect key="frame" x="56" y="0.0" width="136.66666666666666" height="32.666666666666664"/>
+                                                <rect key="frame" x="56" y="0.0" width="136.66666666666669" height="32.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -544,6 +540,9 @@
                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backbtnTapped:" destination="zpu-gl-n8k" eventType="touchUpInside" id="6qw-Jw-d1V"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -570,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc8-Rc-EOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="1088"/>
+            <point key="canvasLocation" x="2381" y="1166"/>
         </scene>
         <!--QuizVC-->
         <scene sceneID="T4z-Ko-5LJ">
@@ -593,7 +592,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="xAN-Tr-FWl"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-zq-LyY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-zq-LyY">
                                                 <rect key="frame" x="30" y="0.0" width="22" height="21"/>
                                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
                                                 <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -624,10 +623,10 @@
                                             <constraint firstAttribute="width" secondItem="kWG-Ce-8F0" secondAttribute="height" multiplier="1:1" id="TbW-YM-nY8"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkV-14-uM9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkV-14-uM9">
                                         <rect key="frame" x="0.0" y="350.33333333333337" width="255" height="198"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk4-jK-kmu">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk4-jK-kmu">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="137"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-4W-DVz">
@@ -647,6 +646,9 @@
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="7A6-5N-Rw3" eventType="touchUpInside" id="1da-Mu-AI8"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bou-37-dpL">
                                                                 <rect key="frame" x="0.0" y="73" width="119" height="64"/>
@@ -658,6 +660,9 @@
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="7A6-5N-Rw3" eventType="touchUpInside" id="aX4-lz-Wqx"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -674,6 +679,9 @@
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="7A6-5N-Rw3" eventType="touchUpInside" id="FOR-cy-93N"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlm-Ub-u3B">
                                                                 <rect key="frame" x="0.0" y="73" width="119" height="64"/>
@@ -685,6 +693,9 @@
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="7A6-5N-Rw3" eventType="touchUpInside" id="8vC-qo-JF7"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -717,17 +728,21 @@
                         <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="RG9-ef-loK" firstAttribute="leading" secondItem="XMC-gd-JJI" secondAttribute="leading" constant="20" id="FJ8-AT-4ru"/>
+                            <constraint firstItem="8BP-We-pb7" firstAttribute="centerX" secondItem="GPX-fI-CGk" secondAttribute="centerX" id="InU-gK-R1T"/>
                             <constraint firstItem="RG9-ef-loK" firstAttribute="top" secondItem="XMC-gd-JJI" secondAttribute="top" constant="30" id="VV6-By-v1R"/>
                             <constraint firstItem="8BP-We-pb7" firstAttribute="top" secondItem="RG9-ef-loK" secondAttribute="bottom" constant="38" id="bYA-lP-5aO"/>
                             <constraint firstItem="XMC-gd-JJI" firstAttribute="trailing" secondItem="RG9-ef-loK" secondAttribute="trailing" constant="20" id="crM-QA-wly"/>
-                            <constraint firstItem="XMC-gd-JJI" firstAttribute="trailing" secondItem="8BP-We-pb7" secondAttribute="trailing" constant="69" id="f1i-rP-PNx"/>
-                            <constraint firstItem="8BP-We-pb7" firstAttribute="leading" secondItem="XMC-gd-JJI" secondAttribute="leading" constant="69" id="oxc-n6-mIz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xuC-mO-HQq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="PJT-Kr-mmj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="PJT-Kr-mmj">
+                            <connections>
+                                <segue destination="2mH-ZR-I2O" kind="unwind" unwindAction="unwindToStages:" id="AqW-GQ-HwF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="heartsLabel" destination="aXs-zq-LyY" id="ysm-kt-wmh"/>
                         <outlet property="imageView" destination="kWG-Ce-8F0" id="Wxx-JF-ise"/>
                         <outlet property="nextBtn" destination="1yv-ST-D1Q" id="0kL-6d-uJS"/>
                         <outlet property="option1" destination="hJh-8e-jIe" id="UmC-xe-WOE"/>
@@ -736,105 +751,114 @@
                         <outlet property="option4" destination="Dlm-Ub-u3B" id="kxq-h5-ybc"/>
                         <outlet property="questionLabel" destination="ePu-LS-0jm" id="iFR-Ua-zxZ"/>
                         <outlet property="quizProgress" destination="R13-aO-UBp" id="vkL-zL-yWZ"/>
+                        <outletCollection property="answerButtons" destination="hJh-8e-jIe" collectionClass="NSMutableArray" id="pu4-dO-oKo"/>
+                        <outletCollection property="answerButtons" destination="bou-37-dpL" collectionClass="NSMutableArray" id="YFL-Nx-ecy"/>
+                        <outletCollection property="answerButtons" destination="UYR-dE-5XP" collectionClass="NSMutableArray" id="c6b-8e-rmN"/>
+                        <outletCollection property="answerButtons" destination="Dlm-Ub-u3B" collectionClass="NSMutableArray" id="qFw-Qp-X7j"/>
+                        <segue destination="mgS-XQ-vpc" kind="show" identifier="imgToResults" id="8XA-xq-AVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rV-Kf-N96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2mH-ZR-I2O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="480"/>
+            <point key="canvasLocation" x="3739.5348837209303" y="738.41201716738203"/>
         </scene>
         <!--ResultsVC-->
         <scene sceneID="Wg1-JS-I3E">
             <objects>
-                <viewController id="mgS-XQ-vpc" customClass="ResultsVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="results" id="mgS-XQ-vpc" customClass="ResultsVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HB8-Eh-rjh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-Lz-7eo">
-                                <rect key="frame" x="41.666666666666657" y="576.33333333333337" width="309.66666666666674" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="2EJ-Bb-5tV">
+                                <rect key="frame" x="36" y="232.66666666666663" width="321" height="387"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="OQg-5r-sZW">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-Tc-x8i">
+                                        <rect key="frame" x="160.66666666666666" y="0.0" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="38"/>
+                                        <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="RR6-fV-H8J">
+                                        <rect key="frame" x="40.666666666666686" y="49.000000000000028" width="240" height="268"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="min-aQ-n8m">
-                                                <rect key="frame" x="0.0" y="0.0" width="59" height="21"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="PEM-pe-HJ0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="22" id="Az2-Vn-s3r"/>
-                                                            <constraint firstAttribute="height" constant="21" id="gHL-Qp-Ajq"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGe-n7-lyS">
-                                                        <rect key="frame" x="30.000000000000007" y="0.0" width="29" height="21"/>
-                                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
-                                                        <color key="textColor" red="0.92941176889999999" green="0.50588238240000005" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TQP-mD-faj">
-                                                <rect key="frame" x="113.00000000000001" y="0.0" width="39.666666666666671" height="21"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-wO-7Jh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="25b-RT-eHW"/>
-                                                            <constraint firstAttribute="width" constant="22" id="AxE-m4-BKt"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-B0-kZq">
-                                                        <rect key="frame" x="30.000000000000004" y="0.0" width="9.6666666666666679" height="21"/>
-                                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
-                                                        <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7B-1O-jyM">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="GZi-Rd-dKX"/>
+                                                    <constraint firstAttribute="width" constant="240" id="XjB-AX-2yx"/>
+                                                    <constraint firstAttribute="width" secondItem="d7B-1O-jyM" secondAttribute="height" multiplier="1:1" id="vJ4-0n-Rrc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-0L-gQp">
+                                                <rect key="frame" x="119.99999999999999" y="267.99999999999994" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="33"/>
+                                                <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رصيدك الآن: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqk-q0-siY">
-                                        <rect key="frame" x="203.66666666666669" y="0.0" width="106" height="21"/>
-                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
-                                        <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انتصار ساحق!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-Tc-x8i">
-                                <rect key="frame" x="122.66666666666669" y="123.00000000000001" width="148" height="45.666666666666671"/>
-                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="38"/>
-                                <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="VON-Tw-7j7">
-                                <rect key="frame" x="76.666666666666686" y="218.66666666666666" width="240" height="307.66666666666674"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7B-1O-jyM">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="d7B-1O-jyM" secondAttribute="height" multiplier="1:1" id="STe-U9-Dsw"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أحسنت" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-0L-gQp">
-                                        <rect key="frame" x="82.666666666666657" y="268" width="74.666666666666657" height="39.666666666666686"/>
-                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="33"/>
-                                        <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-Lz-7eo">
+                                        <rect key="frame" x="0.0" y="366" width="321" height="21"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="OQg-5r-sZW">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="21"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="min-aQ-n8m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="21"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="PEM-pe-HJ0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="22" id="Az2-Vn-s3r"/>
+                                                                    <constraint firstAttribute="height" constant="21" id="gHL-Qp-Ajq"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGe-n7-lyS">
+                                                                <rect key="frame" x="30" y="0.0" width="0.0" height="21"/>
+                                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                                <color key="textColor" red="0.92941176889999999" green="0.50588238240000005" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TQP-mD-faj">
+                                                        <rect key="frame" x="84" y="0.0" width="80" height="21"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-wO-7Jh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="25b-RT-eHW"/>
+                                                                    <constraint firstAttribute="width" constant="22" id="AxE-m4-BKt"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-B0-kZq">
+                                                                <rect key="frame" x="30" y="0.0" width="50" height="21"/>
+                                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                                <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رصيدك الآن: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqk-q0-siY">
+                                                <rect key="frame" x="215" y="0.0" width="106" height="21"/>
+                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jdA-96-qzN"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Vp6-Tc-x8i" firstAttribute="centerX" secondItem="HB8-Eh-rjh" secondAttribute="centerX" id="1Dj-5Y-mDj"/>
-                            <constraint firstItem="VON-Tw-7j7" firstAttribute="top" secondItem="Vp6-Tc-x8i" secondAttribute="bottom" constant="50" id="1cm-0f-dB4"/>
-                            <constraint firstItem="2gX-Lz-7eo" firstAttribute="top" secondItem="VON-Tw-7j7" secondAttribute="bottom" constant="50" id="3na-Le-kYZ"/>
-                            <constraint firstItem="2gX-Lz-7eo" firstAttribute="centerX" secondItem="HB8-Eh-rjh" secondAttribute="centerX" id="Kv4-Lc-fvd"/>
-                            <constraint firstItem="Vp6-Tc-x8i" firstAttribute="top" secondItem="jdA-96-qzN" secondAttribute="top" constant="64" id="Mag-Cq-7ol"/>
-                            <constraint firstItem="VON-Tw-7j7" firstAttribute="centerX" secondItem="HB8-Eh-rjh" secondAttribute="centerX" id="VVL-Qr-1Y5"/>
+                            <constraint firstItem="2EJ-Bb-5tV" firstAttribute="centerX" secondItem="HB8-Eh-rjh" secondAttribute="centerX" id="cPZ-2F-4es"/>
+                            <constraint firstItem="2EJ-Bb-5tV" firstAttribute="centerY" secondItem="HB8-Eh-rjh" secondAttribute="centerY" id="liB-UX-2Jh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CxO-De-WxT"/>
@@ -849,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3S-bT-PB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4879" y="799"/>
+            <point key="canvasLocation" x="5028" y="1143"/>
         </scene>
         <!--Video QuizVC-->
         <scene sceneID="c9l-1w-m40">
@@ -860,7 +884,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="T58-6a-Om9">
-                                <rect key="frame" x="20" y="133" width="353" height="21"/>
+                                <rect key="frame" x="20" y="133" width="337" height="21"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AWy-mt-pKR">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
@@ -872,7 +896,7 @@
                                                     <constraint firstAttribute="height" constant="21" id="jgk-Cu-gbk"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-bq-yzJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-bq-yzJ">
                                                 <rect key="frame" x="30" y="0.0" width="22" height="21"/>
                                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
                                                 <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -881,7 +905,7 @@
                                         </subviews>
                                     </stackView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NVV-gN-yn3">
-                                        <rect key="frame" x="66" y="8.6666666666666572" width="287" height="4"/>
+                                        <rect key="frame" x="66" y="8.6666666666666572" width="271" height="4"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
@@ -904,73 +928,85 @@
                                             <constraint firstAttribute="width" secondItem="Ebi-Ba-IeE" secondAttribute="height" multiplier="1:1" id="tgL-QZ-9F0"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="BY2-KS-TVv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-sZ-DhV">
                                         <rect key="frame" x="0.0" y="350.33333333333337" width="255" height="198"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5u-8N-GgV">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-Hz-zO3">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="137"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4i7-Gw-p3D">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4Uo-pp-ATr">
                                                         <rect key="frame" x="0.0" y="0.0" width="119" height="137"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-R9-vap">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMs-hJ-FDP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="64" id="8uC-Vx-2zc"/>
-                                                                    <constraint firstAttribute="width" secondItem="ao1-R9-vap" secondAttribute="height" multiplier="119:64" id="fs3-QQ-hLM"/>
+                                                                    <constraint firstAttribute="height" constant="64" id="3y9-63-QYK"/>
+                                                                    <constraint firstAttribute="width" secondItem="xMs-hJ-FDP" secondAttribute="height" multiplier="119:64" id="yL1-rY-kvO"/>
                                                                 </constraints>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="ij2-hD-mW5"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ4-eP-JoA">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-6b-h3b">
                                                                 <rect key="frame" x="0.0" y="73" width="119" height="64"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="VbN-J3-jyP"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BMn-Rt-x30">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="0r7-EP-odQ">
                                                         <rect key="frame" x="136" y="0.0" width="119" height="137"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brm-5c-4JZ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-hg-9Ud">
                                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="sz3-92-zPW"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-qI-fCB">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6so-5R-16c">
                                                                 <rect key="frame" x="0.0" y="73" width="119" height="64"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="72H-ss-5XU"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6s-oM-FNR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4X5-6F-k6h">
                                                 <rect key="frame" x="0.0" y="154" width="255" height="44"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -981,7 +1017,7 @@
                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextStage:" destination="ota-U7-iDb" eventType="touchUpInside" id="87l-UZ-c9c"/>
+                                                    <action selector="nextStage:" destination="ota-U7-iDb" eventType="touchUpInside" id="a1s-5E-oa1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -996,40 +1032,68 @@
                         <viewLayoutGuide key="safeArea" id="iQG-pQ-9S2"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="mE9-hd-wmF" firstAttribute="leading" secondItem="iQG-pQ-9S2" secondAttribute="leading" constant="69" id="1ET-Yy-hQq"/>
                             <constraint firstItem="T58-6a-Om9" firstAttribute="leading" secondItem="iQG-pQ-9S2" secondAttribute="leading" constant="20" id="Atx-1y-Uc3"/>
-                            <constraint firstItem="iQG-pQ-9S2" firstAttribute="trailing" secondItem="mE9-hd-wmF" secondAttribute="trailing" constant="69" id="BvZ-L5-UAl"/>
+                            <constraint firstItem="mE9-hd-wmF" firstAttribute="centerX" secondItem="h2m-Vf-TTY" secondAttribute="centerX" id="D1a-5U-biU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T58-6a-Om9" secondAttribute="trailing" constant="20" id="I8a-kW-Tax"/>
                             <constraint firstItem="mE9-hd-wmF" firstAttribute="top" secondItem="T58-6a-Om9" secondAttribute="bottom" constant="38" id="cJZ-ae-XlJ"/>
                             <constraint firstItem="T58-6a-Om9" firstAttribute="top" secondItem="iQG-pQ-9S2" secondAttribute="top" constant="30" id="i8R-Me-bhR"/>
-                            <constraint firstItem="iQG-pQ-9S2" firstAttribute="trailing" secondItem="T58-6a-Om9" secondAttribute="trailing" constant="20" id="jNv-eQ-MQy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KHA-BA-AGt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="g23-JQ-nP9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="g23-JQ-nP9">
+                            <connections>
+                                <segue destination="861-r4-WbU" kind="unwind" unwindAction="unwindToStages:" id="Zg3-O4-fdH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="option1" destination="ao1-R9-vap" id="5Vq-dl-oDc"/>
-                        <outlet property="option2" destination="WZ4-eP-JoA" id="iL5-aM-Xfl"/>
-                        <outlet property="option3" destination="brm-5c-4JZ" id="MSN-en-oS7"/>
-                        <outlet property="option4" destination="PnO-qI-fCB" id="EZ5-TZ-hNg"/>
+                        <outlet property="heartsLabel" destination="ucu-bq-yzJ" id="sNt-j9-fbK"/>
+                        <outlet property="nextBtn" destination="4X5-6F-k6h" id="sFC-P0-ciU"/>
+                        <outlet property="option1" destination="xMs-hJ-FDP" id="bYP-u7-MWo"/>
+                        <outlet property="option2" destination="2aj-6b-h3b" id="Lbo-VY-YC0"/>
+                        <outlet property="option3" destination="Et0-hg-9Ud" id="4wt-LT-Yqe"/>
+                        <outlet property="option4" destination="6so-5R-16c" id="ZI4-AZ-naf"/>
                         <outlet property="questionLabel" destination="ESi-FZ-2ym" id="FhR-jh-uZu"/>
                         <outlet property="quizProgress" destination="NVV-gN-yn3" id="OHJ-aX-2AN"/>
                         <outlet property="videoView" destination="Ebi-Ba-IeE" id="G3r-Ef-Xbb"/>
+                        <segue destination="mgS-XQ-vpc" kind="show" identifier="vidToResults" id="CJs-TJ-LxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab3-Ho-Qr9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="861-r4-WbU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3741" y="1327"/>
+            <point key="canvasLocation" x="3740" y="1485"/>
+        </scene>
+        <!--الدروس-->
+        <scene sceneID="8aP-0k-29K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOa-nq-Oyc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الدروس" image="book" catalog="system" id="qLB-Et-x6H"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Trw-ni-wBL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y9o-c9-EpK" kind="relationship" relationship="rootViewController" id="2Qm-u8-Uil"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOL-ya-6kP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541.2213740458014" y="22.535211267605636"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MV8-ek-GGV"/>
+        <segue reference="CJs-TJ-LxM"/>
+        <segue reference="LKi-DC-B0L"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BACK" width="1081" height="1081"/>
         <image name="Book" width="1080" height="1080"/>
         <image name="Stages" width="1081" height="1081"/>
         <image name="Tick" width="1081" height="1081"/>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="heart" width="1081" height="1081"/>
         <image name="quizBG" width="1180" height="2557"/>
         <image name="replay" width="1081" height="1081"/>

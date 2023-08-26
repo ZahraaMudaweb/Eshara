@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIa-cS-8Qm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FFHekaya-Light.otf">
+            <string>FFHekaya-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="hg6-7O-lkI">
+            <objects>
+                <viewController id="gg9-8K-ZFc" customClass="HomeVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9AU-eV-bq6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3lg-NR-DJ4">
+                                <rect key="frame" x="39" y="281" width="315" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="gq6-Rz-2J2">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOo-TW-QOK">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="jzt-hC-gMR">
+                                                        <rect key="frame" x="26" y="0.0" width="263" height="70"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تدرّب مع المعلمين" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jr-XM-2Qm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="181" height="70"/>
+                                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                                                <color key="textColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomePage-18" translatesAutoresizingMaskIntoConstraints="NO" id="g4i-DD-EDh">
+                                                                <rect key="frame" x="205" y="0.0" width="58" height="70"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="58" id="fai-Yh-IGO"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="tNG-CW-Jbf"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="1KU-7c-gsS"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.2470588088" green="0.56078433989999998" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="jzt-hC-gMR" secondAttribute="bottom" id="REz-ds-csk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jzt-hC-gMR" secondAttribute="trailing" constant="26" id="YqV-du-bhN"/>
+                                                    <constraint firstItem="jzt-hC-gMR" firstAttribute="top" secondItem="QOo-TW-QOK" secondAttribute="top" id="jn4-5V-cSv"/>
+                                                    <constraint firstItem="jzt-hC-gMR" firstAttribute="leading" secondItem="QOo-TW-QOK" secondAttribute="leading" constant="26" id="nMm-dT-dSb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-Y4-aW4">
+                                        <rect key="frame" x="0.0" y="110" width="315" height="180"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRZ-kv-dnX">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="97a-Do-7bg">
+                                                        <rect key="frame" x="26" y="0.0" width="263" height="70"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="واصـــل الـــتـــعـــلّـــم" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQE-7x-0Lk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="181" height="70"/>
+                                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                                                <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomePage-16" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-w5-Oud">
+                                                                <rect key="frame" x="205" y="0.0" width="58" height="70"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="58" id="6R0-rw-dti"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="g8D-e3-ffi"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="zRf-7z-Xpf"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.9529411793" green="0.85490196939999996" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="97a-Do-7bg" firstAttribute="top" secondItem="QRZ-kv-dnX" secondAttribute="top" id="BBB-NQ-bYx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="97a-Do-7bg" secondAttribute="trailing" constant="26" id="aqz-Cn-fK3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="97a-Do-7bg" secondAttribute="bottom" id="dja-NM-Jji"/>
+                                                    <constraint firstItem="97a-Do-7bg" firstAttribute="leading" secondItem="QRZ-kv-dnX" secondAttribute="leading" constant="26" id="paz-h4-GTW"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGi-KZ-WFf">
+                                                <rect key="frame" x="0.0" y="110" width="315" height="70"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-Gn-qFD">
+                                                        <rect key="frame" x="26" y="0.0" width="263" height="70"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شــارِك الأصـــدقـــاء!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMf-ur-AeI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="181" height="70"/>
+                                                                <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
+                                                                <color key="textColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomePage-17" translatesAutoresizingMaskIntoConstraints="NO" id="qM3-le-IXQ">
+                                                                <rect key="frame" x="205" y="0.0" width="58" height="70"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="58" id="a7o-Yj-gfl"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="dlT-5b-Obz"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="Y6H-gn-HQY"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.92941176889999999" green="0.50588238240000005" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="n9n-Gn-qFD" secondAttribute="trailing" constant="26" id="Cpp-CR-lAq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="n9n-Gn-qFD" secondAttribute="bottom" id="IA9-Uc-28v"/>
+                                                    <constraint firstItem="n9n-Gn-qFD" firstAttribute="leading" secondItem="WGi-KZ-WFf" secondAttribute="leading" constant="26" id="Pr8-fb-iXa"/>
+                                                    <constraint firstItem="n9n-Gn-qFD" firstAttribute="top" secondItem="WGi-KZ-WFf" secondAttribute="top" id="Zqj-aA-UJe"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="buK-3j-tqe">
+                                <rect key="frame" x="39" y="281" width="315" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNi-wA-OxL">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="315" id="EWc-Kn-I4n"/>
+                                            <constraint firstAttribute="height" constant="70" id="Uze-wf-WxT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="VMD-8w-CQy" kind="show" id="E2i-1m-rKp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-Ve-37W">
+                                        <rect key="frame" x="0.0" y="110" width="315" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="g4Q-2g-Q80" kind="show" id="Ane-cC-gEU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-6I-k6V">
+                                        <rect key="frame" x="0.0" y="220" width="315" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oJ-IV-z6G">
+                                <rect key="frame" x="154" y="652" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hussain"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="TI2-6R-AHh">
+                                <rect key="frame" x="20" y="89" width="353" height="21"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="3mY-Sk-A5i">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="21"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6h-gi-Mp3">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="21"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="hKJ-rU-MMR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="9kn-jo-Z1h"/>
+                                                            <constraint firstAttribute="width" constant="22" id="yg9-KB-dYg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn6-TU-or8">
+                                                        <rect key="frame" x="30" y="0.0" width="0.0" height="21"/>
+                                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                        <color key="textColor" red="0.92941176889999999" green="0.50588238240000005" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M6N-2E-VWG">
+                                                <rect key="frame" x="84" y="0.0" width="80" height="21"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="1S6-Kv-tWB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="Pcg-ex-Vns"/>
+                                                            <constraint firstAttribute="height" constant="21" id="YXT-IL-Lk0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-6p-8Pd">
+                                                        <rect key="frame" x="30" y="0.0" width="50" height="21"/>
+                                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                                        <color key="textColor" red="0.78823530669999997" green="0.270588249" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رصيدك الآن: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-em-hSi">
+                                        <rect key="frame" x="222" y="0.0" width="131" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="LcT-Uw-otA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="28"/>
+                                        <color key="textColor" red="0.25098040700000002" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ft9-az-BQy"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="buK-3j-tqe" firstAttribute="centerY" secondItem="9AU-eV-bq6" secondAttribute="centerY" id="9uy-0P-Ntm"/>
+                            <constraint firstItem="ft9-az-BQy" firstAttribute="trailing" secondItem="TI2-6R-AHh" secondAttribute="trailing" constant="20" id="B6c-i5-hBy"/>
+                            <constraint firstItem="TI2-6R-AHh" firstAttribute="top" secondItem="ft9-az-BQy" secondAttribute="top" constant="30" id="ETN-8x-0QK"/>
+                            <constraint firstItem="3lg-NR-DJ4" firstAttribute="centerY" secondItem="9AU-eV-bq6" secondAttribute="centerY" id="UZV-NN-qVB"/>
+                            <constraint firstItem="TI2-6R-AHh" firstAttribute="leading" secondItem="ft9-az-BQy" secondAttribute="leading" constant="20" id="XaA-NG-H4g"/>
+                            <constraint firstItem="buK-3j-tqe" firstAttribute="centerX" secondItem="9AU-eV-bq6" secondAttribute="centerX" id="jAK-3u-GbE"/>
+                            <constraint firstItem="3lg-NR-DJ4" firstAttribute="centerX" secondItem="9AU-eV-bq6" secondAttribute="centerX" id="lIk-kx-3Bi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="sAy-4y-23J"/>
+                    <connections>
+                        <outlet property="friends" destination="WGi-KZ-WFf" id="hTc-pO-vkE"/>
+                        <outlet property="heartsLabel" destination="WJd-6p-8Pd" id="IUb-2C-XoR"/>
+                        <outlet property="lessons" destination="QRZ-kv-dnX" id="GUt-ar-gzf"/>
+                        <outlet property="pointsLabel" destination="Zn6-TU-or8" id="u2J-1b-2EE"/>
+                        <outlet property="teachers" destination="QOo-TW-QOK" id="6fB-pC-6Yx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1Q-9Z-bVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="532"/>
+        </scene>
+        <!--Ahmed-->
+        <scene sceneID="ie3-5w-1nT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ahmed" id="VMD-8w-CQy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="المعلمين" selectedImage="person.line.dotted.person.fill" catalog="system" id="vPr-iE-W4D"/>
+                    <navigationItem key="navigationItem" id="NoI-Vi-hn3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfS-b0-Mf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799" y="686"/>
+        </scene>
+        <!--Browse Categories & Lessons-->
+        <scene sceneID="uoh-OD-rAC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Browse Categories &amp; Lessons" id="g4Q-2g-Q80" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الدروس" selectedImage="book" catalog="system" id="iM7-mS-Pgo"/>
+                    <navigationItem key="navigationItem" id="Ybc-R9-04u"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sr-dd-D3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="1074"/>
+        </scene>
+        <!--Hussain-->
+        <scene sceneID="OR6-UB-dYN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Hussain" id="UqM-ED-jAJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZ7-xG-iqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693.8931297709923" y="822.53521126760563"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Yff-vI-ehK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="55N-mg-KT6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="4fR-kp-NED"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMF-5K-prI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="904"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="2PR-S1-1bf">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="AIa-cS-8Qm" customClass="MainTabBarController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VIb-Ad-gY6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gg9-8K-ZFc" kind="relationship" relationship="viewControllers" id="XCr-8D-02O"/>
+                        <segue destination="VMD-8w-CQy" kind="relationship" relationship="viewControllers" id="SNJ-bT-irb"/>
+                        <segue destination="g4Q-2g-Q80" kind="relationship" relationship="viewControllers" id="mjk-US-spu"/>
+                        <segue destination="55N-mg-KT6" kind="relationship" relationship="viewControllers" id="q2W-T8-7xl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1O-et-57A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.618320610687022" y="685.91549295774655"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ane-cC-gEU"/>
+        <segue reference="E2i-1m-rKp"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="HomePage-16" width="1081" height="1081"/>
+        <image name="HomePage-17" width="1081" height="1081"/>
+        <image name="HomePage-18" width="1081" height="1081"/>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="heart" width="1081" height="1081"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.line.dotted.person.fill" catalog="system" width="128" height="58"/>
+        <image name="star" width="1081" height="1081"/>
+    </resources>
+</document>
