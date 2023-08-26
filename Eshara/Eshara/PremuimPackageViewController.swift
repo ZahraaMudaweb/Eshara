@@ -59,60 +59,33 @@ class PremiumPackageViewController: UIViewController {
     
     @IBAction func payPackage1(_ sender: UIButton) {
         
-        if(sender == pay1)
-        {
-            performSegue(withIdentifier: "pay1", sender: self)
+       
+        performSegue(withIdentifier: "pay1", sender: self)
             
 //            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
 //
 //            let viewController = storyboard.instantiateViewController(withIdentifier: "PayPackeg") as! PremiumPayViewController
-//
-//            self.package?.id = 1
-//            self.package?.name = "Standard Package"
-//            self.package?.period = "3 Months"
-//            self.package?.price = "5 BD"
-//            self.package?.issueDate = ""
-//            self.package?.expiryDatre = ""
-//
-//            navigationController?.pushViewController(viewController, animated: true)
+//  navigationController?.pushViewController(viewController, animated: true)
             
             
         
             //performSegue(withIdentifier: "paySeg", sender: sender)
-        }
-        else if(sender == pay2)
-        {
-            package?.id = 1
-            package?.name = "Premium Package"
-            package?.period = "6 Months"
-            package?.price = "15 BD"
-            package?.issueDate = ""
-            package?.expiryDatre = ""
-            //performSegue(withIdentifier: "paySeg", sender: sender)
-            
-        }
-        else if(sender == pay3)
-        {
-            
-            package?.id = 1
-            package?.name = "Elite Package"
-            package?.period = "12 Months"
-            package?.price = "20 BD"
-            package?.issueDate = ""
-            package?.expiryDatre = ""
-            //performSegue(withIdentifier: "paySeg", sender: sender)
-        }
-        else
-        {
-            
-        }
         
     }
     
     
     
+    @IBAction func payPackage2(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "pay2", sender: self)
+        
+    }
     
- 
+    @IBAction func payPackage3(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "pay3", sender: self)
+        
+    }
     
 //    @IBSegueAction func packegSegu(_ coder: NSCoder, sender: Any?) -> PremiumPayViewController?
 //    {
@@ -134,23 +107,32 @@ class PremiumPackageViewController: UIViewController {
             if let destions  = segue.destination as? PremiumPayViewController
             {
 
-                self.package = PremiumPackage(id: 1, name: "", price: "5", period: "", issueDate: "", expiryDatre: "")
-                
-//                self.package?.id = 1
-//                self.package?.name = "Standard Package"
-//                self.package?.period = "3 Months"
-//                self.package?.price = "5 BD"
-//                self.package?.issueDate = ""
-//                self.package?.expiryDatre = ""
-//
+                self.package = PremiumPackage(id: 1, name: "Standard Package", price: "5 BHD", period: "3 Months", issueDate: "", expiryDatre: "")
+       
                 destions.packeag = self.package
                 print("Hiiiii")
 
+            }
+        }
+        else if segue.identifier == "pay2"
+        {
+            if let destions  = segue.destination as? PremiumPayViewController
+            {
 
+                self.package = PremiumPackage(id: 2, name: "Premium Package", price: "15 BHD", period: "6 Months", issueDate: "", expiryDatre: "")
+       
+                destions.packeag = self.package
 
-//                destions.packeag?.period = package!.period
-//                destions.packeag?.price = package!.price
-//                destions.packeag?.name = package!.name
+            }
+        }
+        else if segue.identifier == "pay3"
+        {
+            if let destions  = segue.destination as? PremiumPayViewController
+            {
+
+                self.package = PremiumPackage(id: 3, name: "Elite Package", price: "20 BHD", period: "12 Months", issueDate: "", expiryDatre: "")
+       
+                destions.packeag = self.package
 
             }
         }
