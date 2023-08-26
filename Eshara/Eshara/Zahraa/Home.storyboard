@@ -3,9 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +14,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--الرئيسية-->
         <scene sceneID="hg6-7O-lkI">
             <objects>
                 <viewController id="gg9-8K-ZFc" customClass="HomeVC" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
@@ -212,7 +211,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رصيدك الآن: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-em-hSi">
-                                        <rect key="frame" x="222" y="0.0" width="131" height="21"/>
+                                        <rect key="frame" x="247" y="0.0" width="106" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="LcT-Uw-otA"/>
                                         </constraints>
@@ -235,7 +234,7 @@
                             <constraint firstItem="3lg-NR-DJ4" firstAttribute="centerX" secondItem="9AU-eV-bq6" secondAttribute="centerX" id="lIk-kx-3Bi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="sAy-4y-23J"/>
+                    <tabBarItem key="tabBarItem" title="الرئيسية" image="house" catalog="system" selectedImage="house" id="sAy-4y-23J"/>
                     <connections>
                         <outlet property="friends" destination="WGi-KZ-WFf" id="hTc-pO-vkE"/>
                         <outlet property="heartsLabel" destination="WJd-6p-8Pd" id="IUb-2C-XoR"/>
@@ -274,7 +273,7 @@
         <scene sceneID="OR6-UB-dYN">
             <objects>
                 <viewControllerPlaceholder storyboardName="Hussain" id="UqM-ED-jAJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" selectedImage="note.text" catalog="system" id="YW9-rA-Dd2">
+                    <tabBarItem key="tabBarItem" title="التذكيرات" selectedImage="note.text" catalog="system" id="YW9-rA-Dd2">
                         <imageReference key="image" image="note.text" catalog="system" variableValue="1"/>
                     </tabBarItem>
                 </viewControllerPlaceholder>
@@ -285,10 +284,10 @@
         <!--Profile-->
         <scene sceneID="Yff-vI-ehK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMF-5K-prI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Profile" id="55N-mg-KT6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="4fR-kp-NED"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iMF-5K-prI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1574" y="904"/>
         </scene>
@@ -306,8 +305,8 @@
                         <segue destination="gg9-8K-ZFc" kind="relationship" relationship="viewControllers" id="XCr-8D-02O"/>
                         <segue destination="VMD-8w-CQy" kind="relationship" relationship="viewControllers" id="SNJ-bT-irb"/>
                         <segue destination="g4Q-2g-Q80" kind="relationship" relationship="viewControllers" id="mjk-US-spu"/>
-                        <segue destination="55N-mg-KT6" kind="relationship" relationship="viewControllers" id="q2W-T8-7xl"/>
                         <segue destination="UqM-ED-jAJ" kind="relationship" relationship="viewControllers" id="fPU-Bj-UsB"/>
+                        <segue destination="55N-mg-KT6" kind="relationship" relationship="viewControllers" id="yCM-uG-Pp3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1O-et-57A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
