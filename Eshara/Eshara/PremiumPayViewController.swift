@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class PremiumPayViewController: UIViewController {
 
@@ -43,9 +45,45 @@ class PremiumPayViewController: UIViewController {
 
     @IBAction func purchasePackage(_ sender: Any) {
         
+        performSegue(withIdentifier: "updateHearts", sender: self)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "updateHearts"
+        {
+            if let destions  = segue.destination as? profileViewController
+            {
+
+                updateHearts()
+
+            }
+        }
         
+    }
+    
+    
+    func updateHearts() {
         
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        // decrease user hearts
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    
+                    let newValue = value + 999999999 // to make it unlimited
+                    
+                    ref.child("user").child(uid!).updateChildValues(["hearts" : (newValue)])
+                    
+                }
+            }
+        })
+    
     }
     
     

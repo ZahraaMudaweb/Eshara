@@ -10,6 +10,13 @@ import UIKit
 class PremiumPackageViewController: UIViewController {
     
     
+    @IBOutlet weak var viewPkg1: UIView!
+    
+    @IBOutlet weak var viewPkg2: UIView!
+    
+    
+    @IBOutlet weak var viewPkg3: UIView!
+    
     @IBOutlet var tenBDLabel: UILabel!
     @IBOutlet var threeMothenLabel: UILabel!
     @IBOutlet var packegStander: UILabel!
@@ -47,6 +54,7 @@ class PremiumPackageViewController: UIViewController {
         standerpackeg()
         PremiumPackeg()
         Elite()
+        adjustView()
         
         // Do any additional setup after loading the view.
     }
@@ -54,7 +62,26 @@ class PremiumPackageViewController: UIViewController {
     
     func adjustView(){
         
+        viewPkg1.layer.cornerRadius = 35
+        viewPkg1.clipsToBounds = true
         
+        viewPkg2.layer.cornerRadius = 35
+        viewPkg2.clipsToBounds = true
+        
+        viewPkg3.layer.cornerRadius = 35
+        viewPkg3.clipsToBounds = true
+        
+        
+        pay1.layer.cornerRadius = 35
+        pay1.clipsToBounds = true
+        
+        pay2.layer.cornerRadius = 35
+        pay2.clipsToBounds = true
+        
+        pay3.layer.cornerRadius = 35
+        pay3.clipsToBounds = true
+        
+    
     }
     
     @IBAction func payPackage1(_ sender: UIButton) {
@@ -151,7 +178,7 @@ class PremiumPackageViewController: UIViewController {
     
     func PremiumPackeg()
     {
-        premuimPackeg.text = "PremuimPackeg"
+        premuimPackeg.text = "Premuim Packeg"
         package?.name = premuimPackeg.text!
         fiftenBHD.text = "15 BHD"
         package?.price = fiftenBHD.text!

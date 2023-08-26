@@ -35,29 +35,29 @@ class HomeVC: UIViewController {
     }
     
     func updateHearts() {
-//        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
-//            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
-//
-//            for child in result {
-//                if child.key == "hearts" {
-//                    guard let value = child.value as? Int else {return}
-//                    self.heartsLabel.text = "\(value)"
-//                }
-//            }
-//        })
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    self.heartsLabel.text = "\(value)"
+                }
+            }
+        })
     }
     
     func updatePoints() {
-//        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
-//            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
-//
-//            for child in result {
-//                if child.key == "points" {
-//                    guard let value = child.value as? Int else {return}
-//                    self.pointsLabel.text = "\(value)"
-//                }
-//            }
-//        })
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+
+            for child in result {
+                if child.key == "points" {
+                    guard let value = child.value as? Int else {return}
+                    self.pointsLabel.text = "\(value)"
+                }
+            }
+        })
     }
     /*
     // MARK: - Navigation
