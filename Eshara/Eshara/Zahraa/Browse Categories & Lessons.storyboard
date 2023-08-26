@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uaf-4o-8BZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aOa-nq-Oyc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -77,7 +77,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSv-I3-Fxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614.50381679389307" y="22.535211267605636"/>
+            <point key="canvasLocation" x="2467.93893129771" y="22.535211267605636"/>
         </scene>
         <!--StagesVC-->
         <scene sceneID="L7r-kq-PDw">
@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYk-it-m8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448.0916030534352" y="22.535211267605636"/>
+            <point key="canvasLocation" x="3301.5267175572517" y="22.535211267605636"/>
         </scene>
         <!--LessonsVC-->
         <scene sceneID="s7v-uc-awG">
@@ -326,25 +326,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdd-cY-gP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xus-nX-xua" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="-927"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qhV-YL-XfS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uaf-4o-8BZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zrc-Ke-c57">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y9o-c9-EpK" kind="relationship" relationship="rootViewController" id="ily-cf-xSQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ghc-L9-qtR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-312.21374045801525" y="22.535211267605636"/>
+            <point key="canvasLocation" x="4192" y="-924"/>
         </scene>
         <!--Video LessonsVC-->
         <scene sceneID="jhd-LO-oGC">
@@ -490,7 +472,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgA-X3-aly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="lMW-cV-r6x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2381" y="23"/>
+            <point key="canvasLocation" x="4234.3511450381675" y="22.535211267605636"/>
         </scene>
         <!--Pre QuizVC-->
         <scene sceneID="eUG-kh-7an">
@@ -507,10 +489,10 @@
                                 <rect key="frame" x="71.999999999999986" y="475.33333333333331" width="248.66666666666663" height="232.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="tUY-qg-FAP">
-                                        <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="71.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="248.66666666666669" height="71.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد أنهيت الدرس!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-5z-R9N">
-                                                <rect key="frame" x="56" y="0.0" width="136.66666666666666" height="32.666666666666664"/>
+                                                <rect key="frame" x="56" y="0.0" width="136.66666666666669" height="32.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="27"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -641,10 +623,10 @@
                                             <constraint firstAttribute="width" secondItem="kWG-Ce-8F0" secondAttribute="height" multiplier="1:1" id="TbW-YM-nY8"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkV-14-uM9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkV-14-uM9">
                                         <rect key="frame" x="0.0" y="350.33333333333337" width="255" height="198"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk4-jK-kmu">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk4-jK-kmu">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="137"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-4W-DVz">
@@ -746,11 +728,10 @@
                         <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="RG9-ef-loK" firstAttribute="leading" secondItem="XMC-gd-JJI" secondAttribute="leading" constant="20" id="FJ8-AT-4ru"/>
+                            <constraint firstItem="8BP-We-pb7" firstAttribute="centerX" secondItem="GPX-fI-CGk" secondAttribute="centerX" id="InU-gK-R1T"/>
                             <constraint firstItem="RG9-ef-loK" firstAttribute="top" secondItem="XMC-gd-JJI" secondAttribute="top" constant="30" id="VV6-By-v1R"/>
                             <constraint firstItem="8BP-We-pb7" firstAttribute="top" secondItem="RG9-ef-loK" secondAttribute="bottom" constant="38" id="bYA-lP-5aO"/>
                             <constraint firstItem="XMC-gd-JJI" firstAttribute="trailing" secondItem="RG9-ef-loK" secondAttribute="trailing" constant="20" id="crM-QA-wly"/>
-                            <constraint firstItem="XMC-gd-JJI" firstAttribute="trailing" secondItem="8BP-We-pb7" secondAttribute="trailing" constant="69" id="f1i-rP-PNx"/>
-                            <constraint firstItem="8BP-We-pb7" firstAttribute="leading" secondItem="XMC-gd-JJI" secondAttribute="leading" constant="69" id="oxc-n6-mIz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xuC-mO-HQq">
@@ -780,7 +761,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rV-Kf-N96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2mH-ZR-I2O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="739"/>
+            <point key="canvasLocation" x="3739.5348837209303" y="738.41201716738203"/>
         </scene>
         <!--ResultsVC-->
         <scene sceneID="Wg1-JS-I3E">
@@ -903,7 +884,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="T58-6a-Om9">
-                                <rect key="frame" x="20" y="133" width="353" height="21"/>
+                                <rect key="frame" x="20" y="133" width="337" height="21"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AWy-mt-pKR">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
@@ -924,7 +905,7 @@
                                         </subviews>
                                     </stackView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NVV-gN-yn3">
-                                        <rect key="frame" x="66" y="8.6666666666666572" width="287" height="4"/>
+                                        <rect key="frame" x="66" y="8.6666666666666572" width="271" height="4"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
@@ -947,85 +928,85 @@
                                             <constraint firstAttribute="width" secondItem="Ebi-Ba-IeE" secondAttribute="height" multiplier="1:1" id="tgL-QZ-9F0"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="BY2-KS-TVv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-sZ-DhV">
                                         <rect key="frame" x="0.0" y="350.33333333333337" width="255" height="198"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5u-8N-GgV">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-Hz-zO3">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="137"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4i7-Gw-p3D">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4Uo-pp-ATr">
                                                         <rect key="frame" x="0.0" y="0.0" width="119" height="137"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-R9-vap">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMs-hJ-FDP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="64" id="8uC-Vx-2zc"/>
-                                                                    <constraint firstAttribute="width" secondItem="ao1-R9-vap" secondAttribute="height" multiplier="119:64" id="fs3-QQ-hLM"/>
+                                                                    <constraint firstAttribute="height" constant="64" id="3y9-63-QYK"/>
+                                                                    <constraint firstAttribute="width" secondItem="xMs-hJ-FDP" secondAttribute="height" multiplier="119:64" id="yL1-rY-kvO"/>
                                                                 </constraints>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="wnH-nd-baO"/>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="ij2-hD-mW5"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ4-eP-JoA">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-6b-h3b">
                                                                 <rect key="frame" x="0.0" y="73" width="119" height="64"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="uDB-UE-pDD"/>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="VbN-J3-jyP"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BMn-Rt-x30">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="0r7-EP-odQ">
                                                         <rect key="frame" x="136" y="0.0" width="119" height="137"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brm-5c-4JZ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-hg-9Ud">
                                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="64"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="mal-E6-b8B"/>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="sz3-92-zPW"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-qI-fCB">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6so-5R-16c">
                                                                 <rect key="frame" x="0.0" y="73" width="119" height="64"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول" titleAlignment="center">
+                                                                <buttonConfiguration key="configuration" style="plain" title="الخيار الأول">
                                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="22"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="9ae-ox-VFd"/>
+                                                                    <action selector="didChooseAnswer:" destination="ota-U7-iDb" eventType="touchUpInside" id="72H-ss-5XU"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6s-oM-FNR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4X5-6F-k6h">
                                                 <rect key="frame" x="0.0" y="154" width="255" height="44"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -1036,7 +1017,7 @@
                                                     <fontDescription key="titleFontDescription" name="FFHekaya-Light" family="FF Hekaya" pointSize="25"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextStage:" destination="ota-U7-iDb" eventType="touchUpInside" id="87l-UZ-c9c"/>
+                                                    <action selector="nextStage:" destination="ota-U7-iDb" eventType="touchUpInside" id="a1s-5E-oa1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1051,12 +1032,11 @@
                         <viewLayoutGuide key="safeArea" id="iQG-pQ-9S2"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="mE9-hd-wmF" firstAttribute="leading" secondItem="iQG-pQ-9S2" secondAttribute="leading" constant="69" id="1ET-Yy-hQq"/>
                             <constraint firstItem="T58-6a-Om9" firstAttribute="leading" secondItem="iQG-pQ-9S2" secondAttribute="leading" constant="20" id="Atx-1y-Uc3"/>
-                            <constraint firstItem="iQG-pQ-9S2" firstAttribute="trailing" secondItem="mE9-hd-wmF" secondAttribute="trailing" constant="69" id="BvZ-L5-UAl"/>
+                            <constraint firstItem="mE9-hd-wmF" firstAttribute="centerX" secondItem="h2m-Vf-TTY" secondAttribute="centerX" id="D1a-5U-biU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T58-6a-Om9" secondAttribute="trailing" constant="20" id="I8a-kW-Tax"/>
                             <constraint firstItem="mE9-hd-wmF" firstAttribute="top" secondItem="T58-6a-Om9" secondAttribute="bottom" constant="38" id="cJZ-ae-XlJ"/>
                             <constraint firstItem="T58-6a-Om9" firstAttribute="top" secondItem="iQG-pQ-9S2" secondAttribute="top" constant="30" id="i8R-Me-bhR"/>
-                            <constraint firstItem="iQG-pQ-9S2" firstAttribute="trailing" secondItem="T58-6a-Om9" secondAttribute="trailing" constant="20" id="jNv-eQ-MQy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KHA-BA-AGt">
@@ -1068,11 +1048,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="heartsLabel" destination="ucu-bq-yzJ" id="sNt-j9-fbK"/>
-                        <outlet property="nextBtn" destination="g6s-oM-FNR" id="JWn-hL-4bi"/>
-                        <outlet property="option1" destination="ao1-R9-vap" id="5Vq-dl-oDc"/>
-                        <outlet property="option2" destination="WZ4-eP-JoA" id="iL5-aM-Xfl"/>
-                        <outlet property="option3" destination="brm-5c-4JZ" id="MSN-en-oS7"/>
-                        <outlet property="option4" destination="PnO-qI-fCB" id="EZ5-TZ-hNg"/>
+                        <outlet property="nextBtn" destination="4X5-6F-k6h" id="sFC-P0-ciU"/>
+                        <outlet property="option1" destination="xMs-hJ-FDP" id="bYP-u7-MWo"/>
+                        <outlet property="option2" destination="2aj-6b-h3b" id="Lbo-VY-YC0"/>
+                        <outlet property="option3" destination="Et0-hg-9Ud" id="4wt-LT-Yqe"/>
+                        <outlet property="option4" destination="6so-5R-16c" id="ZI4-AZ-naf"/>
                         <outlet property="questionLabel" destination="ESi-FZ-2ym" id="FhR-jh-uZu"/>
                         <outlet property="quizProgress" destination="NVV-gN-yn3" id="OHJ-aX-2AN"/>
                         <outlet property="videoView" destination="Ebi-Ba-IeE" id="G3r-Ef-Xbb"/>
@@ -1084,6 +1064,25 @@
             </objects>
             <point key="canvasLocation" x="3740" y="1485"/>
         </scene>
+        <!--الدروس-->
+        <scene sceneID="8aP-0k-29K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOa-nq-Oyc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الدروس" image="book" catalog="system" id="qLB-Et-x6H"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Trw-ni-wBL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y9o-c9-EpK" kind="relationship" relationship="rootViewController" id="2Qm-u8-Uil"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOL-ya-6kP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541.2213740458014" y="22.535211267605636"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CJs-TJ-LxM"/>
@@ -1094,6 +1093,7 @@
         <image name="Book" width="1080" height="1080"/>
         <image name="Stages" width="1081" height="1081"/>
         <image name="Tick" width="1081" height="1081"/>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="heart" width="1081" height="1081"/>
         <image name="quizBG" width="1180" height="2557"/>
         <image name="replay" width="1081" height="1081"/>

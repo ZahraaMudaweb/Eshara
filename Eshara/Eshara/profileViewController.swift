@@ -110,6 +110,28 @@ class profileViewController: UIViewController,
     }
     
     
+    @IBAction func loginBtn(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        let mainNavigation = MainNavigationController(rootViewController: viewController)
+        
+        mainNavigation.modalPresentationStyle = .popover
+        self.present(mainNavigation, animated: true)
+        
+        
+    }
+    
+    
+    @IBAction func signUpBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "signUp") as! SignupViewController
+        let mainNavigation = MainNavigationController(rootViewController: viewController)
+        
+        mainNavigation.modalPresentationStyle = .popover
+        self.present(mainNavigation, animated: true)
+    }
+    
     //change font style
     func font_style(){
         priceLabel.font = UIFont(name: "FF Hekaya", size: 20)
