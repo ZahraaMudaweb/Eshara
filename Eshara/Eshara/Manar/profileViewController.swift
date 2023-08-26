@@ -383,4 +383,13 @@ class profileViewController: UIViewController,
         })
     
     }
+    
+    @IBAction func unwindToProfileView(segue: UIStoryboardSegue) {
+        
+        guard segue.identifier == "updateHearts",
+              let sourceViewController = segue.source
+                as? PremiumPayViewController else { return }
+       
+        getHearts()
+    }
 }
