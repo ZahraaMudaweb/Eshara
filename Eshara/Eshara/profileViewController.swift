@@ -50,7 +50,11 @@ class profileViewController: UIViewController,
     @IBOutlet var userNameTextfield: UITextField!
     @IBOutlet var emailTextField: UITextField!
     
+    @IBOutlet weak var premiumLbl: UILabel!
     
+    @IBOutlet weak var btnBePremium: UIButton!
+    
+    var hearts: Int = 10
     
     override func viewDidLoad() {
        
@@ -91,6 +95,17 @@ class profileViewController: UIViewController,
         else{
             redirectLogin.isHidden = false
             profileStackView.isHidden = true
+        }
+        
+        getHearts()
+        if self.hearts > 10
+        {
+            self.btnBePremium.isHidden = true
+            self.premiumLbl.isHidden = false
+        }
+        else{
+            self.btnBePremium.isHidden = false
+            self.premiumLbl.isHidden = true
         }
     }
     
@@ -348,5 +363,24 @@ class profileViewController: UIViewController,
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
         
+    }
+    
+    
+    func getHearts() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        // decrease user hearts
+        ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
+            snapshot in guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for child in result {
+                if child.key == "hearts" {
+                    guard let value = child.value as? Int else {return}
+                    let newValue = value
+                    self.hearts = newValue
+                }
+            }
+        })
+    
     }
 }

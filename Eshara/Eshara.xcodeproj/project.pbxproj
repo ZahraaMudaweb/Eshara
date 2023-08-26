@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041235882A9746D100A1A5B4 /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */; };
+
 		0412358A2A979FE500A1A5B4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041235892A979FE500A1A5B4 /* MainTabBarController.swift */; };
 		671155502A8D199500FC3EA0 /* Quizzes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671155412A8D199500FC3EA0 /* Quizzes.storyboard */; };
 		671155512A8D199500FC3EA0 /* VideoQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671155432A8D199500FC3EA0 /* VideoQuizVC.swift */; };
@@ -68,11 +68,28 @@
 		676F1CCE2A9779DD00C90BCC /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 676F1CCD2A9779DD00C90BCC /* FFHekaya-Light.otf */; };
 		67B073A72A7FE0F0009B6329 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B073A62A7FE0F0009B6329 /* LessonsVC.swift */; };
 		67E1ADFD2A8BA40400D2B4EB /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */; };
+		6A382E382A968B4200D40658 /* PremuimPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A382E372A968B4200D40658 /* PremuimPackageViewController.swift */; };
+		6A382E3A2A968BE400D40658 /* PremiumPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A382E392A968BE400D40658 /* PremiumPayViewController.swift */; };
+		6A382E3C2A968CF100D40658 /* PremiumPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A382E3B2A968CF100D40658 /* PremiumPackage.swift */; };
+		6AA626F62A964F7100D636E0 /* BokmarkDtae.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA626F52A964F7100D636E0 /* BokmarkDtae.swift */; };
+		6ABD8A4C2A978E0B004656A5 /* User+Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD8A4B2A978E0B004656A5 /* User+Reviews.swift */; };
+		6AD17E262A94F1B900C8267E /* FFHekaya-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD17E252A94F1B900C8267E /* FFHekaya-Light.otf */; };
+		6AD17E292A94F20000C8267E /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD17E282A94F20000C8267E /* Leaderboard.storyboard */; };
+		6AD17E2B2A94F3DF00C8267E /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E2A2A94F3DF00C8267E /* LeaderBoardViewController.swift */; };
+		6AD17E2D2A94F99000C8267E /* leaderBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E2C2A94F99000C8267E /* leaderBoardCollectionViewCell.swift */; };
+		6AD17E2F2A95015E00C8267E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E2E2A95015E00C8267E /* MyProfileViewController.swift */; };
+		6AD17E312A95032C00C8267E /* Users-Zaki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E302A95032C00C8267E /* Users-Zaki.swift */; };
+		6AD17E332A95084A00C8267E /* MyProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E322A95084A00C8267E /* MyProfileCollectionViewCell.swift */; };
+		6AD17E352A95155200C8267E /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E342A95155200C8267E /* FriendViewController.swift */; };
+		6AD17E372A95181700C8267E /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E362A95181700C8267E /* FriendCollectionViewCell.swift */; };
+		6AD17E392A95195800C8267E /* addFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E382A95195800C8267E /* addFriendViewController.swift */; };
+		6AD17E3B2A951A2F00C8267E /* addFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD17E3A2A951A2F00C8267E /* addFriendCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		041235872A9746D100A1A5B4 /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FFHekaya-Light.otf"; path = "../../../../Desktop/FFHekaya-Light.otf"; sourceTree = "<group>"; };
+
 		041235892A979FE500A1A5B4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+
 		671155412A8D199500FC3EA0 /* Quizzes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Quizzes.storyboard; sourceTree = "<group>"; };
 		671155432A8D199500FC3EA0 /* VideoQuizVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoQuizVC.swift; sourceTree = "<group>"; };
 		671155442A8D199500FC3EA0 /* StagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagesVC.swift; sourceTree = "<group>"; };
@@ -131,6 +148,22 @@
 		676F1CCD2A9779DD00C90BCC /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FFHekaya-Light.otf"; sourceTree = "<group>"; };
 		67B073A62A7FE0F0009B6329 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonsVC.swift; path = Eshara/Zahraa/Controller/LessonsVC.swift; sourceTree = SOURCE_ROOT; };
 		67E1ADFC2A8BA40400D2B4EB /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = Eshara/Zahraa/Controller/ResultsVC.swift; sourceTree = SOURCE_ROOT; };
+		6A382E372A968B4200D40658 /* PremuimPackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremuimPackageViewController.swift; sourceTree = "<group>"; };
+		6A382E392A968BE400D40658 /* PremiumPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPayViewController.swift; sourceTree = "<group>"; };
+		6A382E3B2A968CF100D40658 /* PremiumPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPackage.swift; sourceTree = "<group>"; };
+		6AA626F52A964F7100D636E0 /* BokmarkDtae.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BokmarkDtae.swift; sourceTree = "<group>"; };
+		6ABD8A4B2A978E0B004656A5 /* User+Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Reviews.swift"; sourceTree = "<group>"; };
+		6AD17E252A94F1B900C8267E /* FFHekaya-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FFHekaya-Light.otf"; sourceTree = "<group>"; };
+		6AD17E282A94F20000C8267E /* Leaderboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
+		6AD17E2A2A94F3DF00C8267E /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
+		6AD17E2C2A94F99000C8267E /* leaderBoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leaderBoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AD17E2E2A95015E00C8267E /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		6AD17E302A95032C00C8267E /* Users-Zaki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users-Zaki.swift"; sourceTree = "<group>"; };
+		6AD17E322A95084A00C8267E /* MyProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AD17E342A95155200C8267E /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		6AD17E362A95181700C8267E /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AD17E382A95195800C8267E /* addFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendViewController.swift; sourceTree = "<group>"; };
+		6AD17E3A2A951A2F00C8267E /* addFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +256,7 @@
 		6740ACDD2A794959006CE7DA /* Eshara */ = {
 			isa = PBXGroup;
 			children = (
+				6AD17E272A94F1E100C8267E /* Zaki */,
 				6740ACF92A794AC2006CE7DA /* GoogleService-Info.plist */,
 				676F1CCD2A9779DD00C90BCC /* FFHekaya-Light.otf */,
 				6740ACDE2A794959006CE7DA /* AppDelegate.swift */,
@@ -240,6 +274,7 @@
 				67562BE12A926C8300102CF9 /* profileViewController.swift */,
 				67562BD52A926C8300102CF9 /* ReviewsCollectionViewCell.swift */,
 				67562BDE2A926C8300102CF9 /* ReviewsCollectionViewController.swift */,
+				6AA626F52A964F7100D636E0 /* BokmarkDtae.swift */,
 				67562BE02A926C8300102CF9 /* setting.swift */,
 				67562BE32A926C8300102CF9 /* Settings.bundle */,
 				67562BE72A926C8300102CF9 /* SettingTableViewCell.swift */,
@@ -251,6 +286,9 @@
 				67562BE22A926C8300102CF9 /* TeachersDataViewController.swift */,
 				67562BD32A926C8300102CF9 /* Theme.swift */,
 				67562BD42A926C8300102CF9 /* UserData.swift */,
+				6A382E372A968B4200D40658 /* PremuimPackageViewController.swift */,
+				6A382E3B2A968CF100D40658 /* PremiumPackage.swift */,
+				6A382E392A968BE400D40658 /* PremiumPayViewController.swift */,
 				6740ACE42A794959006CE7DA /* Main.storyboard */,
 				673B703E2A93A74C0030837C /* Profile.storyboard */,
 				6740ACE72A79495A006CE7DA /* Assets.xcassets */,
@@ -290,6 +328,24 @@
 				67562C062A926C9E00102CF9 /* NotifyExtra.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6AD17E272A94F1E100C8267E /* Zaki */ = {
+			isa = PBXGroup;
+			children = (
+				6AD17E282A94F20000C8267E /* Leaderboard.storyboard */,
+				6AD17E302A95032C00C8267E /* Users-Zaki.swift */,
+				6AD17E2A2A94F3DF00C8267E /* LeaderBoardViewController.swift */,
+				6AD17E2C2A94F99000C8267E /* leaderBoardCollectionViewCell.swift */,
+				6ABD8A4B2A978E0B004656A5 /* User+Reviews.swift */,
+				6AD17E2E2A95015E00C8267E /* MyProfileViewController.swift */,
+				6AD17E322A95084A00C8267E /* MyProfileCollectionViewCell.swift */,
+				6AD17E342A95155200C8267E /* FriendViewController.swift */,
+				6AD17E362A95181700C8267E /* FriendCollectionViewCell.swift */,
+				6AD17E382A95195800C8267E /* addFriendViewController.swift */,
+				6AD17E3A2A951A2F00C8267E /* addFriendCollectionViewCell.swift */,
+			);
+			path = Zaki;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +416,7 @@
 			files = (
 				6740ACEB2A79495A006CE7DA /* LaunchScreen.storyboard in Resources */,
 				6740ACFA2A794AC2006CE7DA /* GoogleService-Info.plist in Resources */,
+				6AD17E292A94F20000C8267E /* Leaderboard.storyboard in Resources */,
 				6711555D2A8D1B1E00FC3EA0 /* Media.xcassets in Resources */,
 				6754069D2A9252AD009C23A2 /* Home.storyboard in Resources */,
 				67562C072A926C9E00102CF9 /* Hussain.storyboard in Resources */,
@@ -383,23 +440,30 @@
 			files = (
 				67562BF22A926C8300102CF9 /* SettingTableViewController.swift in Sources */,
 				67562BF12A926C8300102CF9 /* LoginViewController.swift in Sources */,
+				6AD17E372A95181700C8267E /* FriendCollectionViewCell.swift in Sources */,
 				0412358A2A979FE500A1A5B4 /* MainTabBarController.swift in Sources */,
 				6711555B2A8D199500FC3EA0 /* CategoryCollectionViewCell.swift in Sources */,
 				67562C0B2A926C9E00102CF9 /* LocalDatabase.swift in Sources */,
+				6AA626F62A964F7100D636E0 /* BokmarkDtae.swift in Sources */,
 				671155582A8D199500FC3EA0 /* Colors.swift in Sources */,
 				671155592A8D199500FC3EA0 /* Quizzes.swift in Sources */,
 				67562BE92A926C8300102CF9 /* UserData.swift in Sources */,
+				6AD17E3B2A951A2F00C8267E /* addFriendCollectionViewCell.swift in Sources */,
 				67562BF62A926C8300102CF9 /* profileViewController.swift in Sources */,
 				67562C0C2A926C9E00102CF9 /* Notify.swift in Sources */,
 				671155552A8D199500FC3EA0 /* QuizVC.swift in Sources */,
 				67562BF92A926C8300102CF9 /* MainNavigationController.swift in Sources */,
 				67562C092A926C9E00102CF9 /* AlertDetailTableViewController.swift in Sources */,
+				6ABD8A4C2A978E0B004656A5 /* User+Reviews.swift in Sources */,
 				67562BEC2A926C8300102CF9 /* FireBaseViewController.swift in Sources */,
 				67562C082A926C9E00102CF9 /* AlertListTableViewController.swift in Sources */,
 				67562BD02A926C5900102CF9 /* AddReviewViewController.swift in Sources */,
 				671155562A8D199500FC3EA0 /* VideoLessonsVC.swift in Sources */,
+				6AD17E2D2A94F99000C8267E /* leaderBoardCollectionViewCell.swift in Sources */,
 				6740ACE32A794959006CE7DA /* ViewController.swift in Sources */,
+				6AD17E2F2A95015E00C8267E /* MyProfileViewController.swift in Sources */,
 				67562BF02A926C8300102CF9 /* ChangePassViewController.swift in Sources */,
+				6AD17E2B2A94F3DF00C8267E /* LeaderBoardViewController.swift in Sources */,
 				6711555A2A8D199500FC3EA0 /* CatrgoryVFL.swift in Sources */,
 				67562BFA2A926C8400102CF9 /* TeachersDataCollectionViewCell.swift in Sources */,
 				671155512A8D199500FC3EA0 /* VideoQuizVC.swift in Sources */,
@@ -409,11 +473,15 @@
 				6754069F2A925432009C23A2 /* HomeVC.swift in Sources */,
 				67562C0A2A926C9E00102CF9 /* GradientTableViewCell.swift in Sources */,
 				671155522A8D199500FC3EA0 /* StagesVC.swift in Sources */,
+				6AD17E332A95084A00C8267E /* MyProfileCollectionViewCell.swift in Sources */,
+				6AD17E312A95032C00C8267E /* Users-Zaki.swift in Sources */,
 				6740ACDF2A794959006CE7DA /* AppDelegate.swift in Sources */,
 				6740ACE12A794959006CE7DA /* SceneDelegate.swift in Sources */,
 				67562BF52A926C8300102CF9 /* setting.swift in Sources */,
+				6A382E382A968B4200D40658 /* PremuimPackageViewController.swift in Sources */,
 				67562BED2A926C8300102CF9 /* BookMarkViewController.swift in Sources */,
 				67562BEE2A926C8300102CF9 /* TeachersCollectionViewController.swift in Sources */,
+				6AD17E392A95195800C8267E /* addFriendViewController.swift in Sources */,
 				671155532A8D199500FC3EA0 /* CategoriesCollectionVC.swift in Sources */,
 				67B073A72A7FE0F0009B6329 /* LessonsVC.swift in Sources */,
 				67562BEF2A926C8300102CF9 /* SignupViewController.swift in Sources */,
@@ -422,9 +490,12 @@
 				67562BF72A926C8300102CF9 /* TeachersDataViewController.swift in Sources */,
 				67562BEA2A926C8300102CF9 /* ReviewsCollectionViewCell.swift in Sources */,
 				671155542A8D199500FC3EA0 /* preQuizVC.swift in Sources */,
+				6A382E3C2A968CF100D40658 /* PremiumPackage.swift in Sources */,
+				6AD17E352A95155200C8267E /* FriendViewController.swift in Sources */,
 				67562C0D2A926C9E00102CF9 /* NotifyExtra.swift in Sources */,
 				67562BFC2A926C8400102CF9 /* SettingTableViewCell.swift in Sources */,
 				67562BF32A926C8300102CF9 /* ReviewsCollectionViewController.swift in Sources */,
+				6A382E3A2A968BE400D40658 /* PremiumPayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +649,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,6 +677,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

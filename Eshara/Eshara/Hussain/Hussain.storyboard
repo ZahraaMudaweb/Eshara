@@ -23,7 +23,7 @@
                         <viewLayoutGuide key="safeArea" id="5wo-cI-gbl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="wBK-CW-R6I"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="note.text" catalog="system" id="wBK-CW-R6I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAQ-7g-DT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +96,7 @@
                             <outlet property="delegate" destination="By6-DH-JMk" id="6kL-EI-FPf"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="التذكيرات" image="note.text" catalog="system" id="56h-qE-ley"/>
                     <navigationItem key="navigationItem" title="التذكيرات" id="o83-de-1XL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7eq-pG-m1D">
                             <connections>
@@ -103,6 +104,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oN-xv-9Qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,6 +348,7 @@
         <segue reference="eql-rh-faA"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="note.text" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

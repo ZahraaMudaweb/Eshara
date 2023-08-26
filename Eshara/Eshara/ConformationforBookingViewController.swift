@@ -17,13 +17,13 @@ import FirebaseAuth
 class ConformationforBookingViewController: UIViewController
 {
     
-//<<<<<<< HEAD
-
-  
-  
-//=======
-   
-//>>>>>>> Ahmed
+    //<<<<<<< HEAD
+    
+    
+    
+    //=======
+    
+    //>>>>>>> Ahmed
     
     var sending = "Hellowworld"
     
@@ -31,7 +31,7 @@ class ConformationforBookingViewController: UIViewController
     
     @IBOutlet var SucffleBookkMarket: UILabel!
     
-   
+    
     
     
     @IBOutlet var timeLabel: UILabel!
@@ -50,10 +50,10 @@ class ConformationforBookingViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-      
+        
         timeLabel.text = timeString
         dayLabel.text = dayString
         
@@ -61,7 +61,7 @@ class ConformationforBookingViewController: UIViewController
         
     }
     
-  
+    
     
     func Style()
     {
@@ -72,26 +72,27 @@ class ConformationforBookingViewController: UIViewController
         DoneBateen.layer.cornerRadius = 10
         DoneBateen.layer.masksToBounds = true
         DoneBateen.backgroundColor = UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1)
+        view.backgroundColor =  UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
         
     }
     
     
-   
+    
     @IBAction func DontButtontap(_ sender: Any)
     {
         
-//<<<<<<< HEAD
-      
+        //<<<<<<< HEAD
         
-       // navigationController?.pushViewController(dec, animated: true)
-      //  delegate?.sendData(data: "Hello World")
-//=======
-//>>>>>>> Ahmed
+        
+        // navigationController?.pushViewController(dec, animated: true)
+        //  delegate?.sendData(data: "Hello World")
+        //=======
+        //>>>>>>> Ahmed
     }
-   
     
-  
-   
+    
+    
+    
     @IBSegueAction func sendingcon(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> ReviewsCollectionViewController?
     {
         if segueIdentifier == "revcon"
@@ -106,7 +107,7 @@ class ConformationforBookingViewController: UIViewController
         return ReviewsCollectionViewController(coder: coder)
     }
     
-    
+}
 
     
     
@@ -120,4 +121,4 @@ class ConformationforBookingViewController: UIViewController
     }
     */
 
-}
+

@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 
 class BookMarkViewController: UIViewController {
 
-
+   
     
     @IBOutlet var ConfButtin: UIButton!
     
@@ -81,8 +83,6 @@ class BookMarkViewController: UIViewController {
     @IBAction func DatePickerTapp(_ sender: UIDatePicker)
     {
         updateRemindUI()
-        
-      
  
     }
     
@@ -107,6 +107,8 @@ class BookMarkViewController: UIViewController {
             destinationVC.timeString = dateString
             destinationVC.navigationItem.setHidesBackButton(true, animated: false)
             
+            sendBookToFirebase(datePickerrr: bookDatePicker)
+            
         }
        
     }
@@ -120,8 +122,53 @@ class BookMarkViewController: UIViewController {
         ConfButtin.layer.cornerRadius = 10
         ConfButtin.layer.masksToBounds = true
     //    ConfButtin.colo
+        view.backgroundColor =  UIColor(red: (247/255.0), green: (240/255.0), blue: (245/255.0), alpha: 1)
     }
     
+    
+    func sendBookToFirebase(datePickerrr: UIDatePicker)
+    {
+        
+       // let datePickerFormateed = DateFormatter()
+        
+       
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        dateFormatter.string(from: datePickerrr.date)
+                
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+          //  .child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("BookMark")
+        
+//        ref.child("user").child(uid!).observeSingleEvent(of: .value)
+//        {
+//            snapshot in
+//            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+//
+//            for child in result
+//            {
+//                let key = child.key
+//                let value = child.value as? NSDictionary
+//            }
+            
+                        
+            ref.child("user").child(uid!).child("Bookmark").setValue(["date": "\(datePickerrr.date.formatted())"])
+            {
+                (error, _ )
+                in if let error = error
+                {
+                    print(error)
+                }
+                else
+                {
+                    print("Done")
+                }
+            }
+ 
+//        }
+    }
  
     
     

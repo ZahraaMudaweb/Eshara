@@ -35,6 +35,7 @@ class HomeVC: UIViewController {
     }
     
     func updateHearts() {
+
         let uid = Auth.auth().currentUser?.uid
         if uid != nil {
             ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
@@ -50,6 +51,7 @@ class HomeVC: UIViewController {
     }
     
     func updatePoints() {
+
         let uid = Auth.auth().currentUser?.uid
         if uid != nil {
             ref.child("user").child(uid!).observeSingleEvent(of: .value, with: {
