@@ -161,15 +161,17 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-Sj-Wru">
                                                 <rect key="frame" x="0.0" y="656.66666666666663" width="393" height="34.333333333333371"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Be Premuim User"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Be Premuim User">
+                                                    <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="Zti-Yu-OUJ" kind="show" id="JNb-Qt-F2g"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-rm-iDS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are Premium user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-rm-iDS">
                                                 <rect key="frame" x="0.0" y="722" width="393" height="20.333333333333371"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.92941176889999999" green="0.50588238240000005" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR1-6F-J4S">
@@ -278,6 +280,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="znM-dV-SHA"/>
                     <connections>
+                        <outlet property="btnBePremium" destination="q0h-Sj-Wru" id="TfY-t9-YXY"/>
                         <outlet property="changeImageButton" destination="Gpo-al-Bnp" id="xtp-It-aCr"/>
                         <outlet property="changePassButton" destination="Umu-z5-Jg0" id="rdb-Gp-tCN"/>
                         <outlet property="deleteAccountButton" destination="6nN-Np-vjc" id="gRE-dr-lmO"/>
@@ -289,6 +292,7 @@
                         <outlet property="locationLabel" destination="Ptk-zM-2Bn" id="ZEh-vm-lad"/>
                         <outlet property="locationTextfield" destination="HXh-Ji-ce7" id="EGG-Cc-mY4"/>
                         <outlet property="passTextfield" destination="yho-Fg-KAt" id="sLT-EF-XIJ"/>
+                        <outlet property="premiumLbl" destination="2FA-rm-iDS" id="fRQ-HX-r4Q"/>
                         <outlet property="priceLabel" destination="VtS-6U-WSa" id="NGk-rO-Cht"/>
                         <outlet property="priceTextfield" destination="sUD-h9-7Is" id="6LX-D7-LbB"/>
                         <outlet property="profileStackView" destination="Ukj-hH-ZiS" id="Yue-QW-pCk"/>
@@ -527,7 +531,9 @@
                                 <rect key="frame" x="16" y="529" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Confirmation Purchase"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirmation Purchase">
+                                    <color key="baseBackgroundColor" red="0.41176474089999998" green="0.62352943419999995" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="purchasePackage:" destination="kGQ-eC-NqE" eventType="touchUpInside" id="e2Q-3f-6Qm"/>
                                     <segue destination="nOl-Gb-fLg" kind="presentation" identifier="updateHearts" id="kbd-6w-jzo"/>
@@ -569,7 +575,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CZA-Kz-UBc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Cm-wZ-rXQ"/>
                     <connections>
@@ -680,8 +686,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
