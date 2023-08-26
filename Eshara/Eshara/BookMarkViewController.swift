@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class BookMarkViewController: UIViewController {
 
-    var datee: BookMarkDate?
+   
     
     @IBOutlet var ConfButtin: UIButton!
     
@@ -141,22 +141,16 @@ class BookMarkViewController: UIViewController {
         let uid = Auth.auth().currentUser?.uid
           //  .child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("BookMark")
         
-        ref.child("user").child(uid!).observeSingleEvent(of: .value) {[self]
-            snapshot in
-            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
-            
-            for child in result
-            {
-                let key = child.key
-                let value = child.value as? NSDictionary
-                
-                
-                print("/////////////////////////////////////////////////////////////////////////////////////")
-                print(datePickerrr.date)
-                print(key)
-                print(value as Any)
-                print("/////////////////////////////////////////////////////////////////////////////////////")
-            }
+//        ref.child("user").child(uid!).observeSingleEvent(of: .value)
+//        {
+//            snapshot in
+//            guard let result = snapshot.children.allObjects as? [DataSnapshot] else {return}
+//
+//            for child in result
+//            {
+//                let key = child.key
+//                let value = child.value as? NSDictionary
+//            }
             
                         
             ref.child("user").child(uid!).child("Bookmark").setValue(["date": "\(datePickerrr.date.formatted())"])
@@ -171,24 +165,8 @@ class BookMarkViewController: UIViewController {
                     print("Done")
                 }
             }
-        
-        
-       // let refDate = Database.database().reference().child("user").child(" UaNyISDxSpgTQUidtkb23z5n0Ct2").child("BookMark").obser
-      //  let dateP = refDate.childByAutoId()
-        
-    
-        
-//        refDate.setValue((datee?.dictionaryRepresentation(datePickerrrr: datePickerrr))) { (error, _) in
-//            if let error = error
-//            {
-//                print(error)
-//            }
-//            else
-//            {
-//                print("Done date picker")
-//            }
-            
-        }
+ 
+//        }
     }
  
     

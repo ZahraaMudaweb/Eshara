@@ -56,9 +56,16 @@ class TeachersDataViewController: UIViewController
        
         
     TeacherViewLayOut()
-       
-        
-        
+        NameLabel.text = teacher?.teacherName
+        LocationLabel.text = teacher?.teacherLocation
+        if let rate = teacher?.teacherRate
+        {
+            RateLabel.text = String(rate)
+        }
+        if let price = teacher?.teacherPrice
+        {
+            PriceLabel.text = String(price)
+        }
     }
     
     func TeacherViewLayOut()

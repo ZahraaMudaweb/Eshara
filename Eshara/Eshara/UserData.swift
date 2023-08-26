@@ -8,9 +8,7 @@
 import Foundation
 import UIKit
 
-// for commit
-// sdfs
-//comm
+
 
 struct Teacherdata
 {
@@ -35,17 +33,29 @@ struct AddStudentrevie
     var studentRate: String
     var StudentCommrnt: String
     var studentname: String
+    var studentIMage: UIImage?
+}
+struct BookMarkDate
+{
+    var date: String
+    var Rate: String
+    var image: UIImage?
+    
+    
+    
+    init(date: String, Rate: String) {
+        self.date = date
+        self.Rate = Rate
+    }
+    
+    func dictionaryReviews() -> [String: Any]
+    {
+        var dict: [String: Any] = [:]
+        dict["Reviews"] = date
+        dict["Rate"] = Rate
+        return dict
+    }
+    
+   
 }
 
-
-
-//extension Teacherdata
-//{
-//    static let techersData: [Teacherdata] =
-//    [
-//        Teacherdata(teacherName: "Ali", teacherRate: 4.5, teacherLocation: "Sitra", teacherPrice: 8, color: .lightblue),
-//        Teacherdata(teacherName: "Ahmed", teacherRate: 4, teacherLocation: "Eaker", teacherPrice: 5, color: .green),
-//        Teacherdata(teacherName: "Hussain", teacherRate: 5, teacherLocation: "Sanad", teacherPrice: 7, color: .yellow),
-//        Teacherdata(teacherName: "Ammar", teacherRate: 3, teacherLocation: "Manamma", teacherPrice: 9, color: .orenge)
-//    ]
-//}

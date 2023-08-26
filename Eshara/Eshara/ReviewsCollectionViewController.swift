@@ -21,14 +21,12 @@ class ReviewsCollectionViewController: UICollectionViewController{
     
     
     
-    var Student: [AddStudentrevie] =
-    [
-        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-        AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5")
-    ]
+    var Student: [AddStudentrevie] = []
+//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
+//    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5")
    
     
     
@@ -54,6 +52,10 @@ class ReviewsCollectionViewController: UICollectionViewController{
 //       
 
         // Do any additional setup after loading the view.
+        
+        fetchUserReview { name in
+            print(name)
+        }
     }
 
     /*
@@ -87,7 +89,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
      
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(200.0)
+            heightDimension: .absolute(150.0)
         )
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
@@ -146,6 +148,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+    
         return Student.count
     }
 
@@ -192,6 +195,49 @@ class ReviewsCollectionViewController: UICollectionViewController{
         }
     }
     
+    
+    func fetchUserReview(completion: @escaping (String) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            completion("")
+            return
+        }
+        
+        let ref = Database.database().reference()
+        
+        ref.child("user").child(uid).child("Name").observe(.value) { nameSnapshot in
+            guard let username = nameSnapshot.value as? String else {
+                completion("")
+                return
+            }
+            
+            completion(username)
+            
+            ref.child("user").child(uid).child("Reviews").observeSingleEvent(of: .value) { snapshot in
+                guard let result = snapshot.children.allObjects as? [DataSnapshot] else {
+                    return
+                }
+                
+                for child in result {
+                    let key = child.key
+                    guard let value = child.value as? [String: Any],
+                          let review = value["Review"] as? String,
+                          let rate = value["Rate"] as? String else {
+                        return
+                    }
+                    
+                    let newReview = AddStudentrevie(studentRate: rate, StudentCommrnt: review, studentname: "sasas")
+                    self.Student.append(newReview)
+                    
+                    // Print the review
+                    print("Review: \(review)")
+                    print("Rate: \(rate)")
+                   
+                }
+            
+            }
+           
+        }
+    }
     
    
     
