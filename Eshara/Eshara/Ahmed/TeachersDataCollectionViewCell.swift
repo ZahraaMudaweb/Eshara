@@ -19,12 +19,12 @@ class TeachersDataCollectionViewCell: UICollectionViewCell {
     @IBOutlet var PriceLabel: UILabel!
     
     
-    func name( teacherName: String,  teacherRate: Double, teacherLocation: String, teacherPrice: Double)
+    func name( teacherName: String,  teacherRate: String, teacherLocation: String, teacherPrice: String)
     {
-        LocationLabel.text = teacherLocation
-        PriceLabel.text = "\(teacherPrice)"
-        RateLabel.text = "\(teacherRate)"
-        nameLabel.text = teacherName
+        LocationLabel.text = "الموقع:\(teacherLocation)"
+        PriceLabel.text = " السعر: \(teacherPrice) BHD"
+        RateLabel.text = "التقييم:\(teacherRate)"
+        nameLabel.text = "ألاسم:\(teacherName)"
         
         nameLabel.textAlignment = .right
     }
@@ -35,6 +35,7 @@ class TeachersDataCollectionViewCell: UICollectionViewCell {
         
         layer.cornerRadius = 10
         layer.masksToBounds = true
+       
         
     }
   

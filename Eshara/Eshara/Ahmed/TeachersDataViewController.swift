@@ -71,15 +71,16 @@ class TeachersDataViewController: UIViewController
        
         
     TeacherViewLayOut()
-        NameLabel.text = teacher?.teacherName
-        LocationLabel.text = teacher?.teacherLocation
+        NameLabel.text = "ألاسم:\(teacher?.teacherName ?? "")"
+        LocationLabel.text = "لموقع:\(teacher?.teacherLocation ?? "")"
+     
         if let rate = teacher?.teacherRate
         {
-            RateLabel.text = String(rate)
+            RateLabel.text = String("التقييم:\(rate)")
         }
         if let price = teacher?.teacherPrice
         {
-            PriceLabel.text = String(price)
+            PriceLabel.text = String("السعر:\(price)")
         }
     }
     

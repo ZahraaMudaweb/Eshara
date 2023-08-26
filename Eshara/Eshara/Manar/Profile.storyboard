@@ -3,30 +3,22 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
-        <scene sceneID="cBS-L9-NNQ">
-            <objects>
-                <viewControllerPlaceholder id="HFL-vk-Xjj" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6I-sJ-QcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1682" y="1035"/>
-        </scene>
-        <!--Profile View Controller-->
+        <!--ملفي الشخصي-->
         <scene sceneID="C75-qV-2o7">
             <objects>
                 <viewController id="nOl-Gb-fLg" customClass="profileViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FNT-ih-fmY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-8E-Ajl">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Ukj-hH-ZiS">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="938.33333333333337"/>
@@ -218,7 +210,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tRf-1b-CKf">
-                                        <rect key="frame" x="-3.6666666666666572" y="171" width="400.33333333333326" height="500"/>
+                                        <rect key="frame" x="-3.6666666666666572" y="159" width="400.33333333333326" height="500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pgn-nk-Xs4">
                                                 <rect key="frame" x="0.0" y="0.0" width="400.33333333333331" height="250"/>
@@ -292,6 +284,7 @@
                             <constraint firstItem="0hc-8E-Ajl" firstAttribute="leading" secondItem="d0Y-oh-rcw" secondAttribute="leading" id="uon-db-ziZ"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ملفي الشخصي" image="person.crop.circle" catalog="system" id="hrf-Ig-a3L"/>
                     <navigationItem key="navigationItem" id="znM-dV-SHA"/>
                     <connections>
                         <outlet property="btnBePremium" destination="q0h-Sj-Wru" id="TfY-t9-YXY"/>
@@ -321,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKc-8K-LPU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="749"/>
+            <point key="canvasLocation" x="3411.450381679389" y="748.59154929577471"/>
         </scene>
         <!--Premium Package View Controller-->
         <scene sceneID="2oD-pm-Mhl">
@@ -512,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgU-Mv-49O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3321.3740458015268" y="735.91549295774655"/>
+            <point key="canvasLocation" x="4248.0916030534354" y="735.91549295774655"/>
         </scene>
         <!--Premium Pay View Controller-->
         <scene sceneID="nxQ-lg-xe9">
@@ -550,7 +543,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="purchasePackage:" destination="kGQ-eC-NqE" eventType="touchUpInside" id="e2Q-3f-6Qm"/>
-                                    <segue destination="nOl-Gb-fLg" kind="presentation" identifier="updateHearts" id="kbd-6w-jzo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aa-aT-mcI">
@@ -599,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1R-9N-7DA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4174.8091603053435" y="735.91549295774655"/>
+            <point key="canvasLocation" x="5101.5267175572517" y="735.91549295774655"/>
         </scene>
         <!--Change Pass View Controller-->
         <scene sceneID="o27-yr-zPb">
@@ -697,6 +689,7 @@
         <segue reference="MwS-op-wP6"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

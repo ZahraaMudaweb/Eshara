@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource, UITextFieldDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -26,6 +27,11 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
     }
     
 
+    @IBOutlet var userimage: UIImageView!
+    
+    
+    
+    
     @IBOutlet var addratelabel: UILabel!
     
     
@@ -82,8 +88,8 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
           view.addGestureRecognizer(tapGesture)
         CommenttextField.delegate = self
         
-        var nameee: () = fetchUsername()
-        print("nameee\(nameee)")
+         fetchUsername()
+  
         
     }
    
@@ -228,15 +234,14 @@ class AddReviewViewController: UIViewController, UIPickerViewDelegate,UIPickerVi
 
             self.locolusername = username
             
-            DispatchQueue.main.async {
+         
                           let comment = self.CommenttextField.text ?? ""
                           let rate = self.textfieldpicker.text ?? ""
                           let newReviw = AddStudentrevie(studentRate: rate, StudentCommrnt: comment, studentname: username)
                             self.AddstudentRevie = newReviw
-                          // Use 'addStudentRevie' as needed
-                      }
-
 
         }
     }
+    
+  
 }

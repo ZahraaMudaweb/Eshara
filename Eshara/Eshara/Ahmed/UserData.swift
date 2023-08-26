@@ -13,9 +13,9 @@ import UIKit
 struct Teacherdata
 {
     var teacherName: String
-    var teacherRate: Double
+    var teacherRate: String
     var teacherLocation: String
-    var teacherPrice: Double
+    var teacherPrice: String
     var tecaherImage: UIImage?
     var color: UIColor
 }

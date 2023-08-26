@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 private let reuseIdentifier = "Cell"
 
@@ -19,12 +20,13 @@ class ReviewsCollectionViewController: UICollectionViewController{
     @IBOutlet var AddRevireButton: UIBarButtonItem!
     
     
+  
     
     
     var Student: [AddStudentrevie] =
-    [    AddStudentrevie(studentRate: "Ahmed", StudentCommrnt: "nice", studentname: "5"),
-         AddStudentrevie(studentRate: "Ammar", StudentCommrnt: "Nice Teacher", studentname: "4"),
-        AddStudentrevie(studentRate: "Hussain", StudentCommrnt: "it was fun ", studentname: "4.5")
+    [    AddStudentrevie(studentRate: "٥", StudentCommrnt: "جميل", studentname: "عيسى"),
+         AddStudentrevie(studentRate: "٤", StudentCommrnt: "مدرس رائع", studentname: "هشام"),
+        AddStudentrevie(studentRate: "٤.٥", StudentCommrnt: "كانت تجربا ممتاز", studentname: "موسى")
     ]
 
    
@@ -50,7 +52,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
         }
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
     
-
+        
         
       
     }
@@ -155,6 +157,7 @@ class ReviewsCollectionViewController: UICollectionViewController{
        
        
         let student = Student[indexPath.row]
+//        cell.userimage
         
         cell.update(with: student)
 
@@ -191,8 +194,10 @@ class ReviewsCollectionViewController: UICollectionViewController{
         }
     }
     
+  
     
- 
+  
+  
     
    
     

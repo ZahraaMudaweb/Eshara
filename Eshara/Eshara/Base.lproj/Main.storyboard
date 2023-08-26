@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f39-U4-Dtp">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -427,85 +428,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYO-SS-ssP" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4240" y="-567.29857819905214"/>
-        </scene>
-        <!--الإعدادات-->
-        <scene sceneID="Nqy-HJ-Yft">
-            <objects>
-                <tableViewController id="Z6c-EW-AJD" customClass="SettingTableViewController" customModule="Eshara" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="F4o-UY-zU5">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="sectionIndexBackgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="L3l-8s-7lW" customClass="SettingTableViewCell" customModule="Eshara" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L3l-8s-7lW" id="gJe-FP-NuW">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="185" translatesAutoresizingMaskIntoConstraints="NO" id="t34-yY-dMO">
-                                            <rect key="frame" x="20" y="6" width="350" height="31"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50I-p6-R31">
-                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                                </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jan-l8-B6d">
-                                                    <rect key="frame" x="234" y="0.0" width="116" height="31"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="t34-yY-dMO" secondAttribute="trailing" constant="20" id="NCq-U6-OLK"/>
-                                        <constraint firstItem="t34-yY-dMO" firstAttribute="leading" secondItem="gJe-FP-NuW" secondAttribute="leading" constant="20" id="Yxa-4m-RWL"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="label" destination="Jan-l8-B6d" id="dH5-dZ-OMG"/>
-                                    <outlet property="switche" destination="50I-p6-R31" id="0oC-KV-BB4"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Z6c-EW-AJD" id="eZh-24-pDk"/>
-                            <outlet property="delegate" destination="Z6c-EW-AJD" id="Qor-y8-aV7"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="الإعدادات" id="WxD-gX-xLP">
-                        <barButtonItem key="rightBarButtonItem" title="save" id="8QC-79-3Hs">
-                            <connections>
-                                <action selector="saveSetting:" destination="Z6c-EW-AJD" id="08e-GA-nzL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-iR-kqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5330.7692307692305" y="454.9763033175355"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fj2-86-Rwi">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xlZ-v4-o7l" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="aC3-6E-Vs6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jj8-Cn-u1V">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Z6c-EW-AJD" kind="relationship" relationship="rootViewController" id="miY-IP-Ck3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XH2-nD-0a5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4240" y="454.9763033175355"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="Dz2-Wf-BPM">

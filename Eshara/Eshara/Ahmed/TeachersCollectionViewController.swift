@@ -21,6 +21,8 @@ struct Notification {
 
 
 
+
+
 class TeachersCollectionViewController: UICollectionViewController
 {
    
@@ -31,10 +33,10 @@ class TeachersCollectionViewController: UICollectionViewController
     
     let teacherss: [Teacherdata] =
     [
-            Teacherdata(teacherName: "Ali", teacherRate: 4.5, teacherLocation: "Sitra", teacherPrice: 8, color: UIColor(red: (1/255.0), green: (145/255.0), blue: (180/255.0), alpha: 1)),
-            Teacherdata(teacherName: "Ahmed", teacherRate: 4, teacherLocation: "Eaker", teacherPrice: 5, color: UIColor(red: (211/255.0), green: (221/255.0), blue: (24/255.0), alpha: 1)),
-            Teacherdata(teacherName: "Hussain", teacherRate: 5, teacherLocation: "Sanad", teacherPrice: 7, color: UIColor(red: (248/255.0), green: (217/255.0), blue: (15/255.0), alpha: 1)),
-            Teacherdata(teacherName: "Ammar", teacherRate: 3, teacherLocation: "Manamma", teacherPrice: 9, color: UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1))
+            Teacherdata(teacherName: "علي", teacherRate: "٤.٥/٥", teacherLocation: "سترة", teacherPrice: "٨", color: UIColor(red: (1/255.0), green: (145/255.0), blue: (180/255.0), alpha: 1)),
+            Teacherdata(teacherName: "احمد", teacherRate: "٤/٥", teacherLocation: "عكر", teacherPrice: "٥", color: UIColor(red: (211/255.0), green: (221/255.0), blue: (24/255.0), alpha: 1)),
+            Teacherdata(teacherName: "حسين", teacherRate: "٥/٥", teacherLocation: "سند", teacherPrice: "٧", color: UIColor(red: (248/255.0), green: (217/255.0), blue: (15/255.0), alpha: 1)),
+            Teacherdata(teacherName: "عمار", teacherRate: "٣/٥", teacherLocation: "منامة", teacherPrice: "٩", color: UIColor(red: (254/255.0), green: (122/255.0), blue: (21/255.0), alpha: 1))
         ]
     
     var notifications = [Notification]()
