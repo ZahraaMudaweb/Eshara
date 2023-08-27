@@ -44,7 +44,16 @@ class HomeVC: UIViewController {
                 for child in result {
                     if child.key == "hearts" {
                         guard let value = child.value as? Int else {return}
-                        self.heartsLabel.text = "\(value)"
+                      
+                        if value > 10
+                        {
+                            self.heartsLabel.text = "∞"
+                        }
+                        else{
+                            self.heartsLabel.text = "\(value)"
+                        }
+                       
+                        
                     }
                 }
             })}
