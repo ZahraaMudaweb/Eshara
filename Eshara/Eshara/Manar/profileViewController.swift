@@ -63,7 +63,17 @@ class profileViewController: UIViewController,
         self.imageView.clipsToBounds = true
         super.viewDidLoad()
        
+        getHearts()
         
+        if self.hearts > 10
+        {
+            self.btnBePremium.isHidden = true
+            self.premiumLbl.isHidden = false
+        }
+        else{
+            self.btnBePremium.isHidden = false
+            self.premiumLbl.isHidden = true
+        }
     }
    
     override func viewWillAppear(_ animated: Bool) {
